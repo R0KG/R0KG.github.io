@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="glitch-background"></div>
+    <canvas id="matrixCanvas"></canvas>
+    <canvas id="particleCanvas"></canvas>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-text">CYBER//PORT</span>
+                <div class="logo-glitch"></div>
+            </div>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#about" data-text="ABOUT">ABOUT</a></li>
+                    <li><a href="#projects" data-text="PROJECTS">PROJECTS</a></li>
+                    <li><a href="#contact" data-text="CONTACT">CONTACT</a></li>
+                </ul>
+                <div class="nav-indicator"></div>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <div class="glitch-container">
+                    <h1 class="glitch" data-text="ROMAN MERKULOV">ROMAN MERKULOV</h1>
+                    <div class="glitch-line"></div>
+                </div>
+                <p class="subtitle">FULL-STACK // SECURITY // MACHINE LEARNING</p>
+                <div class="hero-details">
+                    <div class="location-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>WIEN, 1080</span>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+43 660 133 71 53</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>int1994019@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/R0KG" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/roman-merk" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="assets/resume.pdf" download class="resume-download">
+                            <i class="fas fa-file-download"></i>
+                            <span>Download CV</span>
+                            <div class="download-progress"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrows">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>ABOUT.exe</h2>
+            <div class="about-content">
+                <div class="profile-section">
+                    <div class="about-header">
+                        <div class="header-line"></div>
+                        <h3 class="about-title">> PERSONAL PROFILE</h3>
+                        <div class="header-line"></div>
+                    </div>
+                    
+                    <div class="about-content-wrapper">
+                        <div class="about-paragraph">
+                            <span class="highlight-text">Background:</span>
+                            My journey in technology began in Norilsk, Siberia. Growing up in such a remote and challenging environment fueled my curiosity and drive to explore the broader world of technology.
+                        </div>
+
+                        <div class="about-paragraph">
+                            <span class="highlight-text">Education Path:</span>
+                            From my teenage years in Moscow, where I deepened my passion for computer science, to my current studies at Vienna University, each step has shaped my technical perspective.
+                        </div>
+
+                        <div class="about-paragraph">
+                            <span class="highlight-text">Expertise:</span>
+                            I specialize in full-stack development, machine learning, and cybersecurity, with hands-on experience in building robust systems and optimizing AI solutions.
+                        </div>
+
+                        <div class="about-paragraph">
+                            <span class="highlight-text">Approach:</span>
+                            Having lived and studied across different cultures, I bring a unique perspective and adaptability to every project. I'm driven by the goal of solving real-world challenges through innovative technologies.
+                        </div>
+                    </div>
+
+                    <div class="about-tags">
+                        <span class="tag">#Innovation</span>
+                        <span class="tag">#ProblemSolving</span>
+                        <span class="tag">#AI</span>
+                        <span class="tag">#Security</span>
+                        <span class="tag">#FullStack</span>
+                    </div>
+                </div>
+                <div class="terminal">
+                    <p>> Initializing profile...</p>
+                    <div class="skills-container">
+                        <div class="skills-category">
+                            <h3 class="category-title">> Machine Learning & AI</h3>
+                            <div class="skill-meter">
+                                <p>> Deep Learning</p>
+                                <div class="meter">
+                                    <div class="meter-fill" data-level="95"></div>
+                                    <span class="meter-text">95%</span>
+                                </div>
+                                <p class="skill-details">[TensorFlow, PyTorch, Neural Networks, CNN, RNN]</p>
+                            </div>
+                            <div class="skill-meter">
+                                <p>> Natural Language Processing</p>
+                                <div class="meter">
+                                    <div class="meter-fill" data-level="90"></div>
+                                    <span class="meter-text">90%</span>
+                                </div>
+                                <p class="skill-details">[BERT, GPT, Transformers, NLTK, spaCy]</p>
+                            </div>
+                            <div class="skill-meter">
+                                <p>> Computer Vision</p>
+                                <div class="meter">
+                                    <div class="meter-fill" data-level="85"></div>
+                                    <span class="meter-text">85%</span>
+                                </div>
+                                <p class="skill-details">[OpenCV, Image Processing, Object Detection]</p>
+                            </div>
+                        </div>
+
+                        <div class="skills-category">
+                            <h3 class="category-title">> Security & Systems</h3>
+                            <div class="skill-meter">
+                                <p>> Penetration Testing</p>
+                                <div class="meter">
+                                    <div class="meter-fill" data-level="88"></div>
+                                    <span class="meter-text">88%</span>
+                                </div>
+                                <p class="skill-details">[Kali Linux, Metasploit, Wireshark, Burp Suite]</p>
+                            </div>
+                            <div class="skill-meter">
+                                <p>> Reverse Engineering</p>
+                                <div class="meter">
+                                    <div class="meter-fill" data-level="85"></div>
+                                    <span class="meter-text">85%</span>
+                                </div>
+                                <p class="skill-details">[IDA Pro, x86/x64 Assembly, Binary Analysis]</p>
+                            </div>
+                            <div class="skill-meter">
+                                <p>> Network Security</p>
+                                <div class="meter">
+                                    <div class="meter-fill" data-level="82"></div>
+                                    <span class="meter-text">82%</span>
+                                </div>
+                                <p class="skill-details">[Firewall Config, VPN, Protocol Analysis]</p>
+                            </div>
+                        </div>
+
+                        <div class="skills-category full-width">
+                            <h3 class="category-title">> Development & Specialized Skills</h3>
+                            <div class="skill-meter">
+                                <p>> Backend Development</p>
+                                <div class="meter">
+                                    <div class="meter-fill" data-level="92"></div>
+                                    <span class="meter-text">92%</span>
+                                </div>
+                                <p class="skill-details">[Python, Java, Node.js, RESTful APIs]</p>
+                            </div>
+                            <div class="skill-meter">
+                                <p>> Frontend Development</p>
+                                <div class="meter">
+                                    <div class="meter-fill" data-level="85"></div>
+                                    <span class="meter-text">85%</span>
+                                </div>
+                                <p class="skill-details">[React, TypeScript, HTML5, CSS3]</p>
+                            </div>
+                            <div class="skill-meter">
+                                <p>> Database Management</p>
+                                <div class="meter">
+                                    <div class="meter-fill" data-level="88"></div>
+                                    <span class="meter-text">88%</span>
+                                </div>
+                                <p class="skill-details">[SQL, MongoDB, Redis, Database Design]</p>
+                            </div>
+                            <div class="skill-meter">
+                                <p>> Algorithm Design</p>
+                                <div class="meter">
+                                    <div class="meter-fill" data-level="90"></div>
+                                    <span class="meter-text">90%</span>
+                                </div>
+                                <p class="skill-details">[Data Structures, Optimization, Complexity Analysis]</p>
+                            </div>
+                            <div class="skill-meter">
+                                <p>> Game Development</p>
+                                <div class="meter">
+                                    <div class="meter-fill" data-level="80"></div>
+                                    <span class="meter-text">80%</span>
+                                </div>
+                                <p class="skill-details">[Unity, Unreal Engine, Game Physics]</p>
+                            </div>
+                            <div class="skill-meter">
+                                <p>> Cloud & DevOps</p>
+                                <div class="meter">
+                                    <div class="meter-fill" data-level="85"></div>
+                                    <span class="meter-text">85%</span>
+                                </div>
+                                <p class="skill-details">[AWS, Docker, CI/CD, Kubernetes]</p>
+                            </div>
+                        </div>
+
+                        <div class="tech-stack-summary">
+                            <p class="tech-list">> Core Languages: Python, Java, C++, JavaScript, TypeScript</p>
+                            <p class="tech-list">> ML/DL: TensorFlow, PyTorch, Scikit-learn, Keras, CUDA</p>
+                            <p class="tech-list">> Security: Kali Linux, IDA Pro, Metasploit, Wireshark</p>
+                            <p class="tech-list">> Web/Mobile: React, Node.js, Express, React Native</p>
+                            <p class="tech-list">> Database: PostgreSQL, MongoDB, Redis, ElasticSearch</p>
+                            <p class="tech-list">> Tools: Git, Docker, AWS, Linux, Kubernetes</p>
+                        </div>
+                    </div>
+                    <p>> System ready.</p>
+                </div>
+                
+                <div class="education-section">
+                    <h3>> EDUCATION.sys</h3>
+                    <div class="education-item">
+                        <h4>Universität Wien (2022-2025)</h4>
+                        <p>Bachelor Wirtschaftsinformatik</p>
+                    </div>
+                    <div class="education-item">
+                        <h4>MFTI - Technical University (2018-2021)</h4>
+                        <p>Bachelor Informatik</p>
+                    </div>
+                </div>
+
+                <div class="experience-section">
+                    <h3>> WORK_EXPERIENCE.dat</h3>
+                    <div class="experience-item">
+                        <h4>Starbucks</h4>
+                        <p>2022 - Present</p>
+                    </div>
+                    <div class="experience-item">
+                        <h4>Technical Consultant</h4>
+                        <p>2020 - 2022</p>
+                    </div>
+                    <div class="experience-item">
+                        <h4>Software Developer Intern (Bank)</h4>
+                        <p>2018 - 2020</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>PROJECTS.sys</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Weather Prediction Model</h3>
+                        <p>Advanced machine learning model for weather forecasting using historical data and real-time parameters.</p>
+                        <div class="tech-stack">Python • TensorFlow • NumPy • Weather API</div>
+                        <div class="project-highlights">
+                            <ul>
+                                <li>Implemented LSTM neural networks</li>
+                                <li>Real-time data processing</li>
+                                <li>85% prediction accuracy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Cybersecurity Testing Suite</h3>
+                        <p>Comprehensive penetration testing toolkit for identifying system vulnerabilities and security gaps.</p>
+                        <div class="tech-stack">Python • Kali Linux • Network Tools • SQL</div>
+                        <div class="project-highlights">
+                            <ul>
+                                <li>Network vulnerability scanning</li>
+                                <li>SQL injection testing</li>
+                                <li>Security report generation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>2D Game Development</h3>
+                        <p>Java-based 2D game with physics engine and dynamic level generation.</p>
+                        <div class="tech-stack">Java • JavaFX • Game Physics • Design Patterns</div>
+                        <div class="project-highlights">
+                            <ul>
+                                <li>Custom physics engine</li>
+                                <li>Procedural level generation</li>
+                                <li>Real-time collision detection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>News Recommendation System</h3>
+                        <p>Neural network-based news suggestion system with personalized content delivery.</p>
+                        <div class="tech-stack">Python • TensorFlow • SQL • Web APIs</div>
+                        <div class="project-highlights">
+                            <ul>
+                                <li>Content-based filtering</li>
+                                <li>User behavior analysis</li>
+                                <li>Real-time recommendations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Reverse Engineering Projects</h3>
+                        <p>Advanced software analysis and vulnerability assessment projects.</p>
+                        <div class="tech-stack">C++ • Assembly • IDA Pro • Debugging Tools</div>
+                        <div class="project-highlights">
+                            <ul>
+                                <li>Binary analysis</li>
+                                <li>Malware detection</li>
+                                <li>Security patch development</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>2D/3D Mathematical Algorithms</h3>
+                        <p>Implementation of complex mathematical algorithms for visual rendering.</p>
+                        <div class="tech-stack">Python • OpenGL • Linear Algebra • CUDA</div>
+                        <div class="project-highlights">
+                            <ul>
+                                <li>GPU acceleration</li>
+                                <li>3D visualization</li>
+                                <li>Performance optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>CONTACT.dat</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="ENTER_NAME" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="ENTER_EMAIL" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="ENTER_MESSAGE" required></textarea>
+                        </div>
+                        <button type="submit" id="submitBtn">TRANSMIT</button>
+                    </form>
+                </div>
+                <div class="profile-window">
+                    <div class="profile-circle">
+                        <img src="assets/profile.jpg" alt="Profile Picture" id="profilePic">
+                        <div class="profile-overlay"></div>
+                        <div class="profile-scan"></div>
+                    </div>
+                    <div class="profile-status">
+                        <span class="status-text">STATUS: ONLINE</span>
+                        <span class="status-blink"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CYBER//PORT - ALL RIGHTS ENCRYPTED</p>
+    </footer>
+
+    <!-- Add EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    <script src="background.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html> 

@@ -1,0 +1,29 @@
+User-agent: *
+Disallow: /
+
+User-agent: Googlebot
+Disallow: /
+User-agent: Bingbot
+Disallow: /
+User-agent: Slurp
+Disallow: /
+User-agent: DuckDuckBot
+Disallow: /
+User-agent: Baiduspider
+Disallow: /
+User-agent: YandexBot
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: Googlebot-Image
+Disallow: /
+User-agent: Googlebot-Video
+Disallow: /
+User-agent: YandexImages
+Disallow: /
+
+Crawl-delay: 10
+Request-rate: 1/10
+Visit-time: 0000-0800 

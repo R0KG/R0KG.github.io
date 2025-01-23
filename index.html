@@ -9,9 +9,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="glitch-background"></div>
-    <canvas id="matrixCanvas"></canvas>
-    <canvas id="particleCanvas"></canvas>
+    <div class="glitch-background">
+        <canvas id="particleCanvas"></canvas>
+    </div>
     
     <header>
         <nav>
@@ -264,17 +264,53 @@
 
                 <div class="experience-section">
                     <h3>> WORK_EXPERIENCE.dat</h3>
-                    <div class="experience-item">
-                        <h4>Starbucks</h4>
-                        <p>2022 - Present</p>
-                    </div>
-                    <div class="experience-item">
-                        <h4>Technical Consultant</h4>
-                        <p>2020 - 2022</p>
-                    </div>
-                    <div class="experience-item">
-                        <h4>Software Developer Intern (Bank)</h4>
-                        <p>2018 - 2020</p>
+                    <div class="experience-container">
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <h4>Freelance Data Scientist</h4>
+                                <span class="company">Self-employed | Remote</span>
+                                <span class="date">2023 - Present</span>
+                            </div>
+                            <div class="achievements">
+                                Engineered ML-driven churn prediction system (Python/XGBoost) → Significantly boosted client retention<br>
+                                Architected automated data cleaning pipeline (Pandas) → Doubled processing efficiency
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <h4>Python Developer</h4>
+                                <span class="company">Self-employed | Remote</span>
+                                <span class="date">2021 - Present</span>
+                            </div>
+                            <div class="achievements">
+                                Developed high-scale Django CRM platform → Managing 1000+ monthly client interactions
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <h4>Machine Learning Intern</h4>
+                                <span class="company">NLABTEAM | Remote</span>
+                                <span class="date">2022</span>
+                            </div>
+                            <div class="achievements">
+                                Enhanced NLP pipeline architecture (spaCy/transformers) → Dramatically improved chatbot response quality
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <h4>Technical Consultant</h4>
+                                <span class="company">Freelance | Vienna, Austria</span>
+                                <span class="date">2020 - 2022</span>
+                            </div>
+                            <div class="achievements">
+                                Led security audits → Identified and resolved critical system vulnerabilities<br>
+                                Orchestrated microservices migration (Docker/K8s) → Achieved substantial cost reduction<br>
+                                Optimized ETL data pipeline (Python) → Revolutionized processing speed
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

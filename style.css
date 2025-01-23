@@ -3,8 +3,8 @@
     --neon-border-color: #08f;
     --background-dark: #0a0a0a;
     --cyber-gradient: linear-gradient(45deg, #f40 0%, #08f 100%);
-    --grid-color: rgba(0, 136, 255, 0.1);
-    --glow-color: rgba(0, 136, 255, 0.2);
+    --grid-color: rgba(0, 195, 255, 0.15);
+    --glow-color: rgba(0, 195, 255, 0.25);
 }
 
 * {
@@ -21,20 +21,32 @@ body {
     overflow-x: hidden;
 }
 
-/* Enhanced Glitch Background */
+/* Background */
 .glitch-background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    background: 
-        radial-gradient(circle at 50% 50%, rgba(8, 16, 24, 0.9) 0%, rgba(2, 4, 8, 0.95) 100%),
-        linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+    z-index: -2;
+    background: rgba(0, 0, 0, 0.92);
     overflow: hidden;
 }
 
+/* Canvas Styles */
+#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.7;
+    mix-blend-mode: screen;
+}
+
+/* Enhanced Glitch Background */
 .glitch-background::before {
     content: '';
     position: absolute;
@@ -43,8 +55,8 @@ body {
     right: 0;
     bottom: 0;
     background: 
-        linear-gradient(90deg, transparent 0%, var(--grid-color) 1px, transparent 1px) 0 0 / 50px 50px,
-        linear-gradient(0deg, transparent 0%, var(--grid-color) 1px, transparent 1px) 0 0 / 50px 50px;
+        linear-gradient(90deg, transparent 0%, var(--grid-color) 1px, transparent 1px) 0 0 / 40px 40px,
+        linear-gradient(0deg, transparent 0%, var(--grid-color) 1px, transparent 1px) 0 0 / 40px 40px;
     transform-origin: 50% 50%;
     animation: gridMove 20s linear infinite;
 }
@@ -59,8 +71,9 @@ body {
     background: radial-gradient(
         circle at 50% 50%,
         transparent 0%,
-        rgba(0, 195, 255, 0.05) 40%,
-        rgba(0, 255, 128, 0.07) 60%,
+        rgba(0, 195, 255, 0.08) 40%,
+        rgba(0, 255, 128, 0.1) 60%,
+        rgba(255, 0, 255, 0.08) 80%,
         transparent 100%
     );
     animation: pulseGlow 4s ease-in-out infinite;
@@ -72,18 +85,18 @@ body {
         transform: perspective(500px) rotateX(60deg) translateY(0);
     }
     100% {
-        transform: perspective(500px) rotateX(60deg) translateY(50px);
+        transform: perspective(500px) rotateX(60deg) translateY(40px);
     }
 }
 
 @keyframes pulseGlow {
     0%, 100% {
-        opacity: 0.5;
+        opacity: 0.6;
         transform: scale(1);
     }
     50% {
-        opacity: 0.8;
-        transform: scale(1.02);
+        opacity: 0.9;
+        transform: scale(1.05);
     }
 }
 
@@ -97,8 +110,8 @@ body::after {
     height: 100%;
     background: repeating-linear-gradient(
         0deg,
-        rgba(0, 0, 0, 0.1) 0px,
-        rgba(0, 0, 0, 0.1) 1px,
+        rgba(0, 0, 0, 0.08) 0px,
+        rgba(0, 0, 0, 0.08) 1px,
         transparent 1px,
         transparent 2px
     );
@@ -1000,37 +1013,16 @@ footer {
     }
 }
 
-/* Canvas Styles */
-#matrixCanvas, #particleCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-}
-
-#matrixCanvas {
-    opacity: 0.4;
-    mix-blend-mode: screen;
-}
-
-#particleCanvas {
-    opacity: 0.5;
-    mix-blend-mode: screen;
-}
-
 /* Digital Glitch Effect */
 .digital-glitch {
     position: fixed;
     font-family: monospace;
-    color: var(--neon-border-color);
     font-size: 14px;
     pointer-events: none;
     z-index: -1;
     opacity: 0;
     animation: glitchFade 1s ease-out forwards;
+    text-shadow: 0 0 5px currentColor;
 }
 
 @keyframes glitchFade {
@@ -1861,4 +1853,53 @@ input:focus, textarea:focus {
 
 .resume-download:hover .download-progress {
     width: 100%;
+}
+
+.experience-item {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--neon-border-color);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 136, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 136, 255, 0.2);
+    border-color: rgba(0, 195, 255, 0.8);
+}
+
+.experience-header {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 136, 255, 0.3);
+}
+
+.experience-header h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.company, .date {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-right: 1rem;
+}
+
+.achievements {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(0, 195, 255, 0.3);
+}
+
+.achievements br {
+    content: "";
+    display: block;
+    margin: 0.8rem 0;
 } 

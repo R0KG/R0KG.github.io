@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LLM Attention Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <style>
+      .token {
+        padding: 2px 6px;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .token-active {
+        background: #dbeafe;
+        border-color: #93c5fd;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <main class="max-w-6xl mx-auto p-6">
+      <h1 class="text-3xl font-semibold">LLM Attention Explorer</h1>
+      <p class="text-gray-600 mb-4">
+        Visualize attention matrices (layer/head) for GPT-style models. Load sample data or upload your own JSON.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="md:col-span-2 bg-white rounded-lg shadow p-4">
+          <div id="heatmap" class="w-full" style="height: 520px"></div>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Layer</label>
+            <select id="layer" class="mt-1 block w-full border rounded px-3 py-2"></select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Head</label>
+            <select id="head" class="mt-1 block w-full border rounded px-3 py-2"></select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Tokens</label>
+            <div id="tokens" class="flex flex-wrap gap-2 mt-2"></div>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="flex items-center gap-2 text-sm"><input id="avgHeads" type="checkbox" /> Average heads</label>
+            <label class="flex items-center gap-2 text-sm"><input id="maskSelf" type="checkbox" /> Mask self</label>
+            <div>
+              <label class="block text-sm">Normalize</label>
+              <select id="norm" class="mt-1 block w-full border rounded px-2 py-1 text-sm">
+                <option value="none">None</option>
+                <option value="row">Row</option>
+                <option value="col">Column</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm">Direction</label>
+              <select id="direction" class="mt-1 block w-full border rounded px-2 py-1 text-sm">
+                <option value="out">Outgoing (row)</option>
+                <option value="in">Incoming (col)</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm">Top-k for selected token</label>
+            <input id="topk" type="number" value="5" min="1" class="mt-1 block w-full border rounded px-3 py-2" />
+          </div>
+          <div class="space-y-2">
+            <button id="loadSample" class="w-full px-3 py-2 rounded bg-blue-600 text-white">
+              Load sample (GPT‑2 small)
+            </button>
+            <label class="w-full block">
+              <span class="block text-sm font-medium text-gray-700">Upload JSON</span>
+              <input id="file" type="file" accept="application/json" class="mt-1 block w-full" />
+            </label>
+            <details>
+              <summary class="cursor-pointer">JSON format</summary>
+              <pre class="text-xs text-gray-600 overflow-auto">
+{
+  "tokens": ["I", "love", "AI", "!"],
+  "attentions": [ // layers
+    [ // heads
+      [[...],[...],[...],[...]], // head 0 matrix (n x n)
+      [[...],[...],[...],[...]]  // head 1
+    ],
+    ...
+  ]
+}</pre
+              >
+            </details>
+          </div>
+          <div class="pt-2 border-t">
+            <div id="barchart" style="height: 240px"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      let data = null
+      let selectedToken = null
+
+      const elLayer = document.getElementById('layer')
+      const elHead = document.getElementById('head')
+      const elTokens = document.getElementById('tokens')
+
+      function populateSelectors() {
+        elLayer.innerHTML = ''
+        elHead.innerHTML = ''
+        const L = data.attentions.length
+        const H = data.attentions[0].length
+        for (let i = 0; i < L; i++) {
+          const opt = document.createElement('option')
+          opt.value = i
+          opt.textContent = `Layer ${i}`
+          elLayer.appendChild(opt)
+        }
+        for (let h = 0; h < H; h++) {
+          const opt = document.createElement('option')
+          opt.value = h
+          opt.textContent = `Head ${h}`
+          elHead.appendChild(opt)
+        }
+        elLayer.value = 0
+        elHead.value = 0
+      }
+
+      function renderTokens() {
+        elTokens.innerHTML = ''
+        data.tokens.forEach((t, idx) => {
+          const span = document.createElement('span')
+          span.className = 'token' + (selectedToken === idx ? ' token-active' : '')
+          span.textContent = t
+          span.addEventListener('click', () => {
+            selectedToken = idx
+            renderTokens()
+            draw()
+          })
+          elTokens.appendChild(span)
+        })
+      }
+
+      function getMatrix() {
+        const l = Number(elLayer.value)
+        const h = Number(elHead.value)
+        const H = data.attentions[0].length
+        const n = data.tokens.length
+        let A
+        if (document.getElementById('avgHeads').checked) {
+          A = Array.from({ length: n }, () => Array(n).fill(0))
+          for (let head = 0; head < H; head++) {
+            const M = data.attentions[l][head]
+            for (let i = 0; i < n; i++) for (let j = 0; j < n; j++) A[i][j] += M[i][j]
+          }
+          for (let i = 0; i < n; i++) for (let j = 0; j < n; j++) A[i][j] /= H
+        } else {
+          A = data.attentions[l][h]
+        }
+        if (document.getElementById('maskSelf').checked) {
+          for (let i = 0; i < n; i++) A[i][i] = 0
+        }
+        const norm = document.getElementById('norm').value
+        if (norm === 'row') {
+          for (let i = 0; i < n; i++) {
+            const s = A[i].reduce((a, b) => a + b, 0) || 1
+            for (let j = 0; j < n; j++) A[i][j] /= s
+          }
+        } else if (norm === 'col') {
+          for (let j = 0; j < n; j++) {
+            let s = 0
+            for (let i = 0; i < n; i++) s += A[i][j]
+            s = s || 1
+            for (let i = 0; i < n; i++) A[i][j] /= s
+          }
+        }
+        return A
+      }
+
+      function drawBars(A) {
+        const dir = document.getElementById('direction').value
+        const tokens = data.tokens
+        if (selectedToken == null) {
+          Plotly.react('barchart', [], { margin: { t: 10, l: 80, r: 10, b: 20 } }, { displayModeBar: false })
+          return
+        }
+        const vec = dir === 'out' ? A[selectedToken] : A.map((r) => r[selectedToken])
+        const topk = Math.max(1, Number(document.getElementById('topk').value) || 5)
+        const pairs = vec
+          .map((v, j) => ({ j, v }))
+          .sort((a, b) => b.v - a.v)
+          .slice(0, topk)
+        const y = pairs.map((p) => tokens[p.j]).reverse()
+        const x = pairs.map((p) => p.v).reverse()
+        Plotly.react(
+          'barchart',
+          [
+            {
+              type: 'bar',
+              x,
+              y,
+              orientation: 'h',
+              marker: { color: '#60a5fa' },
+              hovertemplate: '%{y}: %{x:.3f}<extra></extra>',
+            },
+          ],
+          { margin: { t: 10, l: 80, r: 10, b: 20 } },
+          { displayModeBar: false, responsive: true },
+        )
+      }
+
+      function draw() {
+        const A = getMatrix()
+        const tokens = data.tokens
+
+        const z = A
+        const colorscale = 'Viridis'
+        const hovertext = A.map((row, i) => row.map((v, j) => `${tokens[i]} → ${tokens[j]}: ${v.toFixed(3)}`))
+
+        const layout = {
+          margin: { l: 100, r: 20, t: 20, b: 100 },
+          xaxis: { tickmode: 'array', tickvals: tokens.map((_, i) => i), ticktext: tokens, side: 'bottom' },
+          yaxis: { tickmode: 'array', tickvals: tokens.map((_, i) => i), ticktext: tokens, autorange: 'reversed' },
+        }
+
+        const trace = {
+          type: 'heatmap',
+          z,
+          colorscale,
+          hoverinfo: 'text',
+          text: hovertext,
+        }
+
+        Plotly.react('heatmap', [trace], layout, { displayModeBar: false, responsive: true })
+        drawBars(A)
+      }
+
+      document.getElementById('loadSample').addEventListener('click', async () => {
+        try {
+          const res = await fetch('/demo/LLM-Attention/sample_attention.json')
+          if (!res.ok) throw new Error('HTTP ' + res.status)
+          data = await res.json()
+        } catch (e) {
+          alert('Failed to load sample JSON')
+          return
+        }
+        populateSelectors()
+        renderTokens()
+        draw()
+      })
+
+      document.getElementById('file').addEventListener('change', async (e) => {
+        const f = e.target.files && e.target.files[0]
+        if (!f) return
+        const text = await f.text()
+        try {
+          data = JSON.parse(text)
+        } catch (e) {
+          alert('Invalid JSON')
+          return
+        }
+        if (!data.tokens || !data.attentions) {
+          alert('JSON missing tokens/attentions')
+          return
+        }
+        populateSelectors()
+        renderTokens()
+        draw()
+      })
+
+      elLayer.addEventListener('change', () => {
+        draw()
+      })
+      elHead.addEventListener('change', () => {
+        draw()
+      })
+      document.getElementById('avgHeads').addEventListener('change', () => {
+        draw()
+      })
+      document.getElementById('maskSelf').addEventListener('change', () => {
+        draw()
+      })
+      document.getElementById('norm').addEventListener('change', () => {
+        draw()
+      })
+      document.getElementById('direction').addEventListener('change', () => {
+        draw()
+      })
+      document.getElementById('topk').addEventListener('input', () => {
+        draw()
+      })
+    </script>
+  </body>
+</html>

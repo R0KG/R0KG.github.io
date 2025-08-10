@@ -1,0 +1,572 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSV Wrangler</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link href="https://unpkg.com/tabulator-tables@5.6.2/dist/css/tabulator.min.css" rel="stylesheet" />
+    <style>
+      .container {
+        max-width: 1280px;
+      }
+      #grid {
+        height: 66vh;
+      }
+      .help.is-error {
+        color: #e74c3c;
+      }
+      .drop-zone {
+        border: 2px dashed #b5b5b5;
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+        background: #fafafa;
+      }
+      .drop-zone.is-dragover {
+        background: #f0f9ff;
+        border-color: #3e8ed0;
+      }
+      .columns-sticky {
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 2;
+      }
+      .scroll-300 {
+        max-height: 300px;
+        overflow: auto;
+      }
+      .status-bar {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.9rem;
+      }
+      .condition-row {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+      .condition-row .select,
+      .condition-row .input {
+        min-width: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <h1 class="title is-3">CSV Wrangler</h1>
+            <p class="subtitle">Load CSVs, pick columns, build filters, preview, and export.</p>
+          </div>
+          <div class="column is-narrow">
+            <div class="field has-addons is-pulled-right">
+              <p class="control">
+                <span class="select">
+                  <select id="pageSize">
+                    <option value="10">10 / page</option>
+                    <option value="25" selected>25 / page</option>
+                    <option value="50">50 / page</option>
+                    <option value="100">100 / page</option>
+                  </select>
+                </span>
+              </p>
+              <p class="control">
+                <button id="clear" class="button is-light" title="Reset (⌘/Ctrl+Backspace)">Reset</button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column is-4">
+            <div class="box">
+              <div class="field">
+                <label class="label">Upload CSV</label>
+                <div id="dropZone" class="drop-zone">
+                  <div>Drop a .csv file here or</div>
+                  <div class="mt-2">
+                    <input id="file" class="input" type="file" accept=".csv,text/csv" />
+                  </div>
+                </div>
+                <p id="error" class="help is-error is-hidden"></p>
+              </div>
+
+              <div class="field">
+                <label class="label">Dataset</label>
+                <div class="content">
+                  <ul>
+                    <li><strong>File:</strong> <span id="metaFile">—</span></li>
+                    <li><strong>Rows:</strong> <span id="metaRows">0</span></li>
+                    <li><strong>Columns:</strong> <span id="metaCols">0</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Select columns</label>
+                <div class="control">
+                  <input id="columnSearch" class="input" type="text" placeholder="Search columns..." />
+                </div>
+                <div id="columnList" class="scroll-300 mt-2"></div>
+                <p class="help">Use column checkboxes to include in output. Leave empty to include all.</p>
+              </div>
+
+              <div class="field">
+                <label class="label">Quick filters</label>
+                <div class="field is-grouped is-grouped-multiline" style="margin-bottom: 0.5rem">
+                  <div class="control">
+                    <div class="select is-small">
+                      <select id="joinOp">
+                        <option value="AND" selected>AND</option>
+                        <option value="OR">OR</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="control">
+                    <button id="addCondition" class="button is-small is-link" title="Add condition">
+                      Add condition
+                    </button>
+                  </div>
+                </div>
+                <div id="filterList" class="scroll-300"></div>
+                <div class="buttons mt-2">
+                  <button id="apply" class="button is-link" title="Apply (⌘/Ctrl+Enter)">Apply</button>
+                  <button id="clearFilters" class="button is-light">Clear filters</button>
+                </div>
+              </div>
+
+              <details class="mb-3">
+                <summary>Advanced predicate (JavaScript)</summary>
+                <div class="field mt-2">
+                  <div class="control">
+                    <textarea
+                      class="textarea"
+                      id="filter"
+                      rows="3"
+                      placeholder="row => row.age > 30 && row.country === 'US'"
+                    >
+row => true</textarea
+                    >
+                  </div>
+                  <p class="help">Runs in your browser. Use with trusted data only.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div class="column is-8">
+            <div class="box">
+              <div id="grid"></div>
+              <div class="status-bar mt-3">
+                <div>
+                  <span>Showing <strong id="shownCount">0</strong> of <strong id="totalCount">0</strong> rows</span>
+                </div>
+                <div>
+                  <span>Selected columns: <strong id="selectedColCount">All</strong></span>
+                </div>
+                <div class="buttons">
+                  <button id="exportCsv" class="button is-primary">Export CSV</button>
+                  <button id="exportJson" class="button is-info is-light">Export JSON</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://unpkg.com/tabulator-tables@5.6.2/dist/js/tabulator.min.js"></script>
+    <script>
+      let original = []
+      let current = []
+      let headers = []
+      let table = null
+      let debounceTimer = null
+
+      function debounce(fn, delay = 250) {
+        return function (...args) {
+          clearTimeout(debounceTimer)
+          debounceTimer = setTimeout(() => fn.apply(this, args), delay)
+        }
+      }
+
+      function showError(message) {
+        const el = document.getElementById('error')
+        el.textContent = message || ''
+        el.classList.toggle('is-hidden', !message)
+      }
+
+      function updateMeta(filename = '—') {
+        document.getElementById('metaFile').textContent = filename || '—'
+        document.getElementById('metaRows').textContent = String(original.length)
+        document.getElementById('metaCols').textContent = String(headers.length)
+        document.getElementById('totalCount').textContent = String(original.length)
+        document.getElementById('shownCount').textContent = String(current.length)
+      }
+
+      function buildTable(rows) {
+        const cols = rows.length
+          ? Object.keys(rows[0]).map((k) => ({ title: k, field: k, headerFilter: true }))
+          : headers.map((k) => ({ title: k, field: k, headerFilter: true }))
+        if (table) {
+          table.setColumns(cols)
+          table.setData(rows)
+          return
+        }
+        table = new Tabulator('#grid', {
+          data: rows,
+          columns: cols,
+          layout: 'fitDataStretch',
+          height: '66vh',
+          pagination: true,
+          paginationSize: 25,
+          movableColumns: true,
+          placeholder: 'No data loaded',
+          clipboard: true,
+        })
+      }
+
+      function setPageSize(size) {
+        if (table) table.setPageSize(size)
+      }
+
+      function rebuildColumnList() {
+        const container = document.getElementById('columnList')
+        const query = (document.getElementById('columnSearch').value || '').toLowerCase()
+        container.innerHTML = ''
+        const frag = document.createDocumentFragment()
+        headers
+          .filter((h) => !query || h.toLowerCase().includes(query))
+          .forEach((h) => {
+            const label = document.createElement('label')
+            label.className = 'checkbox'
+            const input = document.createElement('input')
+            input.type = 'checkbox'
+            input.value = h
+            input.checked = true // default include all
+            input.addEventListener('change', debounce(applyTransformations, 150))
+            label.appendChild(input)
+            label.appendChild(document.createTextNode(' ' + h))
+            const div = document.createElement('div')
+            div.className = 'mb-1'
+            div.appendChild(label)
+            frag.appendChild(div)
+          })
+        container.appendChild(frag)
+        updateSelectedColCount()
+      }
+
+      function getSelectedColumnsFromUI() {
+        const checks = Array.from(document.querySelectorAll('#columnList input[type="checkbox"]'))
+        const selected = checks.filter((c) => c.checked).map((c) => c.value)
+        if (selected.length === 0 || selected.length === headers.length) return null // null means all
+        return selected
+      }
+
+      function updateSelectedColCount() {
+        const selected = getSelectedColumnsFromUI()
+        document.getElementById('selectedColCount').textContent = selected ? String(selected.length) : 'All'
+      }
+
+      function compileQuickPredicate() {
+        const list = Array.from(document.querySelectorAll('.condition-row'))
+        if (!list.length) return () => true
+        const joinOp = document.getElementById('joinOp').value || 'AND'
+        const checks = []
+        for (const row of list) {
+          const col = row.querySelector('.cond-col').value
+          const op = row.querySelector('.cond-op').value
+          const valStr = row.querySelector('.cond-val').value
+          if (!col || !op) continue
+          checks.push({ col, op, valStr })
+        }
+        if (!checks.length) return () => true
+        return (row) => {
+          const evalOne = ({ col, op, valStr }) => {
+            const v = row[col]
+            if (op === 'isEmpty') return v === null || v === undefined || v === ''
+            if (op === 'isNotEmpty') return !(v === null || v === undefined || v === '')
+            const num = Number(valStr)
+            const isNum = !Number.isNaN(num) && valStr.trim() !== ''
+            const rhs = isNum ? num : valStr
+            switch (op) {
+              case '=':
+                return v == rhs
+              case '≠':
+                return v != rhs
+              case '>':
+                return isNum && Number(v) > num
+              case '≥':
+                return isNum && Number(v) >= num
+              case '<':
+                return isNum && Number(v) < num
+              case '≤':
+                return isNum && Number(v) <= num
+              case 'contains':
+                return String(v).includes(String(rhs))
+              case 'startsWith':
+                return String(v).startsWith(String(rhs))
+              case 'endsWith':
+                return String(v).endsWith(String(rhs))
+              case 'regex':
+                try {
+                  return new RegExp(valStr).test(String(v))
+                } catch {
+                  return false
+                }
+              default:
+                return true
+            }
+          }
+          if (joinOp === 'OR') return checks.some((c) => evalOne(c))
+          return checks.every((c) => evalOne(c))
+        }
+      }
+
+      function applyTransformations() {
+        showError('')
+        if (!original.length) {
+          current = []
+          buildTable([])
+          updateMeta()
+          return
+        }
+
+        // 1) quick filters
+        let predicate = compileQuickPredicate()
+
+        // 2) advanced predicate (optional)
+        const advancedText = (document.getElementById('filter').value || '').trim()
+        if (advancedText && advancedText !== 'row => true') {
+          try {
+            const adv = eval('(' + advancedText + ')')
+            const prev = predicate
+            predicate = (row) => prev(row) && adv(row)
+          } catch (e) {
+            showError('Advanced predicate error: ' + (e && e.message ? e.message : String(e)))
+          }
+        }
+
+        // 3) filter
+        const filtered = []
+        for (const row of original) {
+          if (predicate(row)) filtered.push(row)
+        }
+
+        // 4) project columns
+        const selected = getSelectedColumnsFromUI()
+        const rows = []
+        if (selected) {
+          for (const row of filtered) {
+            const r = {}
+            for (const k of selected) r[k] = row[k]
+            rows.push(r)
+          }
+        } else {
+          rows.push(...filtered)
+        }
+
+        current = rows
+        buildTable(rows)
+        document.getElementById('shownCount').textContent = String(rows.length)
+        updateSelectedColCount()
+      }
+
+      function addConditionRow(prefill = {}) {
+        const row = document.createElement('div')
+        row.className = 'condition-row'
+        // column select
+        const colSelWrap = document.createElement('div')
+        colSelWrap.className = 'select is-small'
+        const colSel = document.createElement('select')
+        colSel.className = 'cond-col'
+        const emptyOpt = document.createElement('option')
+        emptyOpt.value = ''
+        emptyOpt.textContent = 'Column'
+        colSel.appendChild(emptyOpt)
+        headers.forEach((h) => {
+          const o = document.createElement('option')
+          o.value = h
+          o.textContent = h
+          colSel.appendChild(o)
+        })
+        if (prefill.col) colSel.value = prefill.col
+        colSel.addEventListener('change', debounce(applyTransformations, 150))
+        colSelWrap.appendChild(colSel)
+
+        // operator select
+        const opSelWrap = document.createElement('div')
+        opSelWrap.className = 'select is-small'
+        const opSel = document.createElement('select')
+        opSel.className = 'cond-op'
+        ;['=', '≠', '>', '≥', '<', '≤', 'contains', 'startsWith', 'endsWith', 'regex', 'isEmpty', 'isNotEmpty'].forEach(
+          (op) => {
+            const o = document.createElement('option')
+            o.value = op
+            o.textContent = op
+            opSel.appendChild(o)
+          },
+        )
+        if (prefill.op) opSel.value = prefill.op
+        opSel.addEventListener('change', debounce(applyTransformations, 150))
+        opSelWrap.appendChild(opSel)
+
+        // value input
+        const val = document.createElement('input')
+        val.className = 'input is-small cond-val'
+        val.type = 'text'
+        val.placeholder = 'value'
+        if (prefill.valStr) val.value = prefill.valStr
+        val.addEventListener('input', debounce(applyTransformations, 250))
+
+        // remove button
+        const rm = document.createElement('button')
+        rm.className = 'button is-small is-light'
+        rm.textContent = 'Remove'
+        rm.addEventListener('click', () => {
+          row.remove()
+          applyTransformations()
+        })
+
+        row.appendChild(colSelWrap)
+        row.appendChild(opSelWrap)
+        row.appendChild(val)
+        row.appendChild(rm)
+        document.getElementById('filterList').appendChild(row)
+      }
+
+      // Elements
+      const elFile = document.getElementById('file')
+      const elDrop = document.getElementById('dropZone')
+      const elColumnSearch = document.getElementById('columnSearch')
+
+      // File handling
+      function parseFile(file) {
+        if (!file) return
+        showError('')
+        Papa.parse(file, {
+          header: true,
+          dynamicTyping: true,
+          skipEmptyLines: true,
+          complete: (res) => {
+            if (res.errors && res.errors.length) {
+              showError(
+                'Parse warnings: ' +
+                  res.errors
+                    .slice(0, 2)
+                    .map((e) => e.message)
+                    .join('; '),
+              )
+            }
+            original = res.data || []
+            headers = original.length ? Object.keys(original[0]) : []
+            current = original.slice()
+            updateMeta(file.name)
+            rebuildColumnList()
+            buildTable(current)
+            document.getElementById('shownCount').textContent = String(current.length)
+          },
+        })
+      }
+
+      elFile.addEventListener('change', () => {
+        const file = elFile.files && elFile.files[0]
+        parseFile(file)
+      })
+      ;['dragenter', 'dragover'].forEach((evt) =>
+        elDrop.addEventListener(evt, (e) => {
+          e.preventDefault()
+          e.stopPropagation()
+          elDrop.classList.add('is-dragover')
+        }),
+      )
+      ;['dragleave', 'drop'].forEach((evt) =>
+        elDrop.addEventListener(evt, (e) => {
+          e.preventDefault()
+          e.stopPropagation()
+          elDrop.classList.remove('is-dragover')
+        }),
+      )
+      elDrop.addEventListener('drop', (e) => {
+        const file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]
+        if (file) {
+          elFile.files = e.dataTransfer.files
+          parseFile(file)
+        }
+      })
+
+      // Controls
+      document.getElementById('apply').addEventListener('click', applyTransformations)
+      document.getElementById('clearFilters').addEventListener('click', () => {
+        document.getElementById('filterList').innerHTML = ''
+        document.getElementById('filter').value = 'row => true'
+        applyTransformations()
+      })
+      document.getElementById('joinOp').addEventListener('change', applyTransformations)
+      document.getElementById('addCondition').addEventListener('click', (e) => {
+        e.preventDefault()
+        addConditionRow()
+      })
+      elColumnSearch.addEventListener('input', debounce(rebuildColumnList, 150))
+
+      document.getElementById('clear').addEventListener('click', () => {
+        original = []
+        current = []
+        headers = []
+        elFile.value = ''
+        document.getElementById('columnSearch').value = ''
+        document.getElementById('columnList').innerHTML = ''
+        document.getElementById('filterList').innerHTML = ''
+        document.getElementById('filter').value = 'row => true'
+        buildTable([])
+        updateMeta()
+        document.getElementById('shownCount').textContent = '0'
+        document.getElementById('selectedColCount').textContent = 'All'
+      })
+
+      document.getElementById('pageSize').addEventListener('change', (e) => setPageSize(Number(e.target.value)))
+
+      // Keyboard shortcuts
+      document.addEventListener('keydown', (e) => {
+        const meta = e.ctrlKey || e.metaKey
+        if (meta && e.key === 'Enter') {
+          e.preventDefault()
+          applyTransformations()
+        }
+        if (meta && (e.key === 'Backspace' || e.key === 'Delete')) {
+          e.preventDefault()
+          document.getElementById('clear').click()
+        }
+      })
+
+      // Export
+      function download(filename, text, mime) {
+        const blob = new Blob([text], { type: mime })
+        const url = URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
+        a.download = filename
+        a.click()
+        URL.revokeObjectURL(url)
+      }
+      document.getElementById('exportCsv').addEventListener('click', () => {
+        const rows = current && current.length ? current : original || []
+        if (!rows.length) return
+        const csv = Papa.unparse(rows)
+        download('result.csv', csv, 'text/csv;charset=utf-8;')
+      })
+      document.getElementById('exportJson').addEventListener('click', () => {
+        const rows = current && current.length ? current : original || []
+        if (!rows.length) return
+        download('result.json', JSON.stringify(rows, null, 2), 'application/json')
+      })
+    </script>
+  </body>
+</html>

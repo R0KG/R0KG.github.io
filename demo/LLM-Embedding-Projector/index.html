@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LLM Embedding Projector</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/karpathy/tsnejs@master/tsne.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  </head>
+  <body class="bg-gray-50">
+    <main class="max-w-6xl mx-auto p-6">
+      <h1 class="text-3xl font-semibold">LLM Embedding Projector</h1>
+      <p class="text-gray-600 mb-4">Upload token/text embeddings (CSV or JSON) and visualize them via PCA or t‑SNE.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <section class="md:col-span-2 bg-white rounded-lg shadow p-4">
+          <div id="plot" style="height: 560px"></div>
+          <div class="flex items-center justify-between text-sm text-gray-600 mt-2">
+            <div id="status"></div>
+            <div id="selectionInfo"></div>
+          </div>
+        </section>
+        <aside class="bg-white rounded-lg shadow p-4 space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Upload CSV/JSON</label>
+            <input id="file" type="file" accept=".csv,application/json" class="mt-1 block w-full" />
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <button id="loadSample" class="px-3 py-2 rounded bg-blue-600 text-white">Load sample</button>
+            <button id="clear" class="px-3 py-2 rounded bg-gray-100">Clear</button>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Algorithm</label>
+              <select id="algo" class="mt-1 block w-full border rounded px-3 py-2">
+                <option value="pca">PCA</option>
+                <option value="tsne">t‑SNE</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Dim</label>
+              <select id="dim" class="mt-1 block w-full border rounded px-3 py-2">
+                <option value="2">2D</option>
+                <option value="3">3D</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="flex items-center gap-2 text-sm"
+              ><input id="standardize" type="checkbox" /> Standardize features</label
+            >
+            <label class="flex items-center gap-2 text-sm"
+              ><input id="colorByLabel" type="checkbox" checked /> Color by label</label
+            >
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-sm">Point size</label>
+              <input id="ptSize" type="range" min="4" max="14" value="8" class="w-full" />
+            </div>
+            <div>
+              <label class="block text-sm">Opacity</label>
+              <input id="ptOpacity" type="range" min="20" max="100" value="80" class="w-full" />
+            </div>
+          </div>
+          <div class="space-y-2">
+            <div class="grid grid-cols-3 gap-2">
+              <div>
+                <label class="block text-sm">Perplexity</label>
+                <input
+                  id="perplexity"
+                  type="number"
+                  value="5"
+                  min="2"
+                  max="50"
+                  class="mt-1 block w-full border rounded px-3 py-2"
+                />
+              </div>
+              <div>
+                <label class="block text-sm">LR (epsilon)</label>
+                <input
+                  id="epsilon"
+                  type="number"
+                  value="10"
+                  min="1"
+                  max="1000"
+                  class="mt-1 block w-full border rounded px-3 py-2"
+                />
+              </div>
+              <div>
+                <label class="block text-sm">Iterations</label>
+                <input
+                  id="iters"
+                  type="number"
+                  value="500"
+                  min="100"
+                  max="2000"
+                  step="50"
+                  class="mt-1 block w-full border rounded px-3 py-2"
+                />
+              </div>
+            </div>
+            <button id="run" class="w-full px-3 py-2 rounded bg-indigo-600 text-white">Run t‑SNE</button>
+            <button id="exportCsv" class="w-full px-3 py-2 rounded bg-gray-200">Export projected CSV</button>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Label column (CSV)</label>
+            <input id="labelCol" type="text" class="mt-1 block w-full border rounded px-3 py-2" placeholder="label" />
+          </div>
+          <details class="text-sm text-gray-600">
+            <summary class="cursor-pointer">CSV format example</summary>
+            <pre class="text-xs overflow-auto">
+label,e1,e2,e3,...
+cat,0.12,0.05,-0.33,...
+dog,0.05,0.02,-0.21,...
+</pre
+            >
+          </details>
+        </aside>
+      </div>
+    </main>
+
+    <script>
+      let labels = []
+      let vectors = []
+      let projected = []
+      let selectedIdx = []
+      const palette = [
+        '#2563eb',
+        '#16a34a',
+        '#f59e0b',
+        '#ef4444',
+        '#06b6d4',
+        '#8b5cf6',
+        '#d946ef',
+        '#22c55e',
+        '#f97316',
+        '#eab308',
+        '#64748b',
+      ]
+
+      function standardizeIfNeeded(X) {
+        if (!document.getElementById('standardize').checked) return X
+        const n = X.length,
+          d = X[0].length
+        const mean = Array(d).fill(0),
+          std = Array(d).fill(0)
+        for (const v of X) for (let j = 0; j < d; j++) mean[j] += v[j]
+        for (let j = 0; j < d; j++) mean[j] /= n
+        for (const v of X) for (let j = 0; j < d; j++) std[j] += (v[j] - mean[j]) ** 2
+        for (let j = 0; j < d; j++) std[j] = Math.sqrt(std[j] / Math.max(1, n - 1)) || 1
+        return X.map((row) => row.map((x, j) => (x - mean[j]) / std[j]))
+      }
+
+      function pcaProject(X, k = 2) {
+        // Center
+        const n = X.length,
+          d = X[0].length
+        const mean = Array(d).fill(0)
+        for (const v of X) for (let j = 0; j < d; j++) mean[j] += v[j]
+        for (let j = 0; j < d; j++) mean[j] /= n
+        const C = Array.from({ length: d }, () => Array(d).fill(0))
+        for (const v of X) {
+          for (let i = 0; i < d; i++) for (let j = 0; j < d; j++) C[i][j] += (v[i] - mean[i]) * (v[j] - mean[j])
+        }
+        for (let i = 0; i < d; i++) for (let j = 0; j < d; j++) C[i][j] /= n - 1
+        // power iteration for leading eigenvector
+        function powerIter(mat, iters = 100) {
+          let v = Array(mat.length)
+            .fill(0)
+            .map(() => Math.random())
+          for (let t = 0; t < iters; t++) {
+            const w = Array(mat.length).fill(0)
+            for (let i = 0; i < mat.length; i++) for (let j = 0; j < mat.length; j++) w[i] += mat[i][j] * v[j]
+            const norm = Math.hypot(...w) || 1
+            v = w.map((x) => x / norm)
+          }
+          return v
+        }
+        const vecs = []
+        const Cw = C.map((row) => row.slice())
+        for (let kk = 0; kk < k; kk++) {
+          const vk = powerIter(Cw)
+          const lambda = vk.reduce((s, vi, i) => s + vi * Cw[i].reduce((ss, cij, j) => ss + cij * vk[j], 0), 0)
+          for (let i = 0; i < d; i++) for (let j = 0; j < d; j++) Cw[i][j] -= lambda * vk[i] * vk[j]
+          vecs.push(vk)
+        }
+        const Y = X.map((row) => vecs.map((vk) => row.reduce((s, xi, i) => s + xi * vk[i], 0)))
+        return Y
+      }
+
+      function buildTraces(points) {
+        const dim = Number(document.getElementById('dim').value)
+        const colorBy = document.getElementById('colorByLabel').checked && labels.length === points.length
+        const size = Number(document.getElementById('ptSize').value)
+        const opacity = Number(document.getElementById('ptOpacity').value) / 100
+        const textStyle = { position: 'top center', font: { size: 10 } }
+
+        // Build color array if needed
+        let color = '#2563eb'
+        if (colorBy) {
+          const map = new Map()
+          let ci = 0
+          for (const lab of labels) if (!map.has(lab)) map.set(lab, palette[ci++ % palette.length])
+          color = labels.map((lab) => map.get(lab))
+        }
+
+        if (dim === 3) {
+          return [
+            {
+              type: 'scatter3d',
+              mode: 'markers+text',
+              x: points.map((p) => p[0]),
+              y: points.map((p) => p[1]),
+              z: points.map((p) => p[2] || 0),
+              text: labels,
+              textposition: textStyle.position,
+              textfont: textStyle.font,
+              hovertemplate: '%{text}<extra></extra>',
+              marker: { size, opacity, color },
+              showlegend: false,
+            },
+          ]
+        }
+        return [
+          {
+            type: 'scatter',
+            mode: 'markers+text',
+            x: points.map((p) => p[0]),
+            y: points.map((p) => p[1]),
+            text: labels,
+            textposition: textStyle.position,
+            textfont: textStyle.font,
+            hovertemplate: '%{text}<extra></extra>',
+            marker: { size, opacity, color },
+            showlegend: false,
+          },
+        ]
+      }
+
+      function draw(points) {
+        projected = points
+        const dim = Number(document.getElementById('dim').value)
+        const layout =
+          dim === 3
+            ? { margin: { t: 20 } }
+            : { margin: { t: 20 }, xaxis: { zeroline: false }, yaxis: { zeroline: false } }
+        Plotly.react('plot', buildTraces(points), layout, {
+          responsive: true,
+          displayModeBar: true,
+          modeBarButtonsToAdd: ['lasso2d', 'select2d'],
+        })
+        document.getElementById('status').textContent = ''
+      }
+
+      async function loadSample() {
+        labels = ['I', 'love', 'GPT', 'models', '!']
+        vectors = [
+          [0.2, 0.1, -0.3, 0.0],
+          [0.15, 0.05, -0.25, 0.1],
+          [0.4, -0.1, 0.2, 0.05],
+          [0.35, -0.05, 0.18, 0.08],
+          [0.1, 0.0, -0.05, 0.02],
+        ]
+        const dim = Number(document.getElementById('dim').value) || 2
+        const points = pcaProject(standardizeIfNeeded(vectors), dim)
+        draw(points)
+      }
+
+      document.getElementById('loadSample').addEventListener('click', loadSample)
+      document.getElementById('clear').addEventListener('click', () => {
+        labels = []
+        vectors = []
+        projected = []
+        Plotly.react('plot', [], {}, {})
+        document.getElementById('selectionInfo').textContent = ''
+        document.getElementById('status').textContent = ''
+      })
+      document.getElementById('algo').addEventListener('change', () => {
+        if (!vectors.length) return
+        const algo = document.getElementById('algo').value
+        const dim = Number(document.getElementById('dim').value) || 2
+        if (algo === 'pca') draw(pcaProject(standardizeIfNeeded(vectors), dim))
+      })
+      document.getElementById('dim').addEventListener('change', () => {
+        if (!vectors.length) return
+        const algo = document.getElementById('algo').value
+        const dim = Number(document.getElementById('dim').value) || 2
+        if (algo === 'pca') draw(pcaProject(standardizeIfNeeded(vectors), dim))
+      })
+      document.getElementById('standardize').addEventListener('change', () => {
+        if (!vectors.length) return
+        const algo = document.getElementById('algo').value
+        const dim = Number(document.getElementById('dim').value) || 2
+        if (algo === 'pca') draw(pcaProject(standardizeIfNeeded(vectors), dim))
+      })
+      document.getElementById('colorByLabel').addEventListener('change', () => {
+        if (projected.length) draw(projected)
+      })
+      document.getElementById('ptSize').addEventListener('input', () => {
+        if (projected.length) draw(projected)
+      })
+      document.getElementById('ptOpacity').addEventListener('input', () => {
+        if (projected.length) draw(projected)
+      })
+
+      document.getElementById('run').addEventListener('click', () => {
+        if (!vectors.length) {
+          document.getElementById('status').textContent = 'Load data first'
+          return
+        }
+        if (!(window.tsnejs && window.tsnejs.tSNE)) {
+          document.getElementById('status').textContent = 't‑SNE library not loaded'
+          return
+        }
+        const dim = Number(document.getElementById('dim').value) || 2
+        let perplexity = Math.max(2, Number(document.getElementById('perplexity').value) || 5)
+        const n = vectors.length
+        if (perplexity >= n) perplexity = Math.max(2, Math.min(50, n - 1))
+        const epsilon = Math.max(1, Number(document.getElementById('epsilon').value) || 10)
+        const iters = Math.max(100, Number(document.getElementById('iters').value) || 500)
+        const model = new window.tsnejs.tSNE({ dim, perplexity, epsilon })
+        model.initDataRaw(standardizeIfNeeded(vectors))
+        document.getElementById('status').textContent =
+          `Running t‑SNE (dim=${dim}, perp=${perplexity}, lr=${epsilon}, iters=${iters})...`
+        // simple synchronous loop for demo scale
+        try {
+          for (let i = 0; i < iters; i++) model.step()
+          const Y = model.getSolution()
+          draw(Y)
+          document.getElementById('status').textContent = `Done t‑SNE (${iters} iters)`
+        } catch (e) {
+          console.error(e)
+          document.getElementById('status').textContent = 't‑SNE failed. Try smaller perplexity/iters.'
+        }
+      })
+
+      document.getElementById('file').addEventListener('change', async (e) => {
+        const f = e.target.files && e.target.files[0]
+        if (!f) return
+        if (f.name.endsWith('.json')) {
+          const json = JSON.parse(await f.text())
+          labels = json.labels || json.tokens || json.texts || []
+          vectors = json.vectors || json.embeddings || []
+        } else {
+          const text = await f.text()
+          const parsed = Papa.parse(text, { header: true })
+          const header = parsed.meta.fields
+          const labelCol = document.getElementById('labelCol').value || 'label'
+          labels = parsed.data.map((r) => r[labelCol])
+          const featCols = header.filter((h) => h !== labelCol)
+          vectors = parsed.data.map((r) => featCols.map((c) => Number(r[c] || 0)))
+        }
+        if (!vectors.length) {
+          alert('No vectors found')
+          return
+        }
+        const algo = document.getElementById('algo').value
+        const dim = Number(document.getElementById('dim').value) || 2
+        if (algo === 'pca') draw(pcaProject(standardizeIfNeeded(vectors), dim))
+        else document.getElementById('status').textContent = 'Set t‑SNE params and click Run'
+      })
+
+      // selection info
+      const plotEl = document.getElementById('plot')
+      plotEl.addEventListener('plotly_selected', (ev) => {
+        selectedIdx = []
+        const pts = ev && ev.detail && ev.detail.points ? ev.detail.points : ev.points
+        if (pts) {
+          // Collect unique point numbers across traces
+          const set = new Set()
+          for (const p of pts) if (typeof p.pointIndex === 'number') set.add(p.pointIndex)
+          selectedIdx = Array.from(set)
+        }
+        if (!selectedIdx.length) {
+          document.getElementById('selectionInfo').textContent = ''
+          return
+        }
+        const byLabel = new Map()
+        selectedIdx.forEach((i) => {
+          const lab = labels[i] ?? '(n/a)'
+          byLabel.set(lab, (byLabel.get(lab) || 0) + 1)
+        })
+        const parts = Array.from(byLabel.entries())
+          .map(([k, v]) => `${k}: ${v}`)
+          .join(' · ')
+        document.getElementById('selectionInfo').textContent = `${selectedIdx.length} selected — ${parts}`
+      })
+
+      document.getElementById('exportCsv').addEventListener('click', () => {
+        if (!projected.length) return
+        const dim = Number(document.getElementById('dim').value) || 2
+        const header = ['label', 'x', 'y'].concat(dim === 3 ? ['z'] : [])
+        const rows = projected.map((p, i) => [labels[i] ?? '', p[0], p[1]].concat(dim === 3 ? [p[2] || 0] : []))
+        const csv = [header.join(','), ...rows.map((r) => r.join(','))].join('\n')
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' })
+        const url = URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
+        a.download = 'projection.csv'
+        a.click()
+        URL.revokeObjectURL(url)
+      })
+    </script>
+  </body>
+</html>

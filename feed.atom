@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://romanmerkulov.me/</id>
+    <id>https://romanmerk.me/</id>
     <title>Roman Merkulov</title>
-    <updated>2025-08-11T00:21:49.570Z</updated>
+    <updated>2025-08-11T00:27:40.686Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Roman Merkulov</name>
         <email>int1994020@gmail.com</email>
-        <uri>https://romanmerkulov.me</uri>
+        <uri>https://romanmerk.me</uri>
     </author>
-    <link rel="alternate" href="https://romanmerkulov.me/"/>
-    <link rel="self" href="https://romanmerkulov.me/feed.atom"/>
+    <link rel="alternate" href="https://romanmerk.me/"/>
+    <link rel="self" href="https://romanmerk.me/feed.atom"/>
     <subtitle>Roman Merkulov's Blog</subtitle>
-    <logo>https://romanmerkulov.me/avatar.png</logo>
-    <icon>https://romanmerkulov.me/logo.png</icon>
+    <logo>https://romanmerk.me/avatar.png</logo>
+    <icon>https://romanmerk.me/logo.png</icon>
     <rights>CC BY-NC-SA 4.0 2025 © Roman Merkulov</rights>
     <entry>
         <title type="html"><![CDATA[The Dawn of Quantum AI]]></title>
-        <id>https://romanmerkulov.me/posts/the-dawn-of-quantum-ai</id>
-        <link href="https://romanmerkulov.me/posts/the-dawn-of-quantum-ai"/>
-        <link rel="enclosure" href="https://romanmerkulov.me/logo.png" type="image/png"/>
+        <id>https://romanmerk.me/posts/the-dawn-of-quantum-ai</id>
+        <link href="https://romanmerk.me/posts/the-dawn-of-quantum-ai"/>
+        <link rel="enclosure" href="https://romanmerk.me/logo.png" type="image/png"/>
         <updated>2025-06-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[How quantum computing and machine learning converge in the NISQ era, with hybrid patterns, practical use cases, and a sensible roadmap.]]></summary>
         <content type="html"><![CDATA[<p>Quantum AI sits at the frontier of computation, uniting the parallelism of qubits with the pattern‑finding power of modern machine learning. The promise is simple to state yet profound in impact: solve classes of problems in optimization, simulation, and modeling that are prohibitively expensive for classical computers.</p>
@@ -64,13 +64,13 @@
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Categorize Your Dependencies]]></title>
-        <id>https://romanmerkulov.me/posts/categorize-deps</id>
-        <link href="https://romanmerkulov.me/posts/categorize-deps"/>
+        <id>https://romanmerk.me/posts/categorize-deps</id>
+        <link href="https://romanmerk.me/posts/categorize-deps"/>
         <updated>2025-04-28T14:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>When building a project, it's very likely that we will install third-party packages from npm to offload some tasks. On that topic, we know there are two major types of dependencies: <code>dependencies</code> (prod) and <code>devDependencies</code> (dev). In our <code>package.json</code>, it might look something like this:</p>
 <pre><code class="language-json">{
@@ -165,7 +165,7 @@ catalogs:
 <h3>Tooling Support</h3>
 <p>Given that catalogs are still quite new, this shift requires better tooling support. A significant pain point for me on this was losing the ability to see a dependency's version at a glance in <code>package.json</code> when using <code>catalog:&lt;name&gt;</code>.</p>
 <p>To address this, I created a VS Code extension, <a href="https://marketplace.visualstudio.com/items?itemName=antfu.pnpm-catalog-lens">PNPM Catalog Lens</a>, which displays the resolved version inline within <code>package.json</code>.</p>
-<p><img src="https://romanmerkulov.me/images/pnpm-catalogs-vscode.png" alt="Screenshot of the extension PNPM Catalog Lens"></p>
+<p><img src="https://romanmerk.me/images/pnpm-catalogs-vscode.png" alt="Screenshot of the extension PNPM Catalog Lens"></p>
 <p>It also adds distinct colors to each named category for easier identification. This gives us the categorization and centralized version control without significantly impacting DX.</p>
 <p>Since versions move to <code>pnpm-workspace.yaml</code>, CLI tools would need to make some integrations to support this. So far, we've adapted the following tools:</p>
 <ul>
@@ -217,13 +217,13 @@ export default defineBuildConfig({
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Tokyo!]]></title>
-        <id>https://romanmerkulov.me/posts/hello-tokyo</id>
-        <link href="https://romanmerkulov.me/posts/hello-tokyo"/>
+        <id>https://romanmerk.me/posts/hello-tokyo</id>
+        <link href="https://romanmerk.me/posts/hello-tokyo"/>
         <updated>2025-04-08T00:00:00.000Z</updated>
         <content type="html"><![CDATA[<p><a href="/posts/ohayo-tokyo"><span i-ph-arrow-right-bold inline-block/> 日本語</a></p>
 <p>Seven years ago, my first visit to Japan - a trip to <ruby lang="ja">大阪<rp>(</rp><rt>Osaka</rt><rp>)</rp></ruby>, <ruby lang="ja">京都<rp>(</rp><rt>Kyoto</rt><rp>)</rp></ruby>, and <ruby lang="ja">北海道<rp>(</rp><rt>Hokkaido</rt><rp>)</rp></ruby> - planted the seed of wanting to live in Japan one day. It was an unforgettable experience that changed the way I see the world. The meticulous attention to detail, the dedication to craftsmanship, and the seamless blend of tradition and modernity continue to inspire me.</p>
@@ -255,14 +255,14 @@ export default defineBuildConfig({
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[State Management in Modern Web Applications - A Guided Tour]]></title>
-        <id>https://romanmerkulov.me/posts/state-management-in-modern-web-applications</id>
-        <link href="https://romanmerkulov.me/posts/state-management-in-modern-web-applications"/>
-        <link rel="enclosure" href="https://romanmerkulov.me/logo.png" type="image/png"/>
+        <id>https://romanmerk.me/posts/state-management-in-modern-web-applications</id>
+        <link href="https://romanmerk.me/posts/state-management-in-modern-web-applications"/>
+        <link rel="enclosure" href="https://romanmerk.me/logo.png" type="image/png"/>
         <updated>2025-03-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[A pragmatic map of client vs server state, when to pick Redux Toolkit or lighter stores, and how to adopt TanStack Query/SWR.]]></summary>
         <content type="html"><![CDATA[<p>State is your app’s memory. As applications evolve from simple prototypes to multi‑team products, managing that memory—what the user is doing, what data is loaded, what changes are pending—becomes one of the hardest engineering problems. The trick is understanding that not all state is the same and choosing the least complex tool that fits each category.</p>
@@ -303,13 +303,13 @@ export default defineBuildConfig({
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Photos Page]]></title>
-        <id>https://romanmerkulov.me/posts/photos-page</id>
-        <link href="https://romanmerkulov.me/posts/photos-page"/>
+        <id>https://romanmerk.me/posts/photos-page</id>
+        <link href="https://romanmerk.me/posts/photos-page"/>
         <updated>2025-03-12T12:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>As you might have noticed, I added a <a href="/photos">photos page</a> on this site recently. It's something I wanted to do for a very long time but always procrastinated on.</p>
 <p>During certain periods of my life, photography was my greatest passion, just as much as I do today with Open Source and programming. Instagram was once a delightful, minimalist platform for photo sharing that I frequently used - until Meta's acquisition changed everything. While I could even tolerate the algorithms, ads, and short videos, the recent <a href="https://www.standard.co.uk/news/tech/instagram-update-how-adjust-profile-grid-what-changes-coming-b1205890.html">change of profile photo grids' aspect ratio from square to 4:5</a> was the final straw - an arrogant decision that impacts every user's content without providing proper solutions.</p>
@@ -327,13 +327,13 @@ export default defineBuildConfig({
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Async, Sync, in Between]]></title>
-        <id>https://romanmerkulov.me/posts/async-sync-in-between</id>
-        <link href="https://romanmerkulov.me/posts/async-sync-in-between"/>
+        <id>https://romanmerk.me/posts/async-sync-in-between</id>
+        <link href="https://romanmerk.me/posts/async-sync-in-between"/>
         <updated>2025-03-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The coloring problem in modern programming, and a proposal of a new approach]]></summary>
         <content type="html"><![CDATA[<h2>The Coloring Problem</h2>
@@ -524,20 +524,20 @@ looking for feedback and contributions, so feel free to join us in the <a href="
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Move on to ESM-only]]></title>
-        <id>https://romanmerkulov.me/posts/move-on-to-esm-only</id>
-        <link href="https://romanmerkulov.me/posts/move-on-to-esm-only"/>
+        <id>https://romanmerk.me/posts/move-on-to-esm-only</id>
+        <link href="https://romanmerk.me/posts/move-on-to-esm-only"/>
         <updated>2025-02-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Let's move on to ESM-only]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
 <p>Three years ago, I wrote a post about <a href="/posts/publish-esm-and-cjs">shipping ESM &amp; CJS in a single package</a>, advocating for dual CJS/ESM formats to ease user migration and trying to make the best of both worlds. Back then, I didn't fully agree with <a href="https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c">aggressively shipping ESM-only</a>, as I considered the ecosystem wasn't ready, especially since the push was mostly from low-level libraries. Over time, as tools and the ecosystem have evolved, my perspective has gradually shifted towards more and more on adopting ESM-only.</p>
 <p>As of 2025, a decade has passed since ESM was first introduced in 2015. Modern tools and libraries have increasingly adopted ESM as the primary module format. According to {@wooorm}'s <a href="https://github.com/wooorm/npm-esm-vs-cjs">script</a>, the packages that ships ESM on npm in 2021 was <strong>7.8%</strong>, and by the end of 2024, it had reached <a href="https://github.com/wooorm/npm-esm-vs-cjs"><strong>25.8%</strong></a>. Although a significant portion of packages still use CJS, the trend clearly shows a good shift towards ESM.</p>
 <figure>
-  <img src="https://romanmerkulov.me/images/npm-esm-vs-cjs-2024.svg" dark:filter-invert />
+  <img src="https://romanmerk.me/images/npm-esm-vs-cjs-2024.svg" dark:filter-invert />
   <figcaption text-center>ESM adoption over time, generated by the <code>npm-esm-vs-cjs</code> script. Last updated at 2024-11-27</figcaption>
 </figure>
 <p>Here in this post, I'd like to share my thoughts on the current state of the ecosystem and why I believe it's time to move on to ESM-only.</p>
@@ -606,13 +606,13 @@ looking for feedback and contributions, so feel free to join us in the <a href="
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Epoch Semantic Versioning]]></title>
-        <id>https://romanmerkulov.me/posts/epoch-semver</id>
-        <link href="https://romanmerkulov.me/posts/epoch-semver"/>
+        <id>https://romanmerk.me/posts/epoch-semver</id>
+        <link href="https://romanmerk.me/posts/epoch-semver"/>
         <updated>2025-01-07T12:00:00.000Z</updated>
         <summary type="html"><![CDATA[Proposal for an extended Semantic Versioning called Epoch SemVer to provide more granular versioning information to users.]]></summary>
         <content type="html"><![CDATA[<p>If you've been following my work in open source, you might have noticed that I have a tendency to stick with zero-major versioning, like <code>v0.x.x</code>. For instance, as of writing this post, the latest version of UnoCSS is <a href="https://github.com/unocss/unocss/releases/tag/v0.65.3"><code>v0.65.3</code></a>, Slidev is <a href="https://github.com/slidevjs/slidev/releases/tag/v0.50.0"><code>v0.50.0</code></a>, and <code>unplugin-vue-components</code> is <a href="https://github.com/unplugin/unplugin-vue-components/releases/tag/v0.28.0"><code>v0.28.0</code></a>. Other projects, such as React Native is on <a href="https://github.com/facebook/react-native/releases/tag/v0.76.5"><code>v0.76.5</code></a>, and sharp is on <a href="https://github.com/lovell/sharp/releases/tag/v0.33.5"><code>v0.33.5</code></a>, also follow this pattern.</p>
@@ -639,7 +639,7 @@ looking for feedback and contributions, so feel free to join us in the <a href="
 <h2>Progressive</h2>
 <p>I am a strong believer in the principle of progressiveness. Rather than making a giant leap to a significantly higher stage all at once, progressiveness allows users to adopt changes gradually at their own pace. It provides opportunities to pause and assess, making it easier to understand the impact of each change.</p>
 <figure text-center>
-  <img src="https://romanmerkulov.me/images/epoch-semver-progressive-1.png" alt="Progressive as Stairs" border="~ base rounded-xl">
+  <img src="https://romanmerk.me/images/epoch-semver-progressive-1.png" alt="Progressive as Stairs" border="~ base rounded-xl">
   <figcaption>Progressive as Stairs - a screenshot of my talk <a italic font-serif href="/talks#the-progressive-path" target="_blank">The Progressive Path</a></figcaption>
 </figure>
 <p>I believe we should apply the same principle to versioning. Instead of treating a major version as a massive overhaul, we can break it down into smaller, more manageable updates. For example, rather than releasing <code>v2.0.0</code> with 10 breaking changes from <code>v1.x</code>, we could distribute these changes across several smaller major releases. This way, we might release <code>v2.0</code> with 2 breaking changes, followed by <code>v3.0</code> with 1 breaking change, and so on. This approach makes it easier for users to adopt changes gradually and reduces the risk of overwhelming them with too many changes at once.</p>
@@ -691,13 +691,13 @@ We shouldn't need to bump <code>EPOCH</code> often. It's mostly useful for high-
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[CPU Profiling Nuxt]]></title>
-        <id>https://romanmerkulov.me/posts/nuxt-cpuprofile</id>
-        <link href="https://romanmerkulov.me/posts/nuxt-cpuprofile"/>
+        <id>https://romanmerk.me/posts/nuxt-cpuprofile</id>
+        <link href="https://romanmerk.me/posts/nuxt-cpuprofile"/>
         <updated>2024-12-31T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>If you want to debug the bundling performance of your Nuxt app to generate CPU profiles.</p>
 <p>Node.js provides a built-in <a href="https://nodejs.org/api/cli.html#--cpu-prof"><code>--cpu-prof</code></a> flag that allows you to generate CPU profiles. However you can't directly pass it in your <code>nuxi</code> command, you have to use it with <code>node</code> directly.</p>
@@ -714,14 +714,14 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[The Evolution of Web Frameworks - From Monoliths to the Edge]]></title>
-        <id>https://romanmerkulov.me/posts/the-evolution-of-web-frameworks</id>
-        <link href="https://romanmerkulov.me/posts/the-evolution-of-web-frameworks"/>
-        <link rel="enclosure" href="https://romanmerkulov.me/logo.png" type="image/png"/>
+        <id>https://romanmerk.me/posts/the-evolution-of-web-frameworks</id>
+        <link href="https://romanmerk.me/posts/the-evolution-of-web-frameworks"/>
+        <link rel="enclosure" href="https://romanmerk.me/logo.png" type="image/png"/>
         <updated>2024-12-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[A developer-focused history of SSR → SPA → meta-frameworks, and what islands, the edge, and DX-first tooling mean next.]]></summary>
         <content type="html"><![CDATA[<p>The web ecosystem evolves in waves. From server‑rendered monoliths to modern meta‑frameworks and edge runtimes, each era has chased a simple goal: ship fast experiences without sacrificing developer velocity. Along the way, we repeatedly rebalanced where code runs, how state moves, and who does the work—the server, the browser, or something in between.</p>
@@ -742,27 +742,27 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Introducing Nuxt Icon v1]]></title>
-        <id>https://romanmerkulov.me/posts/nuxt-icon-v1</id>
-        <link href="https://romanmerkulov.me/posts/nuxt-icon-v1"/>
+        <id>https://romanmerk.me/posts/nuxt-icon-v1</id>
+        <link href="https://romanmerk.me/posts/nuxt-icon-v1"/>
         <updated>2024-11-25T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://nuxt.com/blog/nuxt-icon-v1-0">Go to nuxt.com and read the full post</a>.</p>
 ]]></content>
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[The Rise of AI in Threat Detection - The Digital Watchtower]]></title>
-        <id>https://romanmerkulov.me/posts/the-rise-of-ai-in-threat-detection</id>
-        <link href="https://romanmerkulov.me/posts/the-rise-of-ai-in-threat-detection"/>
-        <link rel="enclosure" href="https://romanmerkulov.me/logo.png" type="image/png"/>
+        <id>https://romanmerk.me/posts/the-rise-of-ai-in-threat-detection</id>
+        <link href="https://romanmerk.me/posts/the-rise-of-ai-in-threat-detection"/>
+        <link rel="enclosure" href="https://romanmerk.me/logo.png" type="image/png"/>
         <updated>2024-10-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Moving beyond signatures—how behavioral ML, unsupervised models, and automation transform modern SecOps.]]></summary>
         <content type="html"><![CDATA[<p>For decades, cybersecurity has been a high‑stakes game of cat and mouse. Attackers find new exploits; defenders patch and react. This model is increasingly unsustainable. AI is transforming security from reactive to proactive—shifting the focus from known signatures to anomalous behaviors and automating the grind of triage.</p>
@@ -783,14 +783,14 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Building Scalable Systems - From a Single Server to Global Scale]]></title>
-        <id>https://romanmerkulov.me/posts/building-scalable-systems</id>
-        <link href="https://romanmerkulov.me/posts/building-scalable-systems"/>
-        <link rel="enclosure" href="https://romanmerkulov.me/logo.png" type="image/png"/>
+        <id>https://romanmerk.me/posts/building-scalable-systems</id>
+        <link href="https://romanmerk.me/posts/building-scalable-systems"/>
+        <link rel="enclosure" href="https://romanmerk.me/logo.png" type="image/png"/>
         <updated>2024-09-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Vertical vs horizontal scaling, microservices, statelessness, sharding—and pragmatic patterns like back pressure and circuit breakers.]]></summary>
         <content type="html"><![CDATA[<p>Every developer has dreamt of it: your app goes viral. The moment of euphoria hits as you see user numbers climbing... and then, the panic. The server slows to a crawl. Pages stop loading. Your brilliant creation, buckling under the weight of its own success, has crashed. This all‑too‑common nightmare is not a failure of the idea—it’s a failure of architecture.</p>
@@ -853,13 +853,13 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Initiative on Sponsorship Forwarding]]></title>
-        <id>https://romanmerkulov.me/posts/sponsorship-forwarding</id>
-        <link href="https://romanmerkulov.me/posts/sponsorship-forwarding"/>
+        <id>https://romanmerk.me/posts/sponsorship-forwarding</id>
+        <link href="https://romanmerk.me/posts/sponsorship-forwarding"/>
         <updated>2024-04-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[An initiative to support open-source ecosystem by Roman Merkulov.]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -875,7 +875,7 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
 <p>Among all the contributors and maintainers, there is a mix of individuals who have different working styles and levels of visibility. Some are more &quot;high-profile&quot; and actively share their work, while others prefer to stay low-profile and focus on their contributions behind the scenes. The different working styles should not diminish the value of their work.</p>
 <p>Naturely, front-facing projects and high-profile maintainers are much more likely to receive attention and sponsorships, while the underlying dependencies and low-profile maintainers are often overlooked. To illustrate this, let me present you <a href="https://www.explainxkcd.com/wiki/index.php/2347:_Dependency">this famous xkcd comic</a> again:</p>
 <p><img
-  src="https://romanmerkulov.me/images/oss-sponsor-dependencies.svg"
+  src="https://romanmerk.me/images/oss-sponsor-dependencies.svg"
   alt="Open-source Sponsor Dependencies"
   class="dark:invert-100 dark:op80 border-none! shadow-none! max-w-120"
 /></p>
@@ -954,39 +954,39 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Refreshed Nuxt ESLint Integrations]]></title>
-        <id>https://romanmerkulov.me/posts/refreshed-nuxt-eslint</id>
-        <link href="https://romanmerkulov.me/posts/refreshed-nuxt-eslint"/>
+        <id>https://romanmerk.me/posts/refreshed-nuxt-eslint</id>
+        <link href="https://romanmerk.me/posts/refreshed-nuxt-eslint"/>
         <updated>2024-04-10T12:00:00.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://nuxt.com/blog/eslint-module">Go to nuxt.com and read the full article</a>.</p>
 ]]></content>
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Introducing ESLint Config Inspector]]></title>
-        <id>https://romanmerkulov.me/posts/eslint-config-inspector</id>
-        <link href="https://romanmerkulov.me/posts/eslint-config-inspector"/>
+        <id>https://romanmerk.me/posts/eslint-config-inspector</id>
+        <link href="https://romanmerk.me/posts/eslint-config-inspector"/>
         <updated>2024-04-05T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://eslint.org/blog/2024/04/eslint-config-inspector/">Go to eslint.org and read the full announcement</a>.</p>
 ]]></content>
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Roman's Roads to Open Source - The Set Theory (React ver.)]]></title>
-        <id>https://romanmerkulov.me/posts/roads-to-oss-set-theory-react-paris-2024</id>
-        <link href="https://romanmerkulov.me/posts/roads-to-oss-set-theory-react-paris-2024"/>
+        <id>https://romanmerk.me/posts/roads-to-oss-set-theory-react-paris-2024</id>
+        <link href="https://romanmerk.me/posts/roads-to-oss-set-theory-react-paris-2024"/>
         <updated>2024-03-22T08:00:00.000Z</updated>
         <summary type="html"><![CDATA[Roman's Roads to Open Source - The Set Theory - React Paris 2024]]></summary>
         <content type="html"><![CDATA[<blockquote>
@@ -997,13 +997,13 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Mental Health in Open Source]]></title>
-        <id>https://romanmerkulov.me/posts/mental-health-oss</id>
-        <link href="https://romanmerkulov.me/posts/mental-health-oss"/>
+        <id>https://romanmerk.me/posts/mental-health-oss</id>
+        <link href="https://romanmerk.me/posts/mental-health-oss"/>
         <updated>2024-03-16T12:00:00.000Z</updated>
         <summary type="html"><![CDATA[Some of my thoughts on my mental health during my journey in Open Source]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -1053,7 +1053,7 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
 <p>This is actually the topic that drove me to write this blog post.</p>
 <p>Let's start with this <a href="https://en.wikipedia.org/wiki/Project_management_triangle">&quot;Iron Triangle&quot;</a> of <b important-text-hex-E3B65E>Velocity</b>, <b important-text-hex-D777B1>Scope</b> and <b important-text-hex-80BEDF>Quality</b>. <br><span op50>(typicall they are Quality/Speed/Cost where I made a few adjustments here)</span></p>
 <figure>
-  <img src="https://romanmerkulov.me/images/oss-mental-iron-triangle.svg" />
+  <img src="https://romanmerk.me/images/oss-mental-iron-triangle.svg" />
   <figcaption text-center>The Iron Triangle of Velocity-Scope-Quality</figcaption>
 </figure>
 <p>Usually, people would say -- in these three factors, you can <strong>only pick two</strong>. If you want to deliver a project faster, you might have to sacrifice the quality or have a smaller scope of features. If you want to have a high-quality and feature-rich product, you might have to sacrifice speed to deliver good stuff slowly, and so on.</p>
@@ -1103,26 +1103,26 @@ I continued doing so with the &quot;velocity&quot; <em>ignorantly</em> since the
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[The Evolution of Shiki v1.0]]></title>
-        <id>https://romanmerkulov.me/posts/evolution-of-shiki-v1</id>
-        <link href="https://romanmerkulov.me/posts/evolution-of-shiki-v1"/>
+        <id>https://romanmerk.me/posts/evolution-of-shiki-v1</id>
+        <link href="https://romanmerk.me/posts/evolution-of-shiki-v1"/>
         <updated>2024-03-11T12:00:00.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://nuxt.com/blog/shiki-v1">Go to nuxt.com and read the full article</a>.</p>
 ]]></content>
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[The Magic in Shiki Magic Move]]></title>
-        <id>https://romanmerkulov.me/posts/shiki-magic-move</id>
-        <link href="https://romanmerkulov.me/posts/shiki-magic-move"/>
+        <id>https://romanmerk.me/posts/shiki-magic-move</id>
+        <link href="https://romanmerk.me/posts/shiki-magic-move"/>
         <updated>2024-03-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The methodology behind Shiki Magic Move.]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -1262,13 +1262,13 @@ for (const el of moveElements) {
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Roman's Roads to Open Source - The Progressive Path]]></title>
-        <id>https://romanmerkulov.me/posts/roads-to-oss-progressive-vueams-2024</id>
-        <link href="https://romanmerkulov.me/posts/roads-to-oss-progressive-vueams-2024"/>
+        <id>https://romanmerk.me/posts/roads-to-oss-progressive-vueams-2024</id>
+        <link href="https://romanmerk.me/posts/roads-to-oss-progressive-vueams-2024"/>
         <updated>2024-02-29T08:00:00.000Z</updated>
         <summary type="html"><![CDATA[Roman's Roads to Open Source - The Progressive Path - Vue Amsterdam]]></summary>
         <content type="html"><![CDATA[<blockquote>
@@ -1279,13 +1279,13 @@ for (const el of moveElements) {
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[TwoSlash with Shiki]]></title>
-        <id>https://romanmerkulov.me/posts/shikiji-twoslash</id>
-        <link href="https://romanmerkulov.me/posts/shikiji-twoslash"/>
+        <id>https://romanmerk.me/posts/shikiji-twoslash</id>
+        <link href="https://romanmerk.me/posts/shikiji-twoslash"/>
         <updated>2023-12-12T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>Here is an example of using <a href="https://twoslash.netlify.app/">TwoSlash</a> with <a href="https://github.com/shikijs/shiki">Shiki</a>:</p>
 <pre><code class="language-ts">// @errors: 2540
@@ -1330,13 +1330,13 @@ todo.title = 'Hello'
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[GitHub-style Alerts]]></title>
-        <id>https://romanmerkulov.me/posts/github-alerts</id>
-        <link href="https://romanmerkulov.me/posts/github-alerts"/>
+        <id>https://romanmerk.me/posts/github-alerts</id>
+        <link href="https://romanmerk.me/posts/github-alerts"/>
         <updated>2023-11-30T10:00:00.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>[!TIP]<br>
@@ -1398,26 +1398,26 @@ Thanks for reading! :)</p>
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Nuxt Devtools v1.0]]></title>
-        <id>https://romanmerkulov.me/posts/nuxt-devtools-v1</id>
-        <link href="https://romanmerkulov.me/posts/nuxt-devtools-v1"/>
+        <id>https://romanmerk.me/posts/nuxt-devtools-v1</id>
+        <link href="https://romanmerk.me/posts/nuxt-devtools-v1"/>
         <updated>2023-11-13T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://nuxt.com/blog/nuxt-devtools-v1-0">Go to nuxt.com and read the full announcement</a>.</p>
 ]]></content>
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Roman's Roads to Open Source - The Set Theory]]></title>
-        <id>https://romanmerkulov.me/posts/roads-to-oss-set-theory-vuefesjapan-2023</id>
-        <link href="https://romanmerkulov.me/posts/roads-to-oss-set-theory-vuefesjapan-2023"/>
+        <id>https://romanmerk.me/posts/roads-to-oss-set-theory-vuefesjapan-2023</id>
+        <link href="https://romanmerk.me/posts/roads-to-oss-set-theory-vuefesjapan-2023"/>
         <updated>2023-10-28T08:00:00.000Z</updated>
         <summary type="html"><![CDATA[Roman's Roads to Open Source - The Set Theory - Vue Fes Japan 2023]]></summary>
         <content type="html"><![CDATA[<blockquote>
@@ -1428,13 +1428,13 @@ Thanks for reading! :)</p>
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Now, and the Future of Nuxt Devtools]]></title>
-        <id>https://romanmerkulov.me/posts/now-and-future-devtools-nuxt-nation-2023</id>
-        <link href="https://romanmerkulov.me/posts/now-and-future-devtools-nuxt-nation-2023"/>
+        <id>https://romanmerk.me/posts/now-and-future-devtools-nuxt-nation-2023</id>
+        <link href="https://romanmerk.me/posts/now-and-future-devtools-nuxt-nation-2023"/>
         <updated>2023-10-18T08:00:00.000Z</updated>
         <summary type="html"><![CDATA[Now, and the Future of Nuxt Devtools - Nuxt Nation 2023]]></summary>
         <content type="html"><![CDATA[<blockquote>
@@ -1447,13 +1447,13 @@ Thanks for reading! :)</p>
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Roman's Roads to Open Source - The Set Theory]]></title>
-        <id>https://romanmerkulov.me/posts/roads-to-oss-set-theory-viteconf-2023</id>
-        <link href="https://romanmerkulov.me/posts/roads-to-oss-set-theory-viteconf-2023"/>
+        <id>https://romanmerk.me/posts/roads-to-oss-set-theory-viteconf-2023</id>
+        <link href="https://romanmerk.me/posts/roads-to-oss-set-theory-viteconf-2023"/>
         <updated>2023-10-05T08:00:00.000Z</updated>
         <summary type="html"><![CDATA[Roman's Roads to Open Source - The Set Theory - ViteConf 2023]]></summary>
         <content type="html"><![CDATA[<blockquote>
@@ -1466,14 +1466,14 @@ Thanks for reading! :)</p>
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[From Siberia to Vienna - A Developer's Journey]]></title>
-        <id>https://romanmerkulov.me/posts/from-siberia-to-vienna</id>
-        <link href="https://romanmerkulov.me/posts/from-siberia-to-vienna"/>
-        <link rel="enclosure" href="https://romanmerkulov.me/logo.png" type="image/png"/>
+        <id>https://romanmerk.me/posts/from-siberia-to-vienna</id>
+        <link href="https://romanmerk.me/posts/from-siberia-to-vienna"/>
+        <link rel="enclosure" href="https://romanmerk.me/logo.png" type="image/png"/>
         <updated>2023-08-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[How scarcity, curiosity, and community shaped my engineering approach—from first principles to collaboration and craft.]]></summary>
         <content type="html"><![CDATA[<p>Every developer has an origin story. Mine begins in the vast quiet of Siberia, where patience and curiosity forged a resilient mindset. With limited access to hardware and slow internet, I learned to value every resource and think deeply about problems. Downloads took hours. Tutorials buffered. A single compiler error could stall an entire evening. That friction taught focus, perseverance, and an instinct to reason rather than guess.</p>
@@ -1491,13 +1491,13 @@ Thanks for reading! :)</p>
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Animated SVG Logo]]></title>
-        <id>https://romanmerkulov.me/posts/animated-svg-logo</id>
-        <link href="https://romanmerkulov.me/posts/animated-svg-logo"/>
+        <id>https://romanmerk.me/posts/animated-svg-logo</id>
+        <link href="https://romanmerk.me/posts/animated-svg-logo"/>
         <updated>2023-07-19T00:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>I recently replaced the logo on the top left corner with an animated SVG:</p>
 <p flex>
@@ -1516,7 +1516,7 @@ Thanks for reading! :)</p>
 </ul>
 <p>They covered this technique very well, highly recommend reading them if you are interested. Basically, the animation is done by a <strong>very long</strong> dash moving, in which you will see the dash as the drawing line and the gap as empty space. The length and position of the dash are controlled by <code>stroke-dasharray</code> and <code>stroke-dashoffset</code>, which are both animatable.</p>
 <h2>The Original Logo</h2>
-<p>My original logo <a href="/logo.svg" target="_blank" important-border-none inline-block><img src="https://romanmerkulov.me/logo.svg" h-1.5em dark:filter-invert important-m0 inline-block alt="My Logo in SVG" /></a> comes from around 8 years ago, I draw it with a pressure-sensitive pen on my Surface Pro 4. It was used as a temporary placeholder for the portfolio I was trying to build at that time. I later image-traced it with Adobe Illustrator to get the SVG version. Surprising to recall, it has been so long since then.</p>
+<p>My original logo <a href="/logo.svg" target="_blank" important-border-none inline-block><img src="https://romanmerk.me/logo.svg" h-1.5em dark:filter-invert important-m0 inline-block alt="My Logo in SVG" /></a> comes from around 8 years ago, I draw it with a pressure-sensitive pen on my Surface Pro 4. It was used as a temporary placeholder for the portfolio I was trying to build at that time. I later image-traced it with Adobe Illustrator to get the SVG version. Surprising to recall, it has been so long since then.</p>
 <div rounded shadow of-hidden border="~ base op20">
 <img src="/images/animated-svg-logo-vector.png" dark:invert-95 important-m0>
 </div>
@@ -1585,13 +1585,13 @@ path {
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[pnpm on External disk]]></title>
-        <id>https://romanmerkulov.me/posts/pnpm-external-disk</id>
-        <link href="https://romanmerkulov.me/posts/pnpm-external-disk"/>
+        <id>https://romanmerk.me/posts/pnpm-external-disk</id>
+        <link href="https://romanmerk.me/posts/pnpm-external-disk"/>
         <updated>2023-07-13T12:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>If you tried to use <a href="https://pnpm.io/">pnpm</a> to install a project on an external disk, it may not work right away because pnpm is heavily relying on symlinks, which doesn't work cross mount points. To workaround this, you can add the following config to your <code>.npmrc</code>:</p>
 <pre><code class="language-ini">package-import-method=copy
@@ -1602,13 +1602,13 @@ prefer-symlinked-executables=false
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Stable Diffusion QR Code 101]]></title>
-        <id>https://romanmerkulov.me/posts/ai-qrcode-101</id>
-        <link href="https://romanmerkulov.me/posts/ai-qrcode-101"/>
+        <id>https://romanmerk.me/posts/ai-qrcode-101</id>
+        <link href="https://romanmerk.me/posts/ai-qrcode-101"/>
         <updated>2023-07-10T05:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>[[toc]]</p>
 <p>
@@ -1622,7 +1622,7 @@ prefer-symlinked-executables=false
 <p>Images that are generated with <a href="https://stability.ai/blog/stable-diffusion-public-release">Stable Diffusion</a> with QR Codes as <a href="https://github.com/lllyasviel/ControlNet">ControlNet</a>'s input, making the QR Code data points blend into the artwork while still being scannable by QR Code readers.</p>
 <figure pt-5>
   <div grid="~ cols-1 md:cols-3 gap-1" lg:scale-120 md:scale-110>
-    <img src="https://romanmerkulov.me/images/ai-qrcode-101-example2.jpg" rounded shadow important-m0 />
+    <img src="https://romanmerk.me/images/ai-qrcode-101-example2.jpg" rounded shadow important-m0 />
     <img src="/images/ai-qrcode-101-example1.jpg" rounded shadow important-m0 />
     <img src="/images/ai-qrcode-101-example3.jpg" rounded shadow important-m0 />
   </div>
@@ -2226,13 +2226,13 @@ prefer-symlinked-executables=false
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Refining AI Generated QR Code]]></title>
-        <id>https://romanmerkulov.me/posts/ai-qrcode-refine</id>
-        <link href="https://romanmerkulov.me/posts/ai-qrcode-refine"/>
+        <id>https://romanmerk.me/posts/ai-qrcode-refine</id>
+        <link href="https://romanmerk.me/posts/ai-qrcode-refine"/>
         <updated>2023-06-30T17:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>[[toc]]</p>
 <blockquote>
@@ -2241,7 +2241,7 @@ prefer-symlinked-executables=false
 <p>Last week, I wrote a <a href="/posts/ai-qrcode">blog post</a> about how I learned to generate scannable QR Codes. When doing so, I consider my goal is to find an image that looks like a QR Code as little as possible to humans, but still be recognizable by the machine.</p>
 <p>We need to find a balance, tweaking the weights to try and error. It's still quite hard to find a good composition that represents the black &amp; white spots, while keeping the content meaningful to human. If you go too far, the QR Code will be unscannable, and if you don't go far enough, the image will just be like a boring QR Code.</p>
 <p>Since there is quite some randomness in the process, sometimes it could be a pity when you find a good one but realize it's not scannable. To improve this, my workflow was to open up Photoshop, overlay the generated image with the original QR Code, manually check the difference, use the brush to mark those spots and send to <strong>inpaint</strong> to draw those areas. It works to some extent, but pretty inefficient as you need to go back and forth quite a few times. Meanwhile, doing this manually can also be inaccurate as the scanning algorithm might see them differently.</p>
-<p><img src="https://romanmerkulov.me/images/ai-qrcode-refine-5.jpg" alt="Steps from QR Code to final image"></p>
+<p><img src="https://romanmerk.me/images/ai-qrcode-refine-5.jpg" alt="Steps from QR Code to final image"></p>
 <p>So, I need to find a way to automate this, helping me to verify and refine the generated QR Code easier. And I came up with a simple web tool to do so. Let me introduce you to a bit about it.</p>
 <div i-ri-arrow-right-line /> <a href="https://qrcode.antfu.me/" target="_blank">Roman's QR Code Toolkit</a>
 <h2>Generating the Base QR Code</h2>
@@ -2318,13 +2318,13 @@ prefer-symlinked-executables=false
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Stylistic QR Code with Stable Diffusion]]></title>
-        <id>https://romanmerkulov.me/posts/ai-qrcode</id>
-        <link href="https://romanmerkulov.me/posts/ai-qrcode"/>
+        <id>https://romanmerk.me/posts/ai-qrcode</id>
+        <link href="https://romanmerk.me/posts/ai-qrcode"/>
         <updated>2023-06-25T05:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>[[toc]]</p>
 <blockquote>
@@ -2335,7 +2335,7 @@ prefer-symlinked-executables=false
 </ul>
 </blockquote>
 <p>Yesterday, I created this image using <a href="https://stability.ai/blog/stable-diffusion-public-release">Stable Diffusion</a> and <a href="https://github.com/lllyasviel/ControlNet">ControlNet</a>, and shared on <a href="https://twitter.com/antfu7/status/1672671149698818048">Twitter</a> and <a href="https://www.instagram.com/p/Ct4fpkgtc1W/">Instagram</a> -- an illustration that also functions as a scannable QR code.</p>
-<p><img src="https://romanmerkulov.me/images/ai-qrcode-final.jpg" alt=""></p>
+<p><img src="https://romanmerk.me/images/ai-qrcode-final.jpg" alt=""></p>
 <QRNotScannable mt--2 />
 <p>The process of creating it was super fun, and I'm quite satisfied with the outcome.</p>
 <p>In this post, I would like to share some insights into my learning journey and the approaches I adopted to create this image. Additionally, I want to take this opportunity to credit the remarkable tools and models that made this project possible.</p>
@@ -2452,13 +2452,13 @@ prefer-symlinked-executables=false
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[DX with Nuxt DevTools]]></title>
-        <id>https://romanmerkulov.me/posts/nuxt-dx-strasbourg-2023</id>
-        <link href="https://romanmerkulov.me/posts/nuxt-dx-strasbourg-2023"/>
+        <id>https://romanmerk.me/posts/nuxt-dx-strasbourg-2023</id>
+        <link href="https://romanmerk.me/posts/nuxt-dx-strasbourg-2023"/>
         <updated>2023-05-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Development Experience with DevTools - StrasbourgJS 2023]]></summary>
         <content type="html"><![CDATA[<blockquote>
@@ -2471,13 +2471,13 @@ prefer-symlinked-executables=false
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[How I Manage GitHub Notifications]]></title>
-        <id>https://romanmerkulov.me/posts/manage-github-notifications-2023</id>
-        <link href="https://romanmerkulov.me/posts/manage-github-notifications-2023"/>
+        <id>https://romanmerk.me/posts/manage-github-notifications-2023</id>
+        <link href="https://romanmerk.me/posts/manage-github-notifications-2023"/>
         <updated>2023-05-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Manage GitHub Notifications - GitHub Maintainer Summit 2023]]></summary>
         <content type="html"><![CDATA[<blockquote>
@@ -2529,13 +2529,13 @@ prefer-symlinked-executables=false
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Sliding Enter Animation]]></title>
-        <id>https://romanmerkulov.me/posts/sliding-enter-animation</id>
-        <link href="https://romanmerkulov.me/posts/sliding-enter-animation"/>
+        <id>https://romanmerk.me/posts/sliding-enter-animation</id>
+        <link href="https://romanmerk.me/posts/sliding-enter-animation"/>
         <updated>2023-05-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Adding an elegant sliding enter animation to your blog.]]></summary>
         <content type="html"><![CDATA[<script setup lag="ts">
@@ -2642,26 +2642,26 @@ const router = useRouter()
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Introducing Nuxt Devtools]]></title>
-        <id>https://romanmerkulov.me/posts/introducing-nuxt-devtools</id>
-        <link href="https://romanmerkulov.me/posts/introducing-nuxt-devtools"/>
+        <id>https://romanmerk.me/posts/introducing-nuxt-devtools</id>
+        <link href="https://romanmerk.me/posts/introducing-nuxt-devtools"/>
         <updated>2023-03-27T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://nuxt.com/blog/introducing-nuxt-devtools">Go to nuxt.com and read the full announcement</a>.</p>
 ]]></content>
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Break Lines in JS]]></title>
-        <id>https://romanmerkulov.me/posts/break-lines-in-js</id>
-        <link href="https://romanmerkulov.me/posts/break-lines-in-js"/>
+        <id>https://romanmerk.me/posts/break-lines-in-js</id>
+        <link href="https://romanmerk.me/posts/break-lines-in-js"/>
         <updated>2023-02-10T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>You probably don't need it usually, but in case you want to break lines programmatically in JavaScript, here is my lazy man's solution:</p>
 <!-- eslint-skip -->
@@ -2680,13 +2680,13 @@ console.log(lines)
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Development Experience with Nuxt]]></title>
-        <id>https://romanmerkulov.me/posts/nuxt-dx-2023</id>
-        <link href="https://romanmerkulov.me/posts/nuxt-dx-2023"/>
+        <id>https://romanmerk.me/posts/nuxt-dx-2023</id>
+        <link href="https://romanmerk.me/posts/nuxt-dx-2023"/>
         <updated>2023-02-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Development Experience with Nuxt - Vue Amsterdam 2023]]></summary>
         <content type="html"><![CDATA[<blockquote>
@@ -2768,20 +2768,20 @@ console.log(lines)
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Bonjour Paris!]]></title>
-        <id>https://romanmerkulov.me/posts/bonjour-paris</id>
-        <link href="https://romanmerkulov.me/posts/bonjour-paris"/>
+        <id>https://romanmerk.me/posts/bonjour-paris</id>
+        <link href="https://romanmerk.me/posts/bonjour-paris"/>
         <link rel="enclosure" href="https://antfu.me/images/a-paris-1.jpg" type="image/jpg"/>
         <updated>2022-12-10T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>Bonjour Paris!</p>
 <p>I am so excited to share with you that we (my GF Inès and me) have <strong>moved to Paris</strong>!</p>
 <p>Paris is always our dream city, it's still a bit unreal to see that we are actually here! Here I am going to share with you some of our life updates and what would they mean to us.</p>
 <figure>
-  <img src="https://romanmerkulov.me/images/a-paris-1.jpg" alt="Inès holding a newspaper by @old.press" />
+  <img src="https://romanmerk.me/images/a-paris-1.jpg" alt="Inès holding a newspaper by @old.press" />
   <figcaption>Inès holding a newspaper by <a href="https://www.instagram.com/old.press" target="_blank">@old.press</a></figcaption>
 </figure>
 <h2>Thanks</h2>
@@ -2819,13 +2819,13 @@ console.log(lines)
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Patterns of VueUse]]></title>
-        <id>https://romanmerkulov.me/posts/patterns-of-vueuse-vuefes-japan-2022</id>
-        <link href="https://romanmerkulov.me/posts/patterns-of-vueuse-vuefes-japan-2022"/>
+        <id>https://romanmerk.me/posts/patterns-of-vueuse-vuefes-japan-2022</id>
+        <link href="https://romanmerk.me/posts/patterns-of-vueuse-vuefes-japan-2022"/>
         <updated>2022-10-16T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Patterns of VueUse - Vue Fes Japan 2022]]></summary>
         <content type="html"><![CDATA[<blockquote>
@@ -2837,13 +2837,13 @@ console.log(lines)
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Vite, the on-demand DX]]></title>
-        <id>https://romanmerkulov.me/posts/vite-on-demand-dx-viteconf-2022</id>
-        <link href="https://romanmerkulov.me/posts/vite-on-demand-dx-viteconf-2022"/>
+        <id>https://romanmerk.me/posts/vite-on-demand-dx-viteconf-2022</id>
+        <link href="https://romanmerk.me/posts/vite-on-demand-dx-viteconf-2022"/>
         <updated>2022-10-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Vite, the on-demand DX - ViteConf 2022]]></summary>
         <content type="html"><![CDATA[<blockquote>
@@ -2857,13 +2857,13 @@ console.log(lines)
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Dev SSR on Nuxt with Vite]]></title>
-        <id>https://romanmerkulov.me/posts/dev-ssr-on-nuxt</id>
-        <link href="https://romanmerkulov.me/posts/dev-ssr-on-nuxt"/>
+        <id>https://romanmerk.me/posts/dev-ssr-on-nuxt</id>
+        <link href="https://romanmerk.me/posts/dev-ssr-on-nuxt"/>
         <updated>2022-10-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The journey of how we made development time SSR working on Nuxt with Vite]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -3035,7 +3035,7 @@ export default await importModule('/foo')
 <p>We ended up extracting this logic into a more general package called <a href="https://github.com/vitest-dev/vitest/tree/main/packages/vite-node#readme"><code>vite-node</code></a>, so it could also be used outside Nuxt.</p>
 <p>Not only does <code>vite-node</code> make it on-demand by only requesting modules it needs, but it also makes it possible to control the module cache to provide hot module replacement. We implemented the HMR logic in <code>vite-node</code>, similiar to how Vite handles it on the client side -- making the SSR reloads surprisingly fast.</p>
 <figure>
-<img src="https://romanmerkulov.me/images/nuxt-vite-node-hmr.png" rounded-lg>
+<img src="https://romanmerk.me/images/nuxt-vite-node-hmr.png" rounded-lg>
 <figcaption>Nuxt Dev SSR with HMR</figcaption>
 </figure>
 <p>From a rough testing with a real-world Nuxt 3 app with 15 routes and 7 modules, we see the SSR reload time by changing a single Vue file goes <strong>from ~200ms to &lt;0.01ms with <code>vite-node</code></strong>. Since it switched a full build to module level on-demand HMR, the difference will be more significant as the project grows.</p>
@@ -3091,13 +3091,13 @@ export default await importModule('/foo')
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Why I don't use Prettier]]></title>
-        <id>https://romanmerkulov.me/posts/why-not-prettier</id>
-        <link href="https://romanmerkulov.me/posts/why-not-prettier"/>
+        <id>https://romanmerk.me/posts/why-not-prettier</id>
+        <link href="https://romanmerk.me/posts/why-not-prettier"/>
         <updated>2022-10-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The reason why I don't use Prettier in my projects.]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -3124,7 +3124,7 @@ export default await importModule('/foo')
 <p>Sometimes when you modify a string literal in JavaScript that may make the line a bit longer than the value of <code>printwidth</code>, Prettier will force wrapping the line. It breaks the inline diffing and make the changes hard to review. Imagine in another pull request, we might reduce the string a bit shorter, Prettier will then unwrap the lines back to one line. Back and forth, it creates a lot of unnecessary noises.</p>
 <p>The following image shows another example:</p>
 <a href="https://prettier.io/playground/#N4Igxg9gdgLgprEAuc0DOMAEBXNcBOamAvJgNoA6UmmwOe+AkgCZKYCMANPQVAIYBbOGwogAggBsAZgEs4mAMJ98QiTJh9RmAL6cqNOrgIs2AJm5H8-ISJABxGf0wAlCGgAWfKFt37aPJlZMAGYLBmthTFEAZXdsAHNMADk+ACNsHz1qf0sTTAAWMN5BSNFnPncBL0wAMXw+Bky-QwY8gFYiqxLbABU3d3kAGQBPbFSEJuyW4yCANk6I22iCeJkIZJkJCCllSYBdAG4qEE4QCAAHGDWoNGRQZXwIAHcABWUEW5Q+CSe+YdvTql6mAANZwGDREqDRxwZA7CR4QHAsEQ858MCOeLIGD4bBwU5wATjZjMODMQZeeLYPjxOA1CAqPgwK5QLFfbAwCAnEDuGACCQAdXc6jgaDRYDgyxu6hkADd1MNkOA0ACQI4GDAXvV4lU4d9ESAAFZoAAe0UxEjgAEVsBB4HqEfiQGjCAQlak0nAJNzzvhHDABTJmDB3Mh8uZnY88AL6uclb7RQRZbDTgBHW3wLUXT4gBoAWigcDJZO5+Dg6ZkZa1NN1SHhBrwAhk2NxTrQFutGdhdf1To0qUDwdDSAjOL4m0xCggAlrIFFbW5Rh6aU+9adsrxjCgpNg0TAfsuYm30Rgw0tDrw2m0QA" target="_blank">
-<img src="https://romanmerkulov.me/images/prettier-print-width.png" scale-110 block m="b--5!" />
+<img src="https://romanmerk.me/images/prettier-print-width.png" scale-110 block m="b--5!" />
 </a>
 <p><sup><em>The 42 of <code>printWidth</code> is made up for demonstration, but it happens in any <code>printWidth</code></em></sup></p>
 <p>On the left is the input code and on the right is the output of Prettier. I don't need to point out but you probably already have the answer of which one is &quot;more pretty&quot;. From my point of view, Prettier follows the rule too strict. And in fact it makes the code much harder to read and modify, violating the initial goal of formatting - to make the code more readable.</p>
@@ -3164,13 +3164,13 @@ export default antfu({
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Why Reproductions are Required]]></title>
-        <id>https://romanmerkulov.me/posts/why-reproductions-are-required</id>
-        <link href="https://romanmerkulov.me/posts/why-reproductions-are-required"/>
+        <id>https://romanmerk.me/posts/why-reproductions-are-required</id>
+        <link href="https://romanmerk.me/posts/why-reproductions-are-required"/>
         <updated>2022-05-30T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[My thoughts on why reproductions are important in open source.]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -3179,7 +3179,7 @@ export default antfu({
 </blockquote>
 <p>If you have ever browsed the issue lists in my repos or created one, you might sometimes see I reply with the following comment and then close the issue:</p>
 <figure>
-<img src="https://romanmerkulov.me/images/issue-close-without-repro-light.png" img-light rounded-lg>
+<img src="https://romanmerk.me/images/issue-close-without-repro-light.png" img-light rounded-lg>
 <img src="/images/issue-close-without-repro-dark.png" img-dark rounded-lg>
 <figcaption>We temporarily close this due to the lack of enough information. Please provide a <a href="https://stackoverflow.com/help/minimal-reproducible-example" target="_blank">minimal reproduction</a> to reopen the issue. Thanks.</figcaption>
 </figure>
@@ -3245,13 +3245,13 @@ export default antfu({
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Introduction to Vitest]]></title>
-        <id>https://romanmerkulov.me/posts/introduction-to-vitest-vue-nation-2022</id>
-        <link href="https://romanmerkulov.me/posts/introduction-to-vitest-vue-nation-2022"/>
+        <id>https://romanmerk.me/posts/introduction-to-vitest-vue-nation-2022</id>
+        <link href="https://romanmerk.me/posts/introduction-to-vitest-vue-nation-2022"/>
         <updated>2022-01-26T08:00:00.000Z</updated>
         <summary type="html"><![CDATA[Introduction to Vitest - Vue.js Nation 2022]]></summary>
         <content type="html"><![CDATA[<blockquote>
@@ -3264,13 +3264,13 @@ export default antfu({
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Ship ESM & CJS in one Package]]></title>
-        <id>https://romanmerkulov.me/posts/publish-esm-and-cjs</id>
-        <link href="https://romanmerkulov.me/posts/publish-esm-and-cjs"/>
+        <id>https://romanmerk.me/posts/publish-esm-and-cjs</id>
+        <link href="https://romanmerk.me/posts/publish-esm-and-cjs"/>
         <updated>2021-11-29T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[A short tutorial of shipping both ESM and CJS dual formats in a single NPM package.]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -3477,13 +3477,13 @@ export default defineBuildConfig({
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Icons in Pure CSS]]></title>
-        <id>https://romanmerkulov.me/posts/icons-in-pure-css</id>
-        <link href="https://romanmerkulov.me/posts/icons-in-pure-css"/>
+        <id>https://romanmerk.me/posts/icons-in-pure-css</id>
+        <link href="https://romanmerk.me/posts/icons-in-pure-css"/>
         <updated>2021-10-31T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[The icon solution in pure CSS.]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -3669,13 +3669,13 @@ export default defineConfig({
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Reimagine Atomic CSS]]></title>
-        <id>https://romanmerkulov.me/posts/reimagine-atomic-css</id>
-        <link href="https://romanmerkulov.me/posts/reimagine-atomic-css"/>
+        <id>https://romanmerk.me/posts/reimagine-atomic-css</id>
+        <link href="https://romanmerk.me/posts/reimagine-atomic-css"/>
         <updated>2021-10-26T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[Let's take a step back and reimagine what's atomic CSS could be in the best.]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -3704,7 +3704,7 @@ export default defineConfig({
 <p>We are not going to talk about the pros and cons of using atomic CSS here, as you might hear them many times already. Today, we are going to use a framework author's perspective to see how we make the trade-off building those frameworks you love, their limitations, what we can do better to eventually benefits your daily work.</p>
 <h2>The Background</h2>
 <p>Before we start, let's talk a bit about the background. If you don't know me, my name is Roman Merkulov, and I am a <a href="https://vitejs.dev/">Vite</a> team member and the creator of <a href="https://github.com/antfu/vitesse">Vitesse</a>, one of the most popular starter templates for Vite. I enjoy the speedy development experience of atomic CSS (or CSS utilities), so I chose to use <a href="https://tailwindcss.com/">Tailwind CSS</a> as the default UI framework for Vitesse. While Vite should be incredibly fast compared to Webpack and others, Tailwind, which generates megabytes of utility CSS, makes the start-up and HMR on Vite slow as the old days. I once thought this was some kind of trade-off for using atomic CSS solutions - until I discovered <a href="https://windicss.org">Windi CSS</a>.</p>
-<img src="https://romanmerkulov.me/images/discover-windicss.png" class="transform scale-110 py-2"/>
+<img src="https://romanmerk.me/images/discover-windicss.png" class="transform scale-110 py-2"/>
 <p><a href="https://windicss.org">Windi CSS</a> was a Tailwind CSS alternative that was written from scratch. It has zero dependencies and does not rely on PostCSS and Autoprefixer. More importantly, it features <strong>on-demanded usage</strong>. Instead of generating all the combinations of utilities that you rarely used to purge later, Windi CSS only generates those actually presented in your codebase. This fits perfectly well with Vite's on-demanded philosophy, and theoretically, it should be way much faster than Tailwind. So I wrote <a href="https://github.com/windicss/vite-plugin-windicss">the Vite plugin</a> for it, and it turned out to be <a href="https://twitter.com/antfu7/status/1361398324587163648">20~100x faster</a> than Tailwind.</p>
 <p>It went pretty well, Windi CSS grown into a team, we made many more innovations like <a href="https://windicss.org/features/value-auto-infer.html">Value Infering</a>, <a href="https://windicss.org/features/variant-groups.html">Variant Groups</a>, <a href="https://windicss.org/features/shortcuts.html">Shortcuts</a>, <a href="https://twitter.com/antfu7/status/1372244287975387145">Design in DevTools</a>, <a href="https://twitter.com/windi_css/status/1387460661135896577">Attributify Mode</a>, etc. As the result, Tailwind was <a href="https://twitter.com/adamwathan/status/1371542711086559237?s=20">ass kicked</a> to introduce their own on-demand <a href="https://tailwindcss.com/docs/just-in-time-mode">JIT engine</a>.</p>
 <h2>Breakdown Atomic CSS</h2>
@@ -4101,13 +4101,13 @@ tailwindcss  v3.0.0-alpha.1  1258.54 ms / 1249.79 ms (x251.28)
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[New Ways to Vue]]></title>
-        <id>https://romanmerkulov.me/posts/new-ways-to-vue-london-2021</id>
-        <link href="https://romanmerkulov.me/posts/new-ways-to-vue-london-2021"/>
+        <id>https://romanmerk.me/posts/new-ways-to-vue-london-2021</id>
+        <link href="https://romanmerk.me/posts/new-ways-to-vue-london-2021"/>
         <updated>2021-10-20T08:00:00.000Z</updated>
         <summary type="html"><![CDATA[New Ways to Vue - Vue.js Live London 2021]]></summary>
         <content type="html"><![CDATA[<blockquote>
@@ -4120,13 +4120,13 @@ tailwindcss  v3.0.0-alpha.1  1258.54 ms / 1249.79 ms (x251.28)
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Range in JavaScript]]></title>
-        <id>https://romanmerkulov.me/posts/range-in-javascript</id>
-        <link href="https://romanmerkulov.me/posts/range-in-javascript"/>
+        <id>https://romanmerk.me/posts/range-in-javascript</id>
+        <link href="https://romanmerk.me/posts/range-in-javascript"/>
         <updated>2021-09-13T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>Credit to <a href="https://copilot.github.com/">GitHub Copilot</a>.</p>
 <p>I didn't know you could provide a map function to <code>Array.from</code> as a second argument until today.</p>
@@ -4137,13 +4137,13 @@ tailwindcss  v3.0.0-alpha.1  1258.54 ms / 1249.79 ms (x251.28)
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Journey with Icons Continues]]></title>
-        <id>https://romanmerkulov.me/posts/journey-with-icons-continues</id>
-        <link href="https://romanmerkulov.me/posts/journey-with-icons-continues"/>
+        <id>https://romanmerk.me/posts/journey-with-icons-continues</id>
+        <link href="https://romanmerk.me/posts/journey-with-icons-continues"/>
         <updated>2021-09-10T18:00:00.000Z</updated>
         <summary type="html"><![CDATA[My journey with icons and the solutions I made along the way]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -4427,13 +4427,13 @@ export default defineConfig({
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Isomorphic `__dirname`]]></title>
-        <id>https://romanmerkulov.me/posts/isomorphic-dirname</id>
-        <link href="https://romanmerkulov.me/posts/isomorphic-dirname"/>
+        <id>https://romanmerk.me/posts/isomorphic-dirname</id>
+        <link href="https://romanmerk.me/posts/isomorphic-dirname"/>
         <updated>2021-08-30T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>In ESM, you might found your old friends <code>__dirname</code> and <code>__filename</code> are no longer available. When you search for <a href="https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-when-using-the-experimental-modules-flag">solutions</a>, you will find that you will need to parse <code>import.meta.url</code> to get the equivalents. While most of the solutions only show you the way to get them in ESM only, If you like me, who write modules in TypeScript and transpile to both CJS and ESM at the same time using tools like <a href="https://tsup.egoist.dev/"><code>tsup</code></a>. Here is the isomorphic solution:</p>
 <pre><code class="language-js">import { dirname } from 'node:path'
@@ -4447,13 +4447,13 @@ const _dirname = typeof __dirname !== 'undefined'
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[GitHub Co-authors]]></title>
-        <id>https://romanmerkulov.me/posts/github-co-authors</id>
-        <link href="https://romanmerkulov.me/posts/github-co-authors"/>
+        <id>https://romanmerk.me/posts/github-co-authors</id>
+        <link href="https://romanmerk.me/posts/github-co-authors"/>
         <updated>2021-08-24T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>You might found GitHub sometimes shows you a commit with multiple authors. This is commonly happening in squashed pull requests when multiple people are involved with the reviewing and made suggestions or changes. In that situation, GitHub will automatically inject the <a href="https://docs.github.com/en/github/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors"><code>Co-authored-by:</code></a> to the commit message. This is a great way to give contributors credits while keeping the commit history clean.</p>
 <p>Note that the format is like <code>Co-authored-by: name &lt;name@example.com&gt;</code>, normally GitHub will fill that for you so you don't need to worry about that, but if you want to add it manually, you have to get the email addresses of the contributors. But how do you know their emails?</p>
@@ -4464,13 +4464,13 @@ const _dirname = typeof __dirname !== 'undefined'
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Async with Composition API]]></title>
-        <id>https://romanmerkulov.me/posts/async-with-composition-api</id>
-        <link href="https://romanmerkulov.me/posts/async-with-composition-api"/>
+        <id>https://romanmerk.me/posts/async-with-composition-api</id>
+        <link href="https://romanmerk.me/posts/async-with-composition-api"/>
         <updated>2021-07-16T08:00:00.000Z</updated>
         <summary type="html"><![CDATA[Notes about the caveat when using async functions in Vue Composition API.]]></summary>
         <content type="html"><![CDATA[<p>There is a major caveat when working with asynchronous functions in Vue Composition API, that I believe many of you have ever come across. I have acknowledged it for a while from somewhere, but every time I want to have a detailed reference and share to others, I can't find it's documented anywhere. So, I am thinking about writing one, with a detailed explanation while sorting out the possible solutions for you.</p>
@@ -4707,13 +4707,13 @@ export default {
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Get Package Root]]></title>
-        <id>https://romanmerkulov.me/posts/get-package-root</id>
-        <link href="https://romanmerkulov.me/posts/get-package-root"/>
+        <id>https://romanmerk.me/posts/get-package-root</id>
+        <link href="https://romanmerk.me/posts/get-package-root"/>
         <updated>2021-07-14T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>When you want to get the real file path of a certain package, you could use <code>require.resolve</code> to fetch their main entry path.</p>
 <pre><code class="language-bash">&gt; require.resolve('vite')
@@ -4732,13 +4732,13 @@ export default {
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Optimize Await]]></title>
-        <id>https://romanmerkulov.me/posts/optimize-await</id>
-        <link href="https://romanmerkulov.me/posts/optimize-await"/>
+        <id>https://romanmerk.me/posts/optimize-await</id>
+        <link href="https://romanmerk.me/posts/optimize-await"/>
         <updated>2021-07-01T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p><code>async</code> / <code>await</code> in ES7 is truly a life-saver for the JavaScript world. It allows you to avoid <a href="http://callbackhell.com/">callback hell</a> in your code and make it more readable. However, a common pitfall is that when you <code>await</code> a huge asynchronous task that takes very long time, it blocks the following code and could potentially make your app slow.</p>
 <p>For example:</p>
@@ -4814,13 +4814,13 @@ const plugin = createPlugin()
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[About Yak Shaving]]></title>
-        <id>https://romanmerkulov.me/posts/about-yak-shaving</id>
-        <link href="https://romanmerkulov.me/posts/about-yak-shaving"/>
+        <id>https://romanmerk.me/posts/about-yak-shaving</id>
+        <link href="https://romanmerk.me/posts/about-yak-shaving"/>
         <updated>2021-05-19T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>[[toc]]</p>
 <blockquote>
@@ -4880,13 +4880,13 @@ You don’t want to show up empty-handed, so you stop for a bottle of wine…</p
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Composable Vue]]></title>
-        <id>https://romanmerkulov.me/posts/composable-vue-vueday-2021</id>
-        <link href="https://romanmerkulov.me/posts/composable-vue-vueday-2021"/>
+        <id>https://romanmerk.me/posts/composable-vue-vueday-2021</id>
+        <link href="https://romanmerk.me/posts/composable-vue-vueday-2021"/>
         <updated>2021-04-28T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[Slides & transcript for my talk at VueDay 2021]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -5399,13 +5399,13 @@ import { defineComponent, reactive, ref } from 'vue-demi'
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Develop with Vite]]></title>
-        <id>https://romanmerkulov.me/posts/vue-beijing-2021</id>
-        <link href="https://romanmerkulov.me/posts/vue-beijing-2021"/>
+        <id>https://romanmerk.me/posts/vue-beijing-2021</id>
+        <link href="https://romanmerk.me/posts/vue-beijing-2021"/>
         <updated>2021-03-28T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>This is the transcript of my talk at <a href="https://twitter.com/beijing_vue">Vue Beijing</a></p>
@@ -5543,13 +5543,13 @@ export default {
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Reflection of Speaking in Public]]></title>
-        <id>https://romanmerkulov.me/posts/reflection-of-speaking-in-public</id>
-        <link href="https://romanmerkulov.me/posts/reflection-of-speaking-in-public"/>
+        <id>https://romanmerk.me/posts/reflection-of-speaking-in-public</id>
+        <link href="https://romanmerk.me/posts/reflection-of-speaking-in-public"/>
         <updated>2021-03-27T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[My sincere apologies to everyone involved.]]></summary>
         <content type="html"><![CDATA[<blockquote>
@@ -5574,13 +5574,13 @@ export default {
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Type your Config]]></title>
-        <id>https://romanmerkulov.me/posts/type-your-config</id>
-        <link href="https://romanmerkulov.me/posts/type-your-config"/>
+        <id>https://romanmerk.me/posts/type-your-config</id>
+        <link href="https://romanmerk.me/posts/type-your-config"/>
         <updated>2021-03-24T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>Configurations can be quite complex, and sometimes you may want to utilize the great type checking that TypeScript provided. Change your <code>xxx.config.js</code> to <code>xxx.config.ts</code> is not an ideal solutions as you will need to have a Node.js register involved to transpile it into JavaScript and some tools might not support doing that way. Fortunately, TypeScript also support type check in plain JavaScript file with JSDoc. Here is an example of Webpack config with type checks:</p>
 <pre><code class="language-ts">// webpack.config.js
@@ -5617,13 +5617,13 @@ export function defineConfig(options: UserConfig) {
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Windi CSS and Tailwind JIT]]></title>
-        <id>https://romanmerkulov.me/posts/windicss-and-tailwind-jit</id>
-        <link href="https://romanmerkulov.me/posts/windicss-and-tailwind-jit"/>
+        <id>https://romanmerk.me/posts/windicss-and-tailwind-jit</id>
+        <link href="https://romanmerk.me/posts/windicss-and-tailwind-jit"/>
         <updated>2021-03-18T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[Wish this is the end.]]></summary>
         <content type="html"><![CDATA[<blockquote>
@@ -5655,13 +5655,13 @@ export function defineConfig(options: UserConfig) {
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Typed Provide and Inject in Vue]]></title>
-        <id>https://romanmerkulov.me/posts/typed-provide-and-inject-in-vue</id>
-        <link href="https://romanmerkulov.me/posts/typed-provide-and-inject-in-vue"/>
+        <id>https://romanmerk.me/posts/typed-provide-and-inject-in-vue</id>
+        <link href="https://romanmerk.me/posts/typed-provide-and-inject-in-vue"/>
         <updated>2021-03-05T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>I didn't know that you can type <code>provide()</code> and <code>inject()</code> elegantly until I watched <a href="https://github.com/LinusBorg/">Thorsten Lünborg</a>'s talk on <a href="https://vuejs.amsterdam/">Vue Amsterdam</a>.</p>
 <p>The basic idea here is the Vue offers a type utility <code>InjectionKey</code> will you can type a Symbol to hold the type of your injection values. And when you use <code>provide()</code> and <code>inject()</code> with that symbol, it can infer the type of provider and return value automatically.</p>
@@ -5707,13 +5707,13 @@ export default {
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Color Scheme for VS Code]]></title>
-        <id>https://romanmerkulov.me/posts/color-scheme-for-vscode-ext</id>
-        <link href="https://romanmerkulov.me/posts/color-scheme-for-vscode-ext"/>
+        <id>https://romanmerk.me/posts/color-scheme-for-vscode-ext</id>
+        <link href="https://romanmerk.me/posts/color-scheme-for-vscode-ext"/>
         <updated>2021-03-01T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>There is currently no API to access colors of current theme in VS Code Extensions, nor the meta information of them. It frustrated me for a long while, until today I came up with a dirty but working solution.</p>
 <p>Since most of the themes follow the conversions of having <code>Light</code> or <code>Dark</code> in their names. Then we can have:</p>
@@ -5740,13 +5740,13 @@ export function isDarkTheme() {
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Types for Submodules]]></title>
-        <id>https://romanmerkulov.me/posts/types-for-sub-modules</id>
-        <link href="https://romanmerkulov.me/posts/types-for-sub-modules"/>
+        <id>https://romanmerk.me/posts/types-for-sub-modules</id>
+        <link href="https://romanmerk.me/posts/types-for-sub-modules"/>
         <updated>2021-03-01T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>When you build multiple entries in a single package, you exports them with <code>exports</code> syntax. Like</p>
 <pre><code class="language-json">{
@@ -5791,13 +5791,13 @@ export * from './dist/foo.d.ts'
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Match Quotes in Pairs]]></title>
-        <id>https://romanmerkulov.me/posts/match-quotes-in-pairs</id>
-        <link href="https://romanmerkulov.me/posts/match-quotes-in-pairs"/>
+        <id>https://romanmerk.me/posts/match-quotes-in-pairs</id>
+        <link href="https://romanmerk.me/posts/match-quotes-in-pairs"/>
         <updated>2021-02-28T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>In JavaScript, single quotes('') and double quotes(&quot;&quot;) are interchangeable. With ES6, we now even have backticks(``) for template literals. When you want to write a quick script to find all the strings without introducing a heavy parser, you may think about using RegExp. For example, you can have:</p>
 <pre><code class="language-ts">/['&quot;`](.*?)['&quot;`]/g
@@ -5819,13 +5819,13 @@ export * from './dist/foo.d.ts'
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Match Chinese Characters]]></title>
-        <id>https://romanmerkulov.me/posts/match-chinese-characters</id>
-        <link href="https://romanmerkulov.me/posts/match-chinese-characters"/>
+        <id>https://romanmerk.me/posts/match-chinese-characters</id>
+        <link href="https://romanmerk.me/posts/match-chinese-characters"/>
         <updated>2021-02-25T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>When you need to detect if a string contains Chinese characters, you would commonly think about doing it will RegExp, or grab a ready-to-use package on npm.</p>
 <p>If you Google it, you are likely end up with <a href="https://stackoverflow.com/a/21113538">this solution</a>:</p>
@@ -5842,13 +5842,13 @@ export * from './dist/foo.d.ts'
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Netlify Redirects]]></title>
-        <id>https://romanmerkulov.me/posts/netlify-redirects</id>
-        <link href="https://romanmerkulov.me/posts/netlify-redirects"/>
+        <id>https://romanmerk.me/posts/netlify-redirects</id>
+        <link href="https://romanmerk.me/posts/netlify-redirects"/>
         <updated>2021-02-20T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<h2>Domains Redirects</h2>
 <p>On <a href="https://netlify.com">Netlify</a>, you can setup multiple domains for a site. When you add a custom domain, the <code>xxx.netlify.app</code> is still accessible. Which would potentially cause some confusion to users. In that way, you can setup the redirection in your <code>netlify.toml</code> file, for example:</p>
@@ -5877,13 +5877,13 @@ force = true
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Rewrite in Vite]]></title>
-        <id>https://romanmerkulov.me/posts/rewrite-in-vite</id>
-        <link href="https://romanmerkulov.me/posts/rewrite-in-vite"/>
+        <id>https://romanmerk.me/posts/rewrite-in-vite</id>
+        <link href="https://romanmerk.me/posts/rewrite-in-vite"/>
         <updated>2021-01-31T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[My site is now powered by Vite!]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -6072,14 +6072,14 @@ await Promise.all(
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Destructuring... with object or array?]]></title>
-        <id>https://romanmerkulov.me/posts/destructuring-with-object-or-array</id>
-        <link href="https://romanmerkulov.me/posts/destructuring-with-object-or-array"/>
-        <link rel="enclosure" href="https://romanmerkulov.me/images/destructuring.png" type="image/png"/>
+        <id>https://romanmerk.me/posts/destructuring-with-object-or-array</id>
+        <link href="https://romanmerk.me/posts/destructuring-with-object-or-array"/>
+        <link rel="enclosure" href="https://romanmerk.me/images/destructuring.png" type="image/png"/>
         <updated>2020-10-21T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[Prefer object destructure or array? Can we support both?]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -6275,13 +6275,13 @@ let [foo, bar] = obj
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Watch with @vue/reactivity]]></title>
-        <id>https://romanmerkulov.me/posts/watch-with-reactivity</id>
-        <link href="https://romanmerkulov.me/posts/watch-with-reactivity"/>
+        <id>https://romanmerk.me/posts/watch-with-reactivity</id>
+        <link href="https://romanmerk.me/posts/watch-with-reactivity"/>
         <updated>2020-09-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[A brief intro of how it works and a guide to implementing the (missing) `watch` on your own.]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -6483,13 +6483,13 @@ npm i <a href='https://github.com/antfu/vue-reactivity-watch' target='_blank'>@v
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Journey with Icons]]></title>
-        <id>https://romanmerkulov.me/posts/journey-with-icons</id>
-        <link href="https://romanmerkulov.me/posts/journey-with-icons"/>
+        <id>https://romanmerk.me/posts/journey-with-icons</id>
+        <link href="https://romanmerk.me/posts/journey-with-icons"/>
         <updated>2020-08-16T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[To solve the pain I faced in using icons for the web, I built several tools to make the DX better.]]></summary>
         <content type="html"><![CDATA[<p>[[toc]]</p>
@@ -6573,13 +6573,13 @@ createApp(App).mount('#app')
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Make Libraries Working with Vue 2 and 3]]></title>
-        <id>https://romanmerkulov.me/posts/make-libraries-working-with-vue-2-and-3</id>
-        <link href="https://romanmerkulov.me/posts/make-libraries-working-with-vue-2-and-3"/>
+        <id>https://romanmerk.me/posts/make-libraries-working-with-vue-2-and-3</id>
+        <link href="https://romanmerk.me/posts/make-libraries-working-with-vue-2-and-3"/>
         <updated>2020-07-01T14:00:00.000Z</updated>
         <summary type="html"><![CDATA[Try Vue Demi!]]></summary>
         <content type="html"><![CDATA[<p>Today, Evan has announced that the first RC of Vue 3 <a href="https://github.com/vuejs/rfcs/issues/183">will be released in mid-July</a>. The post suggests library/plugin authors to start migrating the support for Vue 3. But as the APIs and behaviors have changed a lot, is that possible to make our libraries support Vue 2 and 3 at the same time?</p>
@@ -6621,13 +6621,13 @@ createApp(App).mount('#app')
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Vue 3 Migration Notes]]></title>
-        <id>https://romanmerkulov.me/posts/vue-3-notes</id>
-        <link href="https://romanmerkulov.me/posts/vue-3-notes"/>
+        <id>https://romanmerk.me/posts/vue-3-notes</id>
+        <link href="https://romanmerk.me/posts/vue-3-notes"/>
         <updated>2020-07-01T00:00:00.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>Note: This is my personal notes/tips for migrating to Vue 3 and will be updated overtime. Please refer to <a href="https://v3.vuejs.org">the official docs</a> for the complete changelog.</p>
@@ -6668,13 +6668,13 @@ this.codemirror = markRaw(CodeMirror.fromTextArea(el))
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Type Inferencing in Vue]]></title>
-        <id>https://romanmerkulov.me/posts/type-inferencing-in-vue</id>
-        <link href="https://romanmerkulov.me/posts/type-inferencing-in-vue"/>
+        <id>https://romanmerk.me/posts/type-inferencing-in-vue</id>
+        <link href="https://romanmerk.me/posts/type-inferencing-in-vue"/>
         <updated>2020-06-28T00:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>[[toc]]</p>
 <p>As you may or may not know, I am working on preparing to release the v1.0 version for <a href="https://github.com/vuejs/composition-api">@vue/composition-api</a> recently. One of the current problems is that the type inference does not play well <a href="https://github.com/vuejs/composition-api/issues/338">#338</a>. So I get a chance to have a deeper look at <a href="https://github.com/vuejs/composition-api">vue-next</a>'s type implementations. I will tell you what I learned and how magic works in Vue.</p>
@@ -6819,13 +6819,13 @@ define({
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Domain Email]]></title>
-        <id>https://romanmerkulov.me/posts/domain-email</id>
-        <link href="https://romanmerkulov.me/posts/domain-email"/>
+        <id>https://romanmerk.me/posts/domain-email</id>
+        <link href="https://romanmerk.me/posts/domain-email"/>
         <updated>2020-06-17T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>Saw <a href="https://twitter.com/youyuxi/status/1272932071749619712">a tweet from Evan You</a> about the <a href="https://hey.com/">hey.com</a> mail service recently. I got interested in having a short and nice email address. My current one in Hotmail is just too long to even being spell out in talk. <code>hey.com</code> looks very nice but $99/year is not a very good deal to me. I decide to use my own domain for receiving emails.</p>
 <p>I did this a couple years ago for another domain, I kinda remember an open-source tool allowing forwarding emails by just adding DNS record. I took some time to search for it but I didn't find the page matched with my memory. I went GitHub to search in my stared projects, it turns out the tool now becomes and Freemium SaaS <a href="https://forwardemail.net/">forwardemail.net</a> with a fresh new logo and website design that I can't even recognize it.</p>
@@ -6843,13 +6843,13 @@ TXT  @  forward-email=youremail@example.com
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[New House]]></title>
-        <id>https://romanmerkulov.me/posts/new-house</id>
-        <link href="https://romanmerkulov.me/posts/new-house"/>
+        <id>https://romanmerk.me/posts/new-house</id>
+        <link href="https://romanmerk.me/posts/new-house"/>
         <updated>2020-06-12T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>I always feel that I need a blog but I never have one.</p>
 <p>So I took some time to rewrite my homepage and adding the blog section. and Hi, here I am :)</p>
@@ -6862,7 +6862,7 @@ TXT  @  forward-email=youremail@example.com
         <author>
             <name>Roman Merkulov</name>
             <email>int1994020@gmail.com</email>
-            <uri>https://romanmerkulov.me</uri>
+            <uri>https://romanmerk.me</uri>
         </author>
     </entry>
 </feed>

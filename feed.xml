@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Roman Merkulov</title>
-        <link>https://romanmerkulov.com/</link>
+        <link>https://romanmerkulov.me/</link>
         <description>Roman Merkulov's Blog</description>
-        <lastBuildDate>Sun, 10 Aug 2025 23:06:28 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 11 Aug 2025 00:21:49 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
             <title>Roman Merkulov</title>
-            <url>https://romanmerkulov.com/avatar.png</url>
-            <link>https://romanmerkulov.com/</link>
+            <url>https://romanmerkulov.me/avatar.png</url>
+            <link>https://romanmerkulov.me/</link>
         </image>
         <copyright>CC BY-NC-SA 4.0 2025 © Roman Merkulov</copyright>
-        <atom:link href="https://romanmerkulov.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://romanmerkulov.me/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[The Dawn of Quantum AI]]></title>
-            <link>https://romanmerkulov.com/posts/the-dawn-of-quantum-ai</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/the-dawn-of-quantum-ai</guid>
+            <link>https://romanmerkulov.me/posts/the-dawn-of-quantum-ai</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/the-dawn-of-quantum-ai</guid>
             <pubDate>Sun, 01 Jun 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[How quantum computing and machine learning converge in the NISQ era, with hybrid patterns, practical use cases, and a sensible roadmap.]]></description>
             <content:encoded><![CDATA[<p>Quantum AI sits at the frontier of computation, uniting the parallelism of qubits with the pattern‑finding power of modern machine learning. The promise is simple to state yet profound in impact: solve classes of problems in optimization, simulation, and modeling that are prohibitively expensive for classical computers.</p>
@@ -60,12 +60,12 @@
 <p>We are early—more Wright Brothers than Boeing Dreamliner—but we are flying. The arc is clear: tighter hybrid integration, better error‑mitigation, and steady hardware improvements. The destination, if reached, will reshape parts of science and industry where exploration spaces are unimaginably vast.</p>
 ]]></content:encoded>
             <author>int1994020@gmail.com (Roman Merkulov)</author>
-            <enclosure url="https://romanmerkulov.com/logo.png" length="0" type="image/png"/>
+            <enclosure url="https://romanmerkulov.me/logo.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Categorize Your Dependencies]]></title>
-            <link>https://romanmerkulov.com/posts/categorize-deps</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/categorize-deps</guid>
+            <link>https://romanmerkulov.me/posts/categorize-deps</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/categorize-deps</guid>
             <pubDate>Mon, 28 Apr 2025 14:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>When building a project, it's very likely that we will install third-party packages from npm to offload some tasks. On that topic, we know there are two major types of dependencies: <code>dependencies</code> (prod) and <code>devDependencies</code> (dev). In our <code>package.json</code>, it might look something like this:</p>
 <pre><code class="language-json">{
@@ -160,7 +160,7 @@ catalogs:
 <h3>Tooling Support</h3>
 <p>Given that catalogs are still quite new, this shift requires better tooling support. A significant pain point for me on this was losing the ability to see a dependency's version at a glance in <code>package.json</code> when using <code>catalog:&lt;name&gt;</code>.</p>
 <p>To address this, I created a VS Code extension, <a href="https://marketplace.visualstudio.com/items?itemName=antfu.pnpm-catalog-lens">PNPM Catalog Lens</a>, which displays the resolved version inline within <code>package.json</code>.</p>
-<p><img src="https://romanmerkulov.com/images/pnpm-catalogs-vscode.png" alt="Screenshot of the extension PNPM Catalog Lens"></p>
+<p><img src="https://romanmerkulov.me/images/pnpm-catalogs-vscode.png" alt="Screenshot of the extension PNPM Catalog Lens"></p>
 <p>It also adds distinct colors to each named category for easier identification. This gives us the categorization and centralized version control without significantly impacting DX.</p>
 <p>Since versions move to <code>pnpm-workspace.yaml</code>, CLI tools would need to make some integrations to support this. So far, we've adapted the following tools:</p>
 <ul>
@@ -213,8 +213,8 @@ export default defineBuildConfig({
         </item>
         <item>
             <title><![CDATA[Hello Tokyo!]]></title>
-            <link>https://romanmerkulov.com/posts/hello-tokyo</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/hello-tokyo</guid>
+            <link>https://romanmerkulov.me/posts/hello-tokyo</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/hello-tokyo</guid>
             <pubDate>Tue, 08 Apr 2025 00:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p><a href="/posts/ohayo-tokyo"><span i-ph-arrow-right-bold inline-block/> 日本語</a></p>
 <p>Seven years ago, my first visit to Japan - a trip to <ruby lang="ja">大阪<rp>(</rp><rt>Osaka</rt><rp>)</rp></ruby>, <ruby lang="ja">京都<rp>(</rp><rt>Kyoto</rt><rp>)</rp></ruby>, and <ruby lang="ja">北海道<rp>(</rp><rt>Hokkaido</rt><rp>)</rp></ruby> - planted the seed of wanting to live in Japan one day. It was an unforgettable experience that changed the way I see the world. The meticulous attention to detail, the dedication to craftsmanship, and the seamless blend of tradition and modernity continue to inspire me.</p>
@@ -247,8 +247,8 @@ export default defineBuildConfig({
         </item>
         <item>
             <title><![CDATA[State Management in Modern Web Applications - A Guided Tour]]></title>
-            <link>https://romanmerkulov.com/posts/state-management-in-modern-web-applications</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/state-management-in-modern-web-applications</guid>
+            <link>https://romanmerkulov.me/posts/state-management-in-modern-web-applications</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/state-management-in-modern-web-applications</guid>
             <pubDate>Wed, 19 Mar 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[A pragmatic map of client vs server state, when to pick Redux Toolkit or lighter stores, and how to adopt TanStack Query/SWR.]]></description>
             <content:encoded><![CDATA[<p>State is your app’s memory. As applications evolve from simple prototypes to multi‑team products, managing that memory—what the user is doing, what data is loaded, what changes are pending—becomes one of the hardest engineering problems. The trick is understanding that not all state is the same and choosing the least complex tool that fits each category.</p>
@@ -287,12 +287,12 @@ export default defineBuildConfig({
 <p>There is no one‑size‑fits‑all solution. Mature systems often mix approaches: a server‑state library for IO, a lightweight client store for shared UI state, and component state for local interactions. The key is intentionality—choose the simplest tool that fits the job today, and refactor as the product and team evolve.</p>
 ]]></content:encoded>
             <author>int1994020@gmail.com (Roman Merkulov)</author>
-            <enclosure url="https://romanmerkulov.com/logo.png" length="0" type="image/png"/>
+            <enclosure url="https://romanmerkulov.me/logo.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Photos Page]]></title>
-            <link>https://romanmerkulov.com/posts/photos-page</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/photos-page</guid>
+            <link>https://romanmerkulov.me/posts/photos-page</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/photos-page</guid>
             <pubDate>Wed, 12 Mar 2025 12:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>As you might have noticed, I added a <a href="/photos">photos page</a> on this site recently. It's something I wanted to do for a very long time but always procrastinated on.</p>
 <p>During certain periods of my life, photography was my greatest passion, just as much as I do today with Open Source and programming. Instagram was once a delightful, minimalist platform for photo sharing that I frequently used - until Meta's acquisition changed everything. While I could even tolerate the algorithms, ads, and short videos, the recent <a href="https://www.standard.co.uk/news/tech/instagram-update-how-adjust-profile-grid-what-changes-coming-b1205890.html">change of profile photo grids' aspect ratio from square to 4:5</a> was the final straw - an arrogant decision that impacts every user's content without providing proper solutions.</p>
@@ -311,8 +311,8 @@ export default defineBuildConfig({
         </item>
         <item>
             <title><![CDATA[Async, Sync, in Between]]></title>
-            <link>https://romanmerkulov.com/posts/async-sync-in-between</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/async-sync-in-between</guid>
+            <link>https://romanmerkulov.me/posts/async-sync-in-between</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/async-sync-in-between</guid>
             <pubDate>Mon, 03 Mar 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[The coloring problem in modern programming, and a proposal of a new approach]]></description>
             <content:encoded><![CDATA[<h2>The Coloring Problem</h2>
@@ -504,15 +504,15 @@ looking for feedback and contributions, so feel free to join us in the <a href="
         </item>
         <item>
             <title><![CDATA[Move on to ESM-only]]></title>
-            <link>https://romanmerkulov.com/posts/move-on-to-esm-only</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/move-on-to-esm-only</guid>
+            <link>https://romanmerkulov.me/posts/move-on-to-esm-only</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/move-on-to-esm-only</guid>
             <pubDate>Wed, 05 Feb 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Let's move on to ESM-only]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
 <p>Three years ago, I wrote a post about <a href="/posts/publish-esm-and-cjs">shipping ESM &amp; CJS in a single package</a>, advocating for dual CJS/ESM formats to ease user migration and trying to make the best of both worlds. Back then, I didn't fully agree with <a href="https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c">aggressively shipping ESM-only</a>, as I considered the ecosystem wasn't ready, especially since the push was mostly from low-level libraries. Over time, as tools and the ecosystem have evolved, my perspective has gradually shifted towards more and more on adopting ESM-only.</p>
 <p>As of 2025, a decade has passed since ESM was first introduced in 2015. Modern tools and libraries have increasingly adopted ESM as the primary module format. According to {@wooorm}'s <a href="https://github.com/wooorm/npm-esm-vs-cjs">script</a>, the packages that ships ESM on npm in 2021 was <strong>7.8%</strong>, and by the end of 2024, it had reached <a href="https://github.com/wooorm/npm-esm-vs-cjs"><strong>25.8%</strong></a>. Although a significant portion of packages still use CJS, the trend clearly shows a good shift towards ESM.</p>
 <figure>
-  <img src="https://romanmerkulov.com/images/npm-esm-vs-cjs-2024.svg" dark:filter-invert />
+  <img src="https://romanmerkulov.me/images/npm-esm-vs-cjs-2024.svg" dark:filter-invert />
   <figcaption text-center>ESM adoption over time, generated by the <code>npm-esm-vs-cjs</code> script. Last updated at 2024-11-27</figcaption>
 </figure>
 <p>Here in this post, I'd like to share my thoughts on the current state of the ecosystem and why I believe it's time to move on to ESM-only.</p>
@@ -582,8 +582,8 @@ looking for feedback and contributions, so feel free to join us in the <a href="
         </item>
         <item>
             <title><![CDATA[Epoch Semantic Versioning]]></title>
-            <link>https://romanmerkulov.com/posts/epoch-semver</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/epoch-semver</guid>
+            <link>https://romanmerkulov.me/posts/epoch-semver</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/epoch-semver</guid>
             <pubDate>Tue, 07 Jan 2025 12:00:00 GMT</pubDate>
             <description><![CDATA[Proposal for an extended Semantic Versioning called Epoch SemVer to provide more granular versioning information to users.]]></description>
             <content:encoded><![CDATA[<p>If you've been following my work in open source, you might have noticed that I have a tendency to stick with zero-major versioning, like <code>v0.x.x</code>. For instance, as of writing this post, the latest version of UnoCSS is <a href="https://github.com/unocss/unocss/releases/tag/v0.65.3"><code>v0.65.3</code></a>, Slidev is <a href="https://github.com/slidevjs/slidev/releases/tag/v0.50.0"><code>v0.50.0</code></a>, and <code>unplugin-vue-components</code> is <a href="https://github.com/unplugin/unplugin-vue-components/releases/tag/v0.28.0"><code>v0.28.0</code></a>. Other projects, such as React Native is on <a href="https://github.com/facebook/react-native/releases/tag/v0.76.5"><code>v0.76.5</code></a>, and sharp is on <a href="https://github.com/lovell/sharp/releases/tag/v0.33.5"><code>v0.33.5</code></a>, also follow this pattern.</p>
@@ -610,7 +610,7 @@ looking for feedback and contributions, so feel free to join us in the <a href="
 <h2>Progressive</h2>
 <p>I am a strong believer in the principle of progressiveness. Rather than making a giant leap to a significantly higher stage all at once, progressiveness allows users to adopt changes gradually at their own pace. It provides opportunities to pause and assess, making it easier to understand the impact of each change.</p>
 <figure text-center>
-  <img src="https://romanmerkulov.com/images/epoch-semver-progressive-1.png" alt="Progressive as Stairs" border="~ base rounded-xl">
+  <img src="https://romanmerkulov.me/images/epoch-semver-progressive-1.png" alt="Progressive as Stairs" border="~ base rounded-xl">
   <figcaption>Progressive as Stairs - a screenshot of my talk <a italic font-serif href="/talks#the-progressive-path" target="_blank">The Progressive Path</a></figcaption>
 </figure>
 <p>I believe we should apply the same principle to versioning. Instead of treating a major version as a massive overhaul, we can break it down into smaller, more manageable updates. For example, rather than releasing <code>v2.0.0</code> with 10 breaking changes from <code>v1.x</code>, we could distribute these changes across several smaller major releases. This way, we might release <code>v2.0</code> with 2 breaking changes, followed by <code>v3.0</code> with 1 breaking change, and so on. This approach makes it easier for users to adopt changes gradually and reduces the risk of overwhelming them with too many changes at once.</p>
@@ -663,8 +663,8 @@ We shouldn't need to bump <code>EPOCH</code> often. It's mostly useful for high-
         </item>
         <item>
             <title><![CDATA[CPU Profiling Nuxt]]></title>
-            <link>https://romanmerkulov.com/posts/nuxt-cpuprofile</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/nuxt-cpuprofile</guid>
+            <link>https://romanmerkulov.me/posts/nuxt-cpuprofile</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/nuxt-cpuprofile</guid>
             <pubDate>Tue, 31 Dec 2024 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>If you want to debug the bundling performance of your Nuxt app to generate CPU profiles.</p>
 <p>Node.js provides a built-in <a href="https://nodejs.org/api/cli.html#--cpu-prof"><code>--cpu-prof</code></a> flag that allows you to generate CPU profiles. However you can't directly pass it in your <code>nuxi</code> command, you have to use it with <code>node</code> directly.</p>
@@ -682,8 +682,8 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
         </item>
         <item>
             <title><![CDATA[The Evolution of Web Frameworks - From Monoliths to the Edge]]></title>
-            <link>https://romanmerkulov.com/posts/the-evolution-of-web-frameworks</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/the-evolution-of-web-frameworks</guid>
+            <link>https://romanmerkulov.me/posts/the-evolution-of-web-frameworks</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/the-evolution-of-web-frameworks</guid>
             <pubDate>Sun, 01 Dec 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[A developer-focused history of SSR → SPA → meta-frameworks, and what islands, the edge, and DX-first tooling mean next.]]></description>
             <content:encoded><![CDATA[<p>The web ecosystem evolves in waves. From server‑rendered monoliths to modern meta‑frameworks and edge runtimes, each era has chased a simple goal: ship fast experiences without sacrificing developer velocity. Along the way, we repeatedly rebalanced where code runs, how state moves, and who does the work—the server, the browser, or something in between.</p>
@@ -702,12 +702,12 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
 <p>The story continues as we balance performance, interactivity, and maintainability. The likely outcome is more granular rendering (partial hydration, resumability), more platform primitives replacing custom glue, and opinionated defaults that make the fast path the easy path.</p>
 ]]></content:encoded>
             <author>int1994020@gmail.com (Roman Merkulov)</author>
-            <enclosure url="https://romanmerkulov.com/logo.png" length="0" type="image/png"/>
+            <enclosure url="https://romanmerkulov.me/logo.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Introducing Nuxt Icon v1]]></title>
-            <link>https://romanmerkulov.com/posts/nuxt-icon-v1</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/nuxt-icon-v1</guid>
+            <link>https://romanmerkulov.me/posts/nuxt-icon-v1</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/nuxt-icon-v1</guid>
             <pubDate>Mon, 25 Nov 2024 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p><a href="https://nuxt.com/blog/nuxt-icon-v1-0">Go to nuxt.com and read the full post</a>.</p>
 ]]></content:encoded>
@@ -715,8 +715,8 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
         </item>
         <item>
             <title><![CDATA[The Rise of AI in Threat Detection - The Digital Watchtower]]></title>
-            <link>https://romanmerkulov.com/posts/the-rise-of-ai-in-threat-detection</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/the-rise-of-ai-in-threat-detection</guid>
+            <link>https://romanmerkulov.me/posts/the-rise-of-ai-in-threat-detection</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/the-rise-of-ai-in-threat-detection</guid>
             <pubDate>Thu, 10 Oct 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Moving beyond signatures—how behavioral ML, unsupervised models, and automation transform modern SecOps.]]></description>
             <content:encoded><![CDATA[<p>For decades, cybersecurity has been a high‑stakes game of cat and mouse. Attackers find new exploits; defenders patch and react. This model is increasingly unsustainable. AI is transforming security from reactive to proactive—shifting the focus from known signatures to anomalous behaviors and automating the grind of triage.</p>
@@ -735,12 +735,12 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
 <p>AI augments analysts by filtering noise and surfacing high‑signal anomalies. Humans provide judgment, hypothesis testing, and rules of engagement; machines provide scale and speed. The future of defense is this partnership—codifying expertise, continuously learning from outcomes, and shortening the window between intrusion and containment.</p>
 ]]></content:encoded>
             <author>int1994020@gmail.com (Roman Merkulov)</author>
-            <enclosure url="https://romanmerkulov.com/logo.png" length="0" type="image/png"/>
+            <enclosure url="https://romanmerkulov.me/logo.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Building Scalable Systems - From a Single Server to Global Scale]]></title>
-            <link>https://romanmerkulov.com/posts/building-scalable-systems</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/building-scalable-systems</guid>
+            <link>https://romanmerkulov.me/posts/building-scalable-systems</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/building-scalable-systems</guid>
             <pubDate>Thu, 05 Sep 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Vertical vs horizontal scaling, microservices, statelessness, sharding—and pragmatic patterns like back pressure and circuit breakers.]]></description>
             <content:encoded><![CDATA[<p>Every developer has dreamt of it: your app goes viral. The moment of euphoria hits as you see user numbers climbing... and then, the panic. The server slows to a crawl. Pages stop loading. Your brilliant creation, buckling under the weight of its own success, has crashed. This all‑too‑common nightmare is not a failure of the idea—it’s a failure of architecture.</p>
@@ -801,12 +801,12 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
 <p>By understanding these core principles, you can build systems that don’t just survive success — they thrive on it.</p>
 ]]></content:encoded>
             <author>int1994020@gmail.com (Roman Merkulov)</author>
-            <enclosure url="https://romanmerkulov.com/logo.png" length="0" type="image/png"/>
+            <enclosure url="https://romanmerkulov.me/logo.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Initiative on Sponsorship Forwarding]]></title>
-            <link>https://romanmerkulov.com/posts/sponsorship-forwarding</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/sponsorship-forwarding</guid>
+            <link>https://romanmerkulov.me/posts/sponsorship-forwarding</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/sponsorship-forwarding</guid>
             <pubDate>Sat, 20 Apr 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[An initiative to support open-source ecosystem by Roman Merkulov.]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -822,7 +822,7 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
 <p>Among all the contributors and maintainers, there is a mix of individuals who have different working styles and levels of visibility. Some are more &quot;high-profile&quot; and actively share their work, while others prefer to stay low-profile and focus on their contributions behind the scenes. The different working styles should not diminish the value of their work.</p>
 <p>Naturely, front-facing projects and high-profile maintainers are much more likely to receive attention and sponsorships, while the underlying dependencies and low-profile maintainers are often overlooked. To illustrate this, let me present you <a href="https://www.explainxkcd.com/wiki/index.php/2347:_Dependency">this famous xkcd comic</a> again:</p>
 <p><img
-  src="https://romanmerkulov.com/images/oss-sponsor-dependencies.svg"
+  src="https://romanmerkulov.me/images/oss-sponsor-dependencies.svg"
   alt="Open-source Sponsor Dependencies"
   class="dark:invert-100 dark:op80 border-none! shadow-none! max-w-120"
 /></p>
@@ -902,8 +902,8 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
         </item>
         <item>
             <title><![CDATA[Refreshed Nuxt ESLint Integrations]]></title>
-            <link>https://romanmerkulov.com/posts/refreshed-nuxt-eslint</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/refreshed-nuxt-eslint</guid>
+            <link>https://romanmerkulov.me/posts/refreshed-nuxt-eslint</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/refreshed-nuxt-eslint</guid>
             <pubDate>Wed, 10 Apr 2024 12:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p><a href="https://nuxt.com/blog/eslint-module">Go to nuxt.com and read the full article</a>.</p>
 ]]></content:encoded>
@@ -911,8 +911,8 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
         </item>
         <item>
             <title><![CDATA[Introducing ESLint Config Inspector]]></title>
-            <link>https://romanmerkulov.com/posts/eslint-config-inspector</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/eslint-config-inspector</guid>
+            <link>https://romanmerkulov.me/posts/eslint-config-inspector</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/eslint-config-inspector</guid>
             <pubDate>Fri, 05 Apr 2024 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p><a href="https://eslint.org/blog/2024/04/eslint-config-inspector/">Go to eslint.org and read the full announcement</a>.</p>
 ]]></content:encoded>
@@ -920,8 +920,8 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
         </item>
         <item>
             <title><![CDATA[Roman's Roads to Open Source - The Set Theory (React ver.)]]></title>
-            <link>https://romanmerkulov.com/posts/roads-to-oss-set-theory-react-paris-2024</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/roads-to-oss-set-theory-react-paris-2024</guid>
+            <link>https://romanmerkulov.me/posts/roads-to-oss-set-theory-react-paris-2024</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/roads-to-oss-set-theory-react-paris-2024</guid>
             <pubDate>Fri, 22 Mar 2024 08:00:00 GMT</pubDate>
             <description><![CDATA[Roman's Roads to Open Source - The Set Theory - React Paris 2024]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -933,8 +933,8 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
         </item>
         <item>
             <title><![CDATA[Mental Health in Open Source]]></title>
-            <link>https://romanmerkulov.com/posts/mental-health-oss</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/mental-health-oss</guid>
+            <link>https://romanmerkulov.me/posts/mental-health-oss</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/mental-health-oss</guid>
             <pubDate>Sat, 16 Mar 2024 12:00:00 GMT</pubDate>
             <description><![CDATA[Some of my thoughts on my mental health during my journey in Open Source]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -984,7 +984,7 @@ node --cpu-prof ./node_modules/nuxi/bin/nuxi.mjs dev --fork=false
 <p>This is actually the topic that drove me to write this blog post.</p>
 <p>Let's start with this <a href="https://en.wikipedia.org/wiki/Project_management_triangle">&quot;Iron Triangle&quot;</a> of <b important-text-hex-E3B65E>Velocity</b>, <b important-text-hex-D777B1>Scope</b> and <b important-text-hex-80BEDF>Quality</b>. <br><span op50>(typicall they are Quality/Speed/Cost where I made a few adjustments here)</span></p>
 <figure>
-  <img src="https://romanmerkulov.com/images/oss-mental-iron-triangle.svg" />
+  <img src="https://romanmerkulov.me/images/oss-mental-iron-triangle.svg" />
   <figcaption text-center>The Iron Triangle of Velocity-Scope-Quality</figcaption>
 </figure>
 <p>Usually, people would say -- in these three factors, you can <strong>only pick two</strong>. If you want to deliver a project faster, you might have to sacrifice the quality or have a smaller scope of features. If you want to have a high-quality and feature-rich product, you might have to sacrifice speed to deliver good stuff slowly, and so on.</p>
@@ -1035,8 +1035,8 @@ I continued doing so with the &quot;velocity&quot; <em>ignorantly</em> since the
         </item>
         <item>
             <title><![CDATA[The Evolution of Shiki v1.0]]></title>
-            <link>https://romanmerkulov.com/posts/evolution-of-shiki-v1</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/evolution-of-shiki-v1</guid>
+            <link>https://romanmerkulov.me/posts/evolution-of-shiki-v1</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/evolution-of-shiki-v1</guid>
             <pubDate>Mon, 11 Mar 2024 12:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p><a href="https://nuxt.com/blog/shiki-v1">Go to nuxt.com and read the full article</a>.</p>
 ]]></content:encoded>
@@ -1044,8 +1044,8 @@ I continued doing so with the &quot;velocity&quot; <em>ignorantly</em> since the
         </item>
         <item>
             <title><![CDATA[The Magic in Shiki Magic Move]]></title>
-            <link>https://romanmerkulov.com/posts/shiki-magic-move</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/shiki-magic-move</guid>
+            <link>https://romanmerkulov.me/posts/shiki-magic-move</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/shiki-magic-move</guid>
             <pubDate>Mon, 04 Mar 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[The methodology behind Shiki Magic Move.]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -1186,8 +1186,8 @@ for (const el of moveElements) {
         </item>
         <item>
             <title><![CDATA[Roman's Roads to Open Source - The Progressive Path]]></title>
-            <link>https://romanmerkulov.com/posts/roads-to-oss-progressive-vueams-2024</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/roads-to-oss-progressive-vueams-2024</guid>
+            <link>https://romanmerkulov.me/posts/roads-to-oss-progressive-vueams-2024</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/roads-to-oss-progressive-vueams-2024</guid>
             <pubDate>Thu, 29 Feb 2024 08:00:00 GMT</pubDate>
             <description><![CDATA[Roman's Roads to Open Source - The Progressive Path - Vue Amsterdam]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -1199,8 +1199,8 @@ for (const el of moveElements) {
         </item>
         <item>
             <title><![CDATA[TwoSlash with Shiki]]></title>
-            <link>https://romanmerkulov.com/posts/shikiji-twoslash</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/shikiji-twoslash</guid>
+            <link>https://romanmerkulov.me/posts/shikiji-twoslash</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/shikiji-twoslash</guid>
             <pubDate>Tue, 12 Dec 2023 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>Here is an example of using <a href="https://twoslash.netlify.app/">TwoSlash</a> with <a href="https://github.com/shikijs/shiki">Shiki</a>:</p>
 <pre><code class="language-ts">// @errors: 2540
@@ -1246,8 +1246,8 @@ todo.title = 'Hello'
         </item>
         <item>
             <title><![CDATA[GitHub-style Alerts]]></title>
-            <link>https://romanmerkulov.com/posts/github-alerts</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/github-alerts</guid>
+            <link>https://romanmerkulov.me/posts/github-alerts</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/github-alerts</guid>
             <pubDate>Thu, 30 Nov 2023 10:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<blockquote>
 <p>[!TIP]<br>
@@ -1310,8 +1310,8 @@ Thanks for reading! :)</p>
         </item>
         <item>
             <title><![CDATA[Nuxt Devtools v1.0]]></title>
-            <link>https://romanmerkulov.com/posts/nuxt-devtools-v1</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/nuxt-devtools-v1</guid>
+            <link>https://romanmerkulov.me/posts/nuxt-devtools-v1</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/nuxt-devtools-v1</guid>
             <pubDate>Mon, 13 Nov 2023 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p><a href="https://nuxt.com/blog/nuxt-devtools-v1-0">Go to nuxt.com and read the full announcement</a>.</p>
 ]]></content:encoded>
@@ -1319,8 +1319,8 @@ Thanks for reading! :)</p>
         </item>
         <item>
             <title><![CDATA[Roman's Roads to Open Source - The Set Theory]]></title>
-            <link>https://romanmerkulov.com/posts/roads-to-oss-set-theory-vuefesjapan-2023</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/roads-to-oss-set-theory-vuefesjapan-2023</guid>
+            <link>https://romanmerkulov.me/posts/roads-to-oss-set-theory-vuefesjapan-2023</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/roads-to-oss-set-theory-vuefesjapan-2023</guid>
             <pubDate>Sat, 28 Oct 2023 08:00:00 GMT</pubDate>
             <description><![CDATA[Roman's Roads to Open Source - The Set Theory - Vue Fes Japan 2023]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -1332,8 +1332,8 @@ Thanks for reading! :)</p>
         </item>
         <item>
             <title><![CDATA[Now, and the Future of Nuxt Devtools]]></title>
-            <link>https://romanmerkulov.com/posts/now-and-future-devtools-nuxt-nation-2023</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/now-and-future-devtools-nuxt-nation-2023</guid>
+            <link>https://romanmerkulov.me/posts/now-and-future-devtools-nuxt-nation-2023</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/now-and-future-devtools-nuxt-nation-2023</guid>
             <pubDate>Wed, 18 Oct 2023 08:00:00 GMT</pubDate>
             <description><![CDATA[Now, and the Future of Nuxt Devtools - Nuxt Nation 2023]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -1347,8 +1347,8 @@ Thanks for reading! :)</p>
         </item>
         <item>
             <title><![CDATA[Roman's Roads to Open Source - The Set Theory]]></title>
-            <link>https://romanmerkulov.com/posts/roads-to-oss-set-theory-viteconf-2023</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/roads-to-oss-set-theory-viteconf-2023</guid>
+            <link>https://romanmerkulov.me/posts/roads-to-oss-set-theory-viteconf-2023</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/roads-to-oss-set-theory-viteconf-2023</guid>
             <pubDate>Thu, 05 Oct 2023 08:00:00 GMT</pubDate>
             <description><![CDATA[Roman's Roads to Open Source - The Set Theory - ViteConf 2023]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -1362,8 +1362,8 @@ Thanks for reading! :)</p>
         </item>
         <item>
             <title><![CDATA[From Siberia to Vienna - A Developer's Journey]]></title>
-            <link>https://romanmerkulov.com/posts/from-siberia-to-vienna</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/from-siberia-to-vienna</guid>
+            <link>https://romanmerkulov.me/posts/from-siberia-to-vienna</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/from-siberia-to-vienna</guid>
             <pubDate>Tue, 01 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[How scarcity, curiosity, and community shaped my engineering approach—from first principles to collaboration and craft.]]></description>
             <content:encoded><![CDATA[<p>Every developer has an origin story. Mine begins in the vast quiet of Siberia, where patience and curiosity forged a resilient mindset. With limited access to hardware and slow internet, I learned to value every resource and think deeply about problems. Downloads took hours. Tutorials buffered. A single compiler error could stall an entire evening. That friction taught focus, perseverance, and an instinct to reason rather than guess.</p>
@@ -1379,12 +1379,12 @@ Thanks for reading! :)</p>
 <p>I keep those lessons close when systems get messy or product pressures mount. The quiet of Siberia reminds me to slow down just enough to understand. The energy of Vienna reminds me that shipping is a team sport. From icy plains to imperial palaces, this journey taught me that your starting point doesn’t define your destination. Passion, persistence, and community do.</p>
 ]]></content:encoded>
             <author>int1994020@gmail.com (Roman Merkulov)</author>
-            <enclosure url="https://romanmerkulov.com/logo.png" length="0" type="image/png"/>
+            <enclosure url="https://romanmerkulov.me/logo.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Animated SVG Logo]]></title>
-            <link>https://romanmerkulov.com/posts/animated-svg-logo</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/animated-svg-logo</guid>
+            <link>https://romanmerkulov.me/posts/animated-svg-logo</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/animated-svg-logo</guid>
             <pubDate>Wed, 19 Jul 2023 00:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>I recently replaced the logo on the top left corner with an animated SVG:</p>
 <p flex>
@@ -1403,7 +1403,7 @@ Thanks for reading! :)</p>
 </ul>
 <p>They covered this technique very well, highly recommend reading them if you are interested. Basically, the animation is done by a <strong>very long</strong> dash moving, in which you will see the dash as the drawing line and the gap as empty space. The length and position of the dash are controlled by <code>stroke-dasharray</code> and <code>stroke-dashoffset</code>, which are both animatable.</p>
 <h2>The Original Logo</h2>
-<p>My original logo <a href="/logo.svg" target="_blank" important-border-none inline-block><img src="https://romanmerkulov.com/logo.svg" h-1.5em dark:filter-invert important-m0 inline-block alt="My Logo in SVG" /></a> comes from around 8 years ago, I draw it with a pressure-sensitive pen on my Surface Pro 4. It was used as a temporary placeholder for the portfolio I was trying to build at that time. I later image-traced it with Adobe Illustrator to get the SVG version. Surprising to recall, it has been so long since then.</p>
+<p>My original logo <a href="/logo.svg" target="_blank" important-border-none inline-block><img src="https://romanmerkulov.me/logo.svg" h-1.5em dark:filter-invert important-m0 inline-block alt="My Logo in SVG" /></a> comes from around 8 years ago, I draw it with a pressure-sensitive pen on my Surface Pro 4. It was used as a temporary placeholder for the portfolio I was trying to build at that time. I later image-traced it with Adobe Illustrator to get the SVG version. Surprising to recall, it has been so long since then.</p>
 <div rounded shadow of-hidden border="~ base op20">
 <img src="/images/animated-svg-logo-vector.png" dark:invert-95 important-m0>
 </div>
@@ -1473,8 +1473,8 @@ path {
         </item>
         <item>
             <title><![CDATA[pnpm on External disk]]></title>
-            <link>https://romanmerkulov.com/posts/pnpm-external-disk</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/pnpm-external-disk</guid>
+            <link>https://romanmerkulov.me/posts/pnpm-external-disk</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/pnpm-external-disk</guid>
             <pubDate>Thu, 13 Jul 2023 12:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>If you tried to use <a href="https://pnpm.io/">pnpm</a> to install a project on an external disk, it may not work right away because pnpm is heavily relying on symlinks, which doesn't work cross mount points. To workaround this, you can add the following config to your <code>.npmrc</code>:</p>
 <pre><code class="language-ini">package-import-method=copy
@@ -1486,8 +1486,8 @@ prefer-symlinked-executables=false
         </item>
         <item>
             <title><![CDATA[Stable Diffusion QR Code 101]]></title>
-            <link>https://romanmerkulov.com/posts/ai-qrcode-101</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/ai-qrcode-101</guid>
+            <link>https://romanmerkulov.me/posts/ai-qrcode-101</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/ai-qrcode-101</guid>
             <pubDate>Mon, 10 Jul 2023 05:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>[[toc]]</p>
 <p>
@@ -1501,7 +1501,7 @@ prefer-symlinked-executables=false
 <p>Images that are generated with <a href="https://stability.ai/blog/stable-diffusion-public-release">Stable Diffusion</a> with QR Codes as <a href="https://github.com/lllyasviel/ControlNet">ControlNet</a>'s input, making the QR Code data points blend into the artwork while still being scannable by QR Code readers.</p>
 <figure pt-5>
   <div grid="~ cols-1 md:cols-3 gap-1" lg:scale-120 md:scale-110>
-    <img src="https://romanmerkulov.com/images/ai-qrcode-101-example2.jpg" rounded shadow important-m0 />
+    <img src="https://romanmerkulov.me/images/ai-qrcode-101-example2.jpg" rounded shadow important-m0 />
     <img src="/images/ai-qrcode-101-example1.jpg" rounded shadow important-m0 />
     <img src="/images/ai-qrcode-101-example3.jpg" rounded shadow important-m0 />
   </div>
@@ -2106,8 +2106,8 @@ prefer-symlinked-executables=false
         </item>
         <item>
             <title><![CDATA[Refining AI Generated QR Code]]></title>
-            <link>https://romanmerkulov.com/posts/ai-qrcode-refine</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/ai-qrcode-refine</guid>
+            <link>https://romanmerkulov.me/posts/ai-qrcode-refine</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/ai-qrcode-refine</guid>
             <pubDate>Fri, 30 Jun 2023 17:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>[[toc]]</p>
 <blockquote>
@@ -2116,7 +2116,7 @@ prefer-symlinked-executables=false
 <p>Last week, I wrote a <a href="/posts/ai-qrcode">blog post</a> about how I learned to generate scannable QR Codes. When doing so, I consider my goal is to find an image that looks like a QR Code as little as possible to humans, but still be recognizable by the machine.</p>
 <p>We need to find a balance, tweaking the weights to try and error. It's still quite hard to find a good composition that represents the black &amp; white spots, while keeping the content meaningful to human. If you go too far, the QR Code will be unscannable, and if you don't go far enough, the image will just be like a boring QR Code.</p>
 <p>Since there is quite some randomness in the process, sometimes it could be a pity when you find a good one but realize it's not scannable. To improve this, my workflow was to open up Photoshop, overlay the generated image with the original QR Code, manually check the difference, use the brush to mark those spots and send to <strong>inpaint</strong> to draw those areas. It works to some extent, but pretty inefficient as you need to go back and forth quite a few times. Meanwhile, doing this manually can also be inaccurate as the scanning algorithm might see them differently.</p>
-<p><img src="https://romanmerkulov.com/images/ai-qrcode-refine-5.jpg" alt="Steps from QR Code to final image"></p>
+<p><img src="https://romanmerkulov.me/images/ai-qrcode-refine-5.jpg" alt="Steps from QR Code to final image"></p>
 <p>So, I need to find a way to automate this, helping me to verify and refine the generated QR Code easier. And I came up with a simple web tool to do so. Let me introduce you to a bit about it.</p>
 <div i-ri-arrow-right-line /> <a href="https://qrcode.antfu.me/" target="_blank">Roman's QR Code Toolkit</a>
 <h2>Generating the Base QR Code</h2>
@@ -2194,8 +2194,8 @@ prefer-symlinked-executables=false
         </item>
         <item>
             <title><![CDATA[Stylistic QR Code with Stable Diffusion]]></title>
-            <link>https://romanmerkulov.com/posts/ai-qrcode</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/ai-qrcode</guid>
+            <link>https://romanmerkulov.me/posts/ai-qrcode</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/ai-qrcode</guid>
             <pubDate>Sun, 25 Jun 2023 05:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>[[toc]]</p>
 <blockquote>
@@ -2206,7 +2206,7 @@ prefer-symlinked-executables=false
 </ul>
 </blockquote>
 <p>Yesterday, I created this image using <a href="https://stability.ai/blog/stable-diffusion-public-release">Stable Diffusion</a> and <a href="https://github.com/lllyasviel/ControlNet">ControlNet</a>, and shared on <a href="https://twitter.com/antfu7/status/1672671149698818048">Twitter</a> and <a href="https://www.instagram.com/p/Ct4fpkgtc1W/">Instagram</a> -- an illustration that also functions as a scannable QR code.</p>
-<p><img src="https://romanmerkulov.com/images/ai-qrcode-final.jpg" alt=""></p>
+<p><img src="https://romanmerkulov.me/images/ai-qrcode-final.jpg" alt=""></p>
 <QRNotScannable mt--2 />
 <p>The process of creating it was super fun, and I'm quite satisfied with the outcome.</p>
 <p>In this post, I would like to share some insights into my learning journey and the approaches I adopted to create this image. Additionally, I want to take this opportunity to credit the remarkable tools and models that made this project possible.</p>
@@ -2324,8 +2324,8 @@ prefer-symlinked-executables=false
         </item>
         <item>
             <title><![CDATA[DX with Nuxt DevTools]]></title>
-            <link>https://romanmerkulov.com/posts/nuxt-dx-strasbourg-2023</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/nuxt-dx-strasbourg-2023</guid>
+            <link>https://romanmerkulov.me/posts/nuxt-dx-strasbourg-2023</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/nuxt-dx-strasbourg-2023</guid>
             <pubDate>Thu, 25 May 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Development Experience with DevTools - StrasbourgJS 2023]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -2339,8 +2339,8 @@ prefer-symlinked-executables=false
         </item>
         <item>
             <title><![CDATA[How I Manage GitHub Notifications]]></title>
-            <link>https://romanmerkulov.com/posts/manage-github-notifications-2023</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/manage-github-notifications-2023</guid>
+            <link>https://romanmerkulov.me/posts/manage-github-notifications-2023</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/manage-github-notifications-2023</guid>
             <pubDate>Wed, 17 May 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Manage GitHub Notifications - GitHub Maintainer Summit 2023]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -2393,8 +2393,8 @@ prefer-symlinked-executables=false
         </item>
         <item>
             <title><![CDATA[Sliding Enter Animation]]></title>
-            <link>https://romanmerkulov.com/posts/sliding-enter-animation</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/sliding-enter-animation</guid>
+            <link>https://romanmerkulov.me/posts/sliding-enter-animation</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/sliding-enter-animation</guid>
             <pubDate>Sun, 07 May 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Adding an elegant sliding enter animation to your blog.]]></description>
             <content:encoded><![CDATA[<script setup lag="ts">
@@ -2502,8 +2502,8 @@ const router = useRouter()
         </item>
         <item>
             <title><![CDATA[Introducing Nuxt Devtools]]></title>
-            <link>https://romanmerkulov.com/posts/introducing-nuxt-devtools</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/introducing-nuxt-devtools</guid>
+            <link>https://romanmerkulov.me/posts/introducing-nuxt-devtools</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/introducing-nuxt-devtools</guid>
             <pubDate>Mon, 27 Mar 2023 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p><a href="https://nuxt.com/blog/introducing-nuxt-devtools">Go to nuxt.com and read the full announcement</a>.</p>
 ]]></content:encoded>
@@ -2511,8 +2511,8 @@ const router = useRouter()
         </item>
         <item>
             <title><![CDATA[Break Lines in JS]]></title>
-            <link>https://romanmerkulov.com/posts/break-lines-in-js</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/break-lines-in-js</guid>
+            <link>https://romanmerkulov.me/posts/break-lines-in-js</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/break-lines-in-js</guid>
             <pubDate>Fri, 10 Feb 2023 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>You probably don't need it usually, but in case you want to break lines programmatically in JavaScript, here is my lazy man's solution:</p>
 <!-- eslint-skip -->
@@ -2532,8 +2532,8 @@ console.log(lines)
         </item>
         <item>
             <title><![CDATA[Development Experience with Nuxt]]></title>
-            <link>https://romanmerkulov.com/posts/nuxt-dx-2023</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/nuxt-dx-2023</guid>
+            <link>https://romanmerkulov.me/posts/nuxt-dx-2023</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/nuxt-dx-2023</guid>
             <pubDate>Thu, 09 Feb 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Development Experience with Nuxt - Vue Amsterdam 2023]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -2616,14 +2616,14 @@ console.log(lines)
         </item>
         <item>
             <title><![CDATA[Bonjour Paris!]]></title>
-            <link>https://romanmerkulov.com/posts/bonjour-paris</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/bonjour-paris</guid>
+            <link>https://romanmerkulov.me/posts/bonjour-paris</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/bonjour-paris</guid>
             <pubDate>Sat, 10 Dec 2022 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>Bonjour Paris!</p>
 <p>I am so excited to share with you that we (my GF Inès and me) have <strong>moved to Paris</strong>!</p>
 <p>Paris is always our dream city, it's still a bit unreal to see that we are actually here! Here I am going to share with you some of our life updates and what would they mean to us.</p>
 <figure>
-  <img src="https://romanmerkulov.com/images/a-paris-1.jpg" alt="Inès holding a newspaper by @old.press" />
+  <img src="https://romanmerkulov.me/images/a-paris-1.jpg" alt="Inès holding a newspaper by @old.press" />
   <figcaption>Inès holding a newspaper by <a href="https://www.instagram.com/old.press" target="_blank">@old.press</a></figcaption>
 </figure>
 <h2>Thanks</h2>
@@ -2663,8 +2663,8 @@ console.log(lines)
         </item>
         <item>
             <title><![CDATA[Patterns of VueUse]]></title>
-            <link>https://romanmerkulov.com/posts/patterns-of-vueuse-vuefes-japan-2022</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/patterns-of-vueuse-vuefes-japan-2022</guid>
+            <link>https://romanmerkulov.me/posts/patterns-of-vueuse-vuefes-japan-2022</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/patterns-of-vueuse-vuefes-japan-2022</guid>
             <pubDate>Sun, 16 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Patterns of VueUse - Vue Fes Japan 2022]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -2677,8 +2677,8 @@ console.log(lines)
         </item>
         <item>
             <title><![CDATA[Vite, the on-demand DX]]></title>
-            <link>https://romanmerkulov.com/posts/vite-on-demand-dx-viteconf-2022</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/vite-on-demand-dx-viteconf-2022</guid>
+            <link>https://romanmerkulov.me/posts/vite-on-demand-dx-viteconf-2022</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/vite-on-demand-dx-viteconf-2022</guid>
             <pubDate>Tue, 11 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Vite, the on-demand DX - ViteConf 2022]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -2693,8 +2693,8 @@ console.log(lines)
         </item>
         <item>
             <title><![CDATA[Dev SSR on Nuxt with Vite]]></title>
-            <link>https://romanmerkulov.com/posts/dev-ssr-on-nuxt</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/dev-ssr-on-nuxt</guid>
+            <link>https://romanmerkulov.me/posts/dev-ssr-on-nuxt</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/dev-ssr-on-nuxt</guid>
             <pubDate>Tue, 04 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[The journey of how we made development time SSR working on Nuxt with Vite]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -2866,7 +2866,7 @@ export default await importModule('/foo')
 <p>We ended up extracting this logic into a more general package called <a href="https://github.com/vitest-dev/vitest/tree/main/packages/vite-node#readme"><code>vite-node</code></a>, so it could also be used outside Nuxt.</p>
 <p>Not only does <code>vite-node</code> make it on-demand by only requesting modules it needs, but it also makes it possible to control the module cache to provide hot module replacement. We implemented the HMR logic in <code>vite-node</code>, similiar to how Vite handles it on the client side -- making the SSR reloads surprisingly fast.</p>
 <figure>
-<img src="https://romanmerkulov.com/images/nuxt-vite-node-hmr.png" rounded-lg>
+<img src="https://romanmerkulov.me/images/nuxt-vite-node-hmr.png" rounded-lg>
 <figcaption>Nuxt Dev SSR with HMR</figcaption>
 </figure>
 <p>From a rough testing with a real-world Nuxt 3 app with 15 routes and 7 modules, we see the SSR reload time by changing a single Vue file goes <strong>from ~200ms to &lt;0.01ms with <code>vite-node</code></strong>. Since it switched a full build to module level on-demand HMR, the difference will be more significant as the project grows.</p>
@@ -2923,8 +2923,8 @@ export default await importModule('/foo')
         </item>
         <item>
             <title><![CDATA[Why I don't use Prettier]]></title>
-            <link>https://romanmerkulov.com/posts/why-not-prettier</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/why-not-prettier</guid>
+            <link>https://romanmerkulov.me/posts/why-not-prettier</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/why-not-prettier</guid>
             <pubDate>Sat, 01 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[The reason why I don't use Prettier in my projects.]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -2951,7 +2951,7 @@ export default await importModule('/foo')
 <p>Sometimes when you modify a string literal in JavaScript that may make the line a bit longer than the value of <code>printwidth</code>, Prettier will force wrapping the line. It breaks the inline diffing and make the changes hard to review. Imagine in another pull request, we might reduce the string a bit shorter, Prettier will then unwrap the lines back to one line. Back and forth, it creates a lot of unnecessary noises.</p>
 <p>The following image shows another example:</p>
 <a href="https://prettier.io/playground/#N4Igxg9gdgLgprEAuc0DOMAEBXNcBOamAvJgNoA6UmmwOe+AkgCZKYCMANPQVAIYBbOGwogAggBsAZgEs4mAMJ98QiTJh9RmAL6cqNOrgIs2AJm5H8-ISJABxGf0wAlCGgAWfKFt37aPJlZMAGYLBmthTFEAZXdsAHNMADk+ACNsHz1qf0sTTAAWMN5BSNFnPncBL0wAMXw+Bky-QwY8gFYiqxLbABU3d3kAGQBPbFSEJuyW4yCANk6I22iCeJkIZJkJCCllSYBdAG4qEE4QCAAHGDWoNGRQZXwIAHcABWUEW5Q+CSe+YdvTql6mAANZwGDREqDRxwZA7CR4QHAsEQ858MCOeLIGD4bBwU5wATjZjMODMQZeeLYPjxOA1CAqPgwK5QLFfbAwCAnEDuGACCQAdXc6jgaDRYDgyxu6hkADd1MNkOA0ACQI4GDAXvV4lU4d9ESAAFZoAAe0UxEjgAEVsBB4HqEfiQGjCAQlak0nAJNzzvhHDABTJmDB3Mh8uZnY88AL6uclb7RQRZbDTgBHW3wLUXT4gBoAWigcDJZO5+Dg6ZkZa1NN1SHhBrwAhk2NxTrQFutGdhdf1To0qUDwdDSAjOL4m0xCggAlrIFFbW5Rh6aU+9adsrxjCgpNg0TAfsuYm30Rgw0tDrw2m0QA" target="_blank">
-<img src="https://romanmerkulov.com/images/prettier-print-width.png" scale-110 block m="b--5!" />
+<img src="https://romanmerkulov.me/images/prettier-print-width.png" scale-110 block m="b--5!" />
 </a>
 <p><sup><em>The 42 of <code>printWidth</code> is made up for demonstration, but it happens in any <code>printWidth</code></em></sup></p>
 <p>On the left is the input code and on the right is the output of Prettier. I don't need to point out but you probably already have the answer of which one is &quot;more pretty&quot;. From my point of view, Prettier follows the rule too strict. And in fact it makes the code much harder to read and modify, violating the initial goal of formatting - to make the code more readable.</p>
@@ -2992,8 +2992,8 @@ export default antfu({
         </item>
         <item>
             <title><![CDATA[Why Reproductions are Required]]></title>
-            <link>https://romanmerkulov.com/posts/why-reproductions-are-required</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/why-reproductions-are-required</guid>
+            <link>https://romanmerkulov.me/posts/why-reproductions-are-required</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/why-reproductions-are-required</guid>
             <pubDate>Mon, 30 May 2022 16:00:00 GMT</pubDate>
             <description><![CDATA[My thoughts on why reproductions are important in open source.]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -3002,7 +3002,7 @@ export default antfu({
 </blockquote>
 <p>If you have ever browsed the issue lists in my repos or created one, you might sometimes see I reply with the following comment and then close the issue:</p>
 <figure>
-<img src="https://romanmerkulov.com/images/issue-close-without-repro-light.png" img-light rounded-lg>
+<img src="https://romanmerkulov.me/images/issue-close-without-repro-light.png" img-light rounded-lg>
 <img src="/images/issue-close-without-repro-dark.png" img-dark rounded-lg>
 <figcaption>We temporarily close this due to the lack of enough information. Please provide a <a href="https://stackoverflow.com/help/minimal-reproducible-example" target="_blank">minimal reproduction</a> to reopen the issue. Thanks.</figcaption>
 </figure>
@@ -3069,8 +3069,8 @@ export default antfu({
         </item>
         <item>
             <title><![CDATA[Introduction to Vitest]]></title>
-            <link>https://romanmerkulov.com/posts/introduction-to-vitest-vue-nation-2022</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/introduction-to-vitest-vue-nation-2022</guid>
+            <link>https://romanmerkulov.me/posts/introduction-to-vitest-vue-nation-2022</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/introduction-to-vitest-vue-nation-2022</guid>
             <pubDate>Wed, 26 Jan 2022 08:00:00 GMT</pubDate>
             <description><![CDATA[Introduction to Vitest - Vue.js Nation 2022]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -3084,8 +3084,8 @@ export default antfu({
         </item>
         <item>
             <title><![CDATA[Ship ESM & CJS in one Package]]></title>
-            <link>https://romanmerkulov.com/posts/publish-esm-and-cjs</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/publish-esm-and-cjs</guid>
+            <link>https://romanmerkulov.me/posts/publish-esm-and-cjs</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/publish-esm-and-cjs</guid>
             <pubDate>Mon, 29 Nov 2021 16:00:00 GMT</pubDate>
             <description><![CDATA[A short tutorial of shipping both ESM and CJS dual formats in a single NPM package.]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -3293,8 +3293,8 @@ export default defineBuildConfig({
         </item>
         <item>
             <title><![CDATA[Icons in Pure CSS]]></title>
-            <link>https://romanmerkulov.com/posts/icons-in-pure-css</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/icons-in-pure-css</guid>
+            <link>https://romanmerkulov.me/posts/icons-in-pure-css</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/icons-in-pure-css</guid>
             <pubDate>Sun, 31 Oct 2021 16:00:00 GMT</pubDate>
             <description><![CDATA[The icon solution in pure CSS.]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -3481,8 +3481,8 @@ export default defineConfig({
         </item>
         <item>
             <title><![CDATA[Reimagine Atomic CSS]]></title>
-            <link>https://romanmerkulov.com/posts/reimagine-atomic-css</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/reimagine-atomic-css</guid>
+            <link>https://romanmerkulov.me/posts/reimagine-atomic-css</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/reimagine-atomic-css</guid>
             <pubDate>Tue, 26 Oct 2021 16:00:00 GMT</pubDate>
             <description><![CDATA[Let's take a step back and reimagine what's atomic CSS could be in the best.]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -3511,7 +3511,7 @@ export default defineConfig({
 <p>We are not going to talk about the pros and cons of using atomic CSS here, as you might hear them many times already. Today, we are going to use a framework author's perspective to see how we make the trade-off building those frameworks you love, their limitations, what we can do better to eventually benefits your daily work.</p>
 <h2>The Background</h2>
 <p>Before we start, let's talk a bit about the background. If you don't know me, my name is Roman Merkulov, and I am a <a href="https://vitejs.dev/">Vite</a> team member and the creator of <a href="https://github.com/antfu/vitesse">Vitesse</a>, one of the most popular starter templates for Vite. I enjoy the speedy development experience of atomic CSS (or CSS utilities), so I chose to use <a href="https://tailwindcss.com/">Tailwind CSS</a> as the default UI framework for Vitesse. While Vite should be incredibly fast compared to Webpack and others, Tailwind, which generates megabytes of utility CSS, makes the start-up and HMR on Vite slow as the old days. I once thought this was some kind of trade-off for using atomic CSS solutions - until I discovered <a href="https://windicss.org">Windi CSS</a>.</p>
-<img src="https://romanmerkulov.com/images/discover-windicss.png" class="transform scale-110 py-2"/>
+<img src="https://romanmerkulov.me/images/discover-windicss.png" class="transform scale-110 py-2"/>
 <p><a href="https://windicss.org">Windi CSS</a> was a Tailwind CSS alternative that was written from scratch. It has zero dependencies and does not rely on PostCSS and Autoprefixer. More importantly, it features <strong>on-demanded usage</strong>. Instead of generating all the combinations of utilities that you rarely used to purge later, Windi CSS only generates those actually presented in your codebase. This fits perfectly well with Vite's on-demanded philosophy, and theoretically, it should be way much faster than Tailwind. So I wrote <a href="https://github.com/windicss/vite-plugin-windicss">the Vite plugin</a> for it, and it turned out to be <a href="https://twitter.com/antfu7/status/1361398324587163648">20~100x faster</a> than Tailwind.</p>
 <p>It went pretty well, Windi CSS grown into a team, we made many more innovations like <a href="https://windicss.org/features/value-auto-infer.html">Value Infering</a>, <a href="https://windicss.org/features/variant-groups.html">Variant Groups</a>, <a href="https://windicss.org/features/shortcuts.html">Shortcuts</a>, <a href="https://twitter.com/antfu7/status/1372244287975387145">Design in DevTools</a>, <a href="https://twitter.com/windi_css/status/1387460661135896577">Attributify Mode</a>, etc. As the result, Tailwind was <a href="https://twitter.com/adamwathan/status/1371542711086559237?s=20">ass kicked</a> to introduce their own on-demand <a href="https://tailwindcss.com/docs/just-in-time-mode">JIT engine</a>.</p>
 <h2>Breakdown Atomic CSS</h2>
@@ -3909,8 +3909,8 @@ tailwindcss  v3.0.0-alpha.1  1258.54 ms / 1249.79 ms (x251.28)
         </item>
         <item>
             <title><![CDATA[New Ways to Vue]]></title>
-            <link>https://romanmerkulov.com/posts/new-ways-to-vue-london-2021</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/new-ways-to-vue-london-2021</guid>
+            <link>https://romanmerkulov.me/posts/new-ways-to-vue-london-2021</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/new-ways-to-vue-london-2021</guid>
             <pubDate>Wed, 20 Oct 2021 08:00:00 GMT</pubDate>
             <description><![CDATA[New Ways to Vue - Vue.js Live London 2021]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -3924,8 +3924,8 @@ tailwindcss  v3.0.0-alpha.1  1258.54 ms / 1249.79 ms (x251.28)
         </item>
         <item>
             <title><![CDATA[Range in JavaScript]]></title>
-            <link>https://romanmerkulov.com/posts/range-in-javascript</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/range-in-javascript</guid>
+            <link>https://romanmerkulov.me/posts/range-in-javascript</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/range-in-javascript</guid>
             <pubDate>Mon, 13 Sep 2021 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>Credit to <a href="https://copilot.github.com/">GitHub Copilot</a>.</p>
 <p>I didn't know you could provide a map function to <code>Array.from</code> as a second argument until today.</p>
@@ -3937,8 +3937,8 @@ tailwindcss  v3.0.0-alpha.1  1258.54 ms / 1249.79 ms (x251.28)
         </item>
         <item>
             <title><![CDATA[Journey with Icons Continues]]></title>
-            <link>https://romanmerkulov.com/posts/journey-with-icons-continues</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/journey-with-icons-continues</guid>
+            <link>https://romanmerkulov.me/posts/journey-with-icons-continues</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/journey-with-icons-continues</guid>
             <pubDate>Fri, 10 Sep 2021 18:00:00 GMT</pubDate>
             <description><![CDATA[My journey with icons and the solutions I made along the way]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -4223,8 +4223,8 @@ export default defineConfig({
         </item>
         <item>
             <title><![CDATA[Isomorphic `__dirname`]]></title>
-            <link>https://romanmerkulov.com/posts/isomorphic-dirname</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/isomorphic-dirname</guid>
+            <link>https://romanmerkulov.me/posts/isomorphic-dirname</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/isomorphic-dirname</guid>
             <pubDate>Mon, 30 Aug 2021 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>In ESM, you might found your old friends <code>__dirname</code> and <code>__filename</code> are no longer available. When you search for <a href="https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-when-using-the-experimental-modules-flag">solutions</a>, you will find that you will need to parse <code>import.meta.url</code> to get the equivalents. While most of the solutions only show you the way to get them in ESM only, If you like me, who write modules in TypeScript and transpile to both CJS and ESM at the same time using tools like <a href="https://tsup.egoist.dev/"><code>tsup</code></a>. Here is the isomorphic solution:</p>
 <pre><code class="language-js">import { dirname } from 'node:path'
@@ -4239,8 +4239,8 @@ const _dirname = typeof __dirname !== 'undefined'
         </item>
         <item>
             <title><![CDATA[GitHub Co-authors]]></title>
-            <link>https://romanmerkulov.com/posts/github-co-authors</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/github-co-authors</guid>
+            <link>https://romanmerkulov.me/posts/github-co-authors</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/github-co-authors</guid>
             <pubDate>Tue, 24 Aug 2021 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>You might found GitHub sometimes shows you a commit with multiple authors. This is commonly happening in squashed pull requests when multiple people are involved with the reviewing and made suggestions or changes. In that situation, GitHub will automatically inject the <a href="https://docs.github.com/en/github/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors"><code>Co-authored-by:</code></a> to the commit message. This is a great way to give contributors credits while keeping the commit history clean.</p>
 <p>Note that the format is like <code>Co-authored-by: name &lt;name@example.com&gt;</code>, normally GitHub will fill that for you so you don't need to worry about that, but if you want to add it manually, you have to get the email addresses of the contributors. But how do you know their emails?</p>
@@ -4252,8 +4252,8 @@ const _dirname = typeof __dirname !== 'undefined'
         </item>
         <item>
             <title><![CDATA[Async with Composition API]]></title>
-            <link>https://romanmerkulov.com/posts/async-with-composition-api</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/async-with-composition-api</guid>
+            <link>https://romanmerkulov.me/posts/async-with-composition-api</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/async-with-composition-api</guid>
             <pubDate>Fri, 16 Jul 2021 08:00:00 GMT</pubDate>
             <description><![CDATA[Notes about the caveat when using async functions in Vue Composition API.]]></description>
             <content:encoded><![CDATA[<p>There is a major caveat when working with asynchronous functions in Vue Composition API, that I believe many of you have ever come across. I have acknowledged it for a while from somewhere, but every time I want to have a detailed reference and share to others, I can't find it's documented anywhere. So, I am thinking about writing one, with a detailed explanation while sorting out the possible solutions for you.</p>
@@ -4491,8 +4491,8 @@ export default {
         </item>
         <item>
             <title><![CDATA[Get Package Root]]></title>
-            <link>https://romanmerkulov.com/posts/get-package-root</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/get-package-root</guid>
+            <link>https://romanmerkulov.me/posts/get-package-root</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/get-package-root</guid>
             <pubDate>Wed, 14 Jul 2021 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>When you want to get the real file path of a certain package, you could use <code>require.resolve</code> to fetch their main entry path.</p>
 <pre><code class="language-bash">&gt; require.resolve('vite')
@@ -4512,8 +4512,8 @@ export default {
         </item>
         <item>
             <title><![CDATA[Optimize Await]]></title>
-            <link>https://romanmerkulov.com/posts/optimize-await</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/optimize-await</guid>
+            <link>https://romanmerkulov.me/posts/optimize-await</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/optimize-await</guid>
             <pubDate>Thu, 01 Jul 2021 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p><code>async</code> / <code>await</code> in ES7 is truly a life-saver for the JavaScript world. It allows you to avoid <a href="http://callbackhell.com/">callback hell</a> in your code and make it more readable. However, a common pitfall is that when you <code>await</code> a huge asynchronous task that takes very long time, it blocks the following code and could potentially make your app slow.</p>
 <p>For example:</p>
@@ -4590,8 +4590,8 @@ const plugin = createPlugin()
         </item>
         <item>
             <title><![CDATA[About Yak Shaving]]></title>
-            <link>https://romanmerkulov.com/posts/about-yak-shaving</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/about-yak-shaving</guid>
+            <link>https://romanmerkulov.me/posts/about-yak-shaving</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/about-yak-shaving</guid>
             <pubDate>Wed, 19 May 2021 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>[[toc]]</p>
 <blockquote>
@@ -4652,8 +4652,8 @@ You don’t want to show up empty-handed, so you stop for a bottle of wine…</p
         </item>
         <item>
             <title><![CDATA[Composable Vue]]></title>
-            <link>https://romanmerkulov.com/posts/composable-vue-vueday-2021</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/composable-vue-vueday-2021</guid>
+            <link>https://romanmerkulov.me/posts/composable-vue-vueday-2021</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/composable-vue-vueday-2021</guid>
             <pubDate>Wed, 28 Apr 2021 16:00:00 GMT</pubDate>
             <description><![CDATA[Slides & transcript for my talk at VueDay 2021]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -5167,8 +5167,8 @@ import { defineComponent, reactive, ref } from 'vue-demi'
         </item>
         <item>
             <title><![CDATA[Develop with Vite]]></title>
-            <link>https://romanmerkulov.com/posts/vue-beijing-2021</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/vue-beijing-2021</guid>
+            <link>https://romanmerkulov.me/posts/vue-beijing-2021</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/vue-beijing-2021</guid>
             <pubDate>Sun, 28 Mar 2021 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<blockquote>
 <p>This is the transcript of my talk at <a href="https://twitter.com/beijing_vue">Vue Beijing</a></p>
@@ -5307,8 +5307,8 @@ export default {
         </item>
         <item>
             <title><![CDATA[Reflection of Speaking in Public]]></title>
-            <link>https://romanmerkulov.com/posts/reflection-of-speaking-in-public</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/reflection-of-speaking-in-public</guid>
+            <link>https://romanmerkulov.me/posts/reflection-of-speaking-in-public</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/reflection-of-speaking-in-public</guid>
             <pubDate>Sat, 27 Mar 2021 16:00:00 GMT</pubDate>
             <description><![CDATA[My sincere apologies to everyone involved.]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -5334,8 +5334,8 @@ export default {
         </item>
         <item>
             <title><![CDATA[Type your Config]]></title>
-            <link>https://romanmerkulov.com/posts/type-your-config</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/type-your-config</guid>
+            <link>https://romanmerkulov.me/posts/type-your-config</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/type-your-config</guid>
             <pubDate>Wed, 24 Mar 2021 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>Configurations can be quite complex, and sometimes you may want to utilize the great type checking that TypeScript provided. Change your <code>xxx.config.js</code> to <code>xxx.config.ts</code> is not an ideal solutions as you will need to have a Node.js register involved to transpile it into JavaScript and some tools might not support doing that way. Fortunately, TypeScript also support type check in plain JavaScript file with JSDoc. Here is an example of Webpack config with type checks:</p>
 <pre><code class="language-ts">// webpack.config.js
@@ -5373,8 +5373,8 @@ export function defineConfig(options: UserConfig) {
         </item>
         <item>
             <title><![CDATA[Windi CSS and Tailwind JIT]]></title>
-            <link>https://romanmerkulov.com/posts/windicss-and-tailwind-jit</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/windicss-and-tailwind-jit</guid>
+            <link>https://romanmerkulov.me/posts/windicss-and-tailwind-jit</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/windicss-and-tailwind-jit</guid>
             <pubDate>Thu, 18 Mar 2021 16:00:00 GMT</pubDate>
             <description><![CDATA[Wish this is the end.]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -5407,8 +5407,8 @@ export function defineConfig(options: UserConfig) {
         </item>
         <item>
             <title><![CDATA[Typed Provide and Inject in Vue]]></title>
-            <link>https://romanmerkulov.com/posts/typed-provide-and-inject-in-vue</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/typed-provide-and-inject-in-vue</guid>
+            <link>https://romanmerkulov.me/posts/typed-provide-and-inject-in-vue</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/typed-provide-and-inject-in-vue</guid>
             <pubDate>Fri, 05 Mar 2021 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>I didn't know that you can type <code>provide()</code> and <code>inject()</code> elegantly until I watched <a href="https://github.com/LinusBorg/">Thorsten Lünborg</a>'s talk on <a href="https://vuejs.amsterdam/">Vue Amsterdam</a>.</p>
 <p>The basic idea here is the Vue offers a type utility <code>InjectionKey</code> will you can type a Symbol to hold the type of your injection values. And when you use <code>provide()</code> and <code>inject()</code> with that symbol, it can infer the type of provider and return value automatically.</p>
@@ -5455,8 +5455,8 @@ export default {
         </item>
         <item>
             <title><![CDATA[Color Scheme for VS Code]]></title>
-            <link>https://romanmerkulov.com/posts/color-scheme-for-vscode-ext</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/color-scheme-for-vscode-ext</guid>
+            <link>https://romanmerkulov.me/posts/color-scheme-for-vscode-ext</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/color-scheme-for-vscode-ext</guid>
             <pubDate>Mon, 01 Mar 2021 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>There is currently no API to access colors of current theme in VS Code Extensions, nor the meta information of them. It frustrated me for a long while, until today I came up with a dirty but working solution.</p>
 <p>Since most of the themes follow the conversions of having <code>Light</code> or <code>Dark</code> in their names. Then we can have:</p>
@@ -5484,8 +5484,8 @@ export function isDarkTheme() {
         </item>
         <item>
             <title><![CDATA[Types for Submodules]]></title>
-            <link>https://romanmerkulov.com/posts/types-for-sub-modules</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/types-for-sub-modules</guid>
+            <link>https://romanmerkulov.me/posts/types-for-sub-modules</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/types-for-sub-modules</guid>
             <pubDate>Mon, 01 Mar 2021 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>When you build multiple entries in a single package, you exports them with <code>exports</code> syntax. Like</p>
 <pre><code class="language-json">{
@@ -5531,8 +5531,8 @@ export * from './dist/foo.d.ts'
         </item>
         <item>
             <title><![CDATA[Match Quotes in Pairs]]></title>
-            <link>https://romanmerkulov.com/posts/match-quotes-in-pairs</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/match-quotes-in-pairs</guid>
+            <link>https://romanmerkulov.me/posts/match-quotes-in-pairs</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/match-quotes-in-pairs</guid>
             <pubDate>Sun, 28 Feb 2021 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>In JavaScript, single quotes('') and double quotes(&quot;&quot;) are interchangeable. With ES6, we now even have backticks(``) for template literals. When you want to write a quick script to find all the strings without introducing a heavy parser, you may think about using RegExp. For example, you can have:</p>
 <pre><code class="language-ts">/['&quot;`](.*?)['&quot;`]/g
@@ -5555,8 +5555,8 @@ export * from './dist/foo.d.ts'
         </item>
         <item>
             <title><![CDATA[Match Chinese Characters]]></title>
-            <link>https://romanmerkulov.com/posts/match-chinese-characters</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/match-chinese-characters</guid>
+            <link>https://romanmerkulov.me/posts/match-chinese-characters</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/match-chinese-characters</guid>
             <pubDate>Thu, 25 Feb 2021 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>When you need to detect if a string contains Chinese characters, you would commonly think about doing it will RegExp, or grab a ready-to-use package on npm.</p>
 <p>If you Google it, you are likely end up with <a href="https://stackoverflow.com/a/21113538">this solution</a>:</p>
@@ -5574,8 +5574,8 @@ export * from './dist/foo.d.ts'
         </item>
         <item>
             <title><![CDATA[Netlify Redirects]]></title>
-            <link>https://romanmerkulov.com/posts/netlify-redirects</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/netlify-redirects</guid>
+            <link>https://romanmerkulov.me/posts/netlify-redirects</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/netlify-redirects</guid>
             <pubDate>Sat, 20 Feb 2021 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<h2>Domains Redirects</h2>
 <p>On <a href="https://netlify.com">Netlify</a>, you can setup multiple domains for a site. When you add a custom domain, the <code>xxx.netlify.app</code> is still accessible. Which would potentially cause some confusion to users. In that way, you can setup the redirection in your <code>netlify.toml</code> file, for example:</p>
@@ -5605,8 +5605,8 @@ force = true
         </item>
         <item>
             <title><![CDATA[Rewrite in Vite]]></title>
-            <link>https://romanmerkulov.com/posts/rewrite-in-vite</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/rewrite-in-vite</guid>
+            <link>https://romanmerkulov.me/posts/rewrite-in-vite</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/rewrite-in-vite</guid>
             <pubDate>Sun, 31 Jan 2021 16:00:00 GMT</pubDate>
             <description><![CDATA[My site is now powered by Vite!]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -5796,8 +5796,8 @@ await Promise.all(
         </item>
         <item>
             <title><![CDATA[Destructuring... with object or array?]]></title>
-            <link>https://romanmerkulov.com/posts/destructuring-with-object-or-array</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/destructuring-with-object-or-array</guid>
+            <link>https://romanmerkulov.me/posts/destructuring-with-object-or-array</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/destructuring-with-object-or-array</guid>
             <pubDate>Wed, 21 Oct 2020 16:00:00 GMT</pubDate>
             <description><![CDATA[Prefer object destructure or array? Can we support both?]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -5991,12 +5991,12 @@ let [foo, bar] = obj
 </code></pre>
 ]]></content:encoded>
             <author>int1994020@gmail.com (Roman Merkulov)</author>
-            <enclosure url="https://romanmerkulov.com/images/destructuring.png" length="0" type="image/png"/>
+            <enclosure url="https://romanmerkulov.me/images/destructuring.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Watch with @vue/reactivity]]></title>
-            <link>https://romanmerkulov.com/posts/watch-with-reactivity</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/watch-with-reactivity</guid>
+            <link>https://romanmerkulov.me/posts/watch-with-reactivity</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/watch-with-reactivity</guid>
             <pubDate>Fri, 18 Sep 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[A brief intro of how it works and a guide to implementing the (missing) `watch` on your own.]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -6199,8 +6199,8 @@ npm i <a href='https://github.com/antfu/vue-reactivity-watch' target='_blank'>@v
         </item>
         <item>
             <title><![CDATA[Journey with Icons]]></title>
-            <link>https://romanmerkulov.com/posts/journey-with-icons</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/journey-with-icons</guid>
+            <link>https://romanmerkulov.me/posts/journey-with-icons</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/journey-with-icons</guid>
             <pubDate>Sun, 16 Aug 2020 16:00:00 GMT</pubDate>
             <description><![CDATA[To solve the pain I faced in using icons for the web, I built several tools to make the DX better.]]></description>
             <content:encoded><![CDATA[<p>[[toc]]</p>
@@ -6285,8 +6285,8 @@ createApp(App).mount('#app')
         </item>
         <item>
             <title><![CDATA[Make Libraries Working with Vue 2 and 3]]></title>
-            <link>https://romanmerkulov.com/posts/make-libraries-working-with-vue-2-and-3</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/make-libraries-working-with-vue-2-and-3</guid>
+            <link>https://romanmerkulov.me/posts/make-libraries-working-with-vue-2-and-3</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/make-libraries-working-with-vue-2-and-3</guid>
             <pubDate>Wed, 01 Jul 2020 14:00:00 GMT</pubDate>
             <description><![CDATA[Try Vue Demi!]]></description>
             <content:encoded><![CDATA[<p>Today, Evan has announced that the first RC of Vue 3 <a href="https://github.com/vuejs/rfcs/issues/183">will be released in mid-July</a>. The post suggests library/plugin authors to start migrating the support for Vue 3. But as the APIs and behaviors have changed a lot, is that possible to make our libraries support Vue 2 and 3 at the same time?</p>
@@ -6329,8 +6329,8 @@ createApp(App).mount('#app')
         </item>
         <item>
             <title><![CDATA[Vue 3 Migration Notes]]></title>
-            <link>https://romanmerkulov.com/posts/vue-3-notes</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/vue-3-notes</guid>
+            <link>https://romanmerkulov.me/posts/vue-3-notes</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/vue-3-notes</guid>
             <pubDate>Wed, 01 Jul 2020 00:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<blockquote>
 <p>Note: This is my personal notes/tips for migrating to Vue 3 and will be updated overtime. Please refer to <a href="https://v3.vuejs.org">the official docs</a> for the complete changelog.</p>
@@ -6372,8 +6372,8 @@ this.codemirror = markRaw(CodeMirror.fromTextArea(el))
         </item>
         <item>
             <title><![CDATA[Type Inferencing in Vue]]></title>
-            <link>https://romanmerkulov.com/posts/type-inferencing-in-vue</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/type-inferencing-in-vue</guid>
+            <link>https://romanmerkulov.me/posts/type-inferencing-in-vue</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/type-inferencing-in-vue</guid>
             <pubDate>Sun, 28 Jun 2020 00:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>[[toc]]</p>
 <p>As you may or may not know, I am working on preparing to release the v1.0 version for <a href="https://github.com/vuejs/composition-api">@vue/composition-api</a> recently. One of the current problems is that the type inference does not play well <a href="https://github.com/vuejs/composition-api/issues/338">#338</a>. So I get a chance to have a deeper look at <a href="https://github.com/vuejs/composition-api">vue-next</a>'s type implementations. I will tell you what I learned and how magic works in Vue.</p>
@@ -6519,8 +6519,8 @@ define({
         </item>
         <item>
             <title><![CDATA[Domain Email]]></title>
-            <link>https://romanmerkulov.com/posts/domain-email</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/domain-email</guid>
+            <link>https://romanmerkulov.me/posts/domain-email</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/domain-email</guid>
             <pubDate>Wed, 17 Jun 2020 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>Saw <a href="https://twitter.com/youyuxi/status/1272932071749619712">a tweet from Evan You</a> about the <a href="https://hey.com/">hey.com</a> mail service recently. I got interested in having a short and nice email address. My current one in Hotmail is just too long to even being spell out in talk. <code>hey.com</code> looks very nice but $99/year is not a very good deal to me. I decide to use my own domain for receiving emails.</p>
 <p>I did this a couple years ago for another domain, I kinda remember an open-source tool allowing forwarding emails by just adding DNS record. I took some time to search for it but I didn't find the page matched with my memory. I went GitHub to search in my stared projects, it turns out the tool now becomes and Freemium SaaS <a href="https://forwardemail.net/">forwardemail.net</a> with a fresh new logo and website design that I can't even recognize it.</p>
@@ -6539,8 +6539,8 @@ TXT  @  forward-email=youremail@example.com
         </item>
         <item>
             <title><![CDATA[New House]]></title>
-            <link>https://romanmerkulov.com/posts/new-house</link>
-            <guid isPermaLink="true">https://romanmerkulov.com/posts/new-house</guid>
+            <link>https://romanmerkulov.me/posts/new-house</link>
+            <guid isPermaLink="true">https://romanmerkulov.me/posts/new-house</guid>
             <pubDate>Fri, 12 Jun 2020 16:00:00 GMT</pubDate>
             <content:encoded><![CDATA[<p>I always feel that I need a blog but I never have one.</p>
 <p>So I took some time to rewrite my homepage and adding the blog section. and Hi, here I am :)</p>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://romanmerk.me/</id>
     <title>Roman Merkulov</title>
-    <updated>2025-08-11T08:59:24.918Z</updated>
+    <updated>2025-08-25T17:10:22.435Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Roman Merkulov</name>
@@ -1500,10 +1500,13 @@ Thanks for reading! :)</p>
         <link href="https://romanmerk.me/posts/animated-svg-logo"/>
         <updated>2023-07-19T00:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>I recently replaced the logo on the top left corner with an animated SVG:</p>
-<p flex>
-  <a href="/favicon-animated.svg" target="_blank" important-border-none p4 ma>
-    <Logo w-30 />
-  </a>
+<p flex p4 ma>
+  <iframe
+    src="https://romanmerk.me/animated_signature.html"
+    title="Animated signature"
+    style="width:min(500px,100%);height:160px;border:0;background:transparent"
+    loading="lazy"
+  ></iframe>
 </p>
 <h2>Inspiration</h2>
 <p>The first time I saw such stroke animations in SVG is the <a href="https://icones.js.org/collection/line-md">Material Line Icons</a> by <a href="https://github.com/cyberalien">Vjacheslav Trushkin</a>. It was cool, but I never thought about making one my own until I saw <a href="https://muan.co/">Mu-An Chiou</a>'s <a href="https://muan.co/pages/banners">banner</a> on her website. I suddenly feel like I want to be the cool guy too!</p>
@@ -1516,7 +1519,7 @@ Thanks for reading! :)</p>
 </ul>
 <p>They covered this technique very well, highly recommend reading them if you are interested. Basically, the animation is done by a <strong>very long</strong> dash moving, in which you will see the dash as the drawing line and the gap as empty space. The length and position of the dash are controlled by <code>stroke-dasharray</code> and <code>stroke-dashoffset</code>, which are both animatable.</p>
 <h2>The Original Logo</h2>
-<p>My original logo <a href="/logo.svg" target="_blank" important-border-none inline-block><img src="https://romanmerk.me/logo.svg" h-1.5em dark:filter-invert important-m0 inline-block alt="My Logo in SVG" /></a> comes from around 8 years ago, I draw it with a pressure-sensitive pen on my Surface Pro 4. It was used as a temporary placeholder for the portfolio I was trying to build at that time. I later image-traced it with Adobe Illustrator to get the SVG version. Surprising to recall, it has been so long since then.</p>
+<p>My original logo <a href="/logo.svg" target="_blank" important-border-none inline-block><img src="/logo.svg" h-1.5em dark:filter-invert important-m0 inline-block alt="My Logo in SVG" /></a> comes from around 8 years ago, I draw it with a pressure-sensitive pen on my Surface Pro 4. It was used as a temporary placeholder for the portfolio I was trying to build at that time. I later image-traced it with Adobe Illustrator to get the SVG version. Surprising to recall, it has been so long since then.</p>
 <div rounded shadow of-hidden border="~ base op20">
 <img src="/images/animated-svg-logo-vector.png" dark:invert-95 important-m0>
 </div>
@@ -1563,10 +1566,13 @@ path {
 }
 </code></pre>
 <p>now we have a decent animated logo:</p>
-<p flex>
-  <a href="/favicon-animated-stroke.svg" target="_blank" important-border-none p4 ma>
-    <LogoStroke w-50 />
-  </a>
+<p flex p4 ma>
+  <iframe
+    src="/animated_signature.html"
+    title="Animated signature"
+    style="width:min(500px,100%);height:160px;border:0;background:transparent"
+    loading="lazy"
+  ></iframe>
 </p>
 <p>The only downside is that the stroke is evenly thick everywhere, making it looks less like a signature. I tried to look for solutions and end up with the <a href="https://www.w3.org/Graphics/SVG/WG/wiki/Proposals/Variable_width_stroke">Variable width stroke proposal</a>, however, it does not seem to be going anywhere. Well, it's stroke anyway, it's supposed to be even. Giving the animation is super cool already, what else can I ask for?</p>
 <h2>Variable Stroke Width</h2>
@@ -1575,10 +1581,13 @@ path {
 <img src="/images/animated-svg-logo-mask.png" dark:invert-95 important-m0>
 </div>
 <p>Basically we are using the mask to limit the stroke's visibility, a trick to workaround the limitation of the stroke width. Note it's not 100% pixel-perfect, as in the interaction we can't control the stroke width, so the stroke will be a bit off the mask. We can try to adjust the mask to make it look a bit better, but you will still see a big glitch when zooming in a lot. I guess it might be possible to solve this with multiple strokes and masks, but this one is already quite good to me.</p>
-<p flex>
-  <a href="/favicon-animated.svg" target="_blank" important-border-none p4 ma>
-    <Logo w-50 />
-  </a>
+<p flex p4 ma>
+  <iframe
+    src="/animated_signature.html"
+    title="Animated signature"
+    style="width:min(500px,100%);height:160px;border:0;background:transparent"
+    loading="lazy"
+  ></iframe>
 </p>
 <p>Hope you enjoy the article, and I'd love to see your animated SVG logo too!</p>
 ]]></content>
